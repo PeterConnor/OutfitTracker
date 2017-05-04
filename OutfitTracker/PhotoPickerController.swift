@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import Photos
 
 class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -28,27 +30,124 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-        let cameraAction = UIAlertAction(title: "Use Camera", style: .default) { (action) in
-            self.imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .camera)!
-            self.imagePicker.sourceType = .camera
-            self.imagePicker.allowsEditing = true
-            self.present(self.imagePicker, animated: true, completion: nil)
+        if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            let cameraAction = UIAlertAction(title: "Use Camera", style: .default) { (action) in
+                
+                let status = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+                
+                if (status == .authorized) {
+                    self.displayPicker(type: .camera)
+                }
+                
+                if (status == .restricted) {
+                
+                    self.handleRestricted()
+                }
+                
+                if (status == .denied) {
+                    
+                    self.handleDenied()
+                }
+                
+                if (status == .notDetermined) {
+                
+                    AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granted) in
+                        if (granted) {
+                            self.displayPicker(type: .camera)
+                        }
+                        
+                    })
+                }
+                
+            }
+            
+        alertController.addAction(cameraAction)
         }
         
-        let photoLibraryAction = UIAlertAction(title: "Use Photo Library", style: .default) { (action) in
-            self.imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-            self.imagePicker.sourceType = .photoLibrary
-            self.imagePicker.allowsEditing = true
-            self.present(self.imagePicker, animated: true, completion: nil)
+        if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
+            let photoLibraryAction = UIAlertAction(title: "Use Photo Library", style: .default) { (action) in
+                
+                let status = PHPhotoLibrary.authorizationStatus()
+                
+                if (status == .authorized) {
+                    self.displayPicker(type: .camera)
+                }
+                
+                if (status == .restricted) {
+                    
+                    self.handleRestricted()
+                }
+                
+                if (status == .denied) {
+                    
+                    self.handleDenied()
+                }
+                
+                if (status == .notDetermined) {
+                    
+                    PHPhotoLibrary.requestAuthorization({ (status) in
+                        if (status == PHAuthorizationStatus.authorized) {
+                            self.displayPicker(type: .photoLibrary)
+                            }
+                        })
+
+                    }
+
+                
+                }
+            
+            alertController.addAction(photoLibraryAction)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     
-        alertController.addAction(cameraAction)
-        alertController.addAction(photoLibraryAction)
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func handleDenied() {
+        
+        let alertController = UIAlertController(title: "Camera Access Denied", message: "This app does not have acces to your device's camera. Please update your settings.", preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: "Go To Settings", style: .default) { (action) in
+            DispatchQueue.main.async {
+                UIApplication.shared.open(NSURL(string: UIApplicationOpenSettingsURLString)! as URL)
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.popoverPresentationController?.sourceView = self.photoImage
+        alertController.popoverPresentationController?.sourceRect = self.photoImage.bounds
+        
+        alertController.addAction(settingsAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func handleRestricted() {
+        
+        let alertController = UIAlertController(title: "Camera Access Denied", message: "This device is restricted from accessing the camera at this time", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alertController.popoverPresentationController?.sourceView = self.photoImage
+        alertController.popoverPresentationController?.sourceRect = self.photoImage.bounds
+        
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func displayPicker(type: UIImagePickerControllerSourceType) {
+        self.imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: type)!
+        self.imagePicker.sourceType = type
+        self.imagePicker.allowsEditing = true
+        
+        DispatchQueue.main.async {
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
