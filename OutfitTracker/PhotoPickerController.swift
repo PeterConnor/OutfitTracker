@@ -15,6 +15,17 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var photoImage: UIImageView!
     var imagePicker: UIImagePickerController!
     
+    @IBOutlet weak var addToLibrary: UIButton!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if photoImage.image != nil {
+            addToLibrary.isHidden = false
+        } else {
+            addToLibrary.isHidden = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -70,7 +81,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
                 let status = PHPhotoLibrary.authorizationStatus()
                 
                 if (status == .authorized) {
-                    self.displayPicker(type: .camera)
+                    self.displayPicker(type: .photoLibrary)
                 }
                 
                 if (status == .restricted) {
@@ -104,6 +115,10 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func addToLibrary(_ sender: UIButton) {
+        //?
     }
     
     func handleDenied() {
@@ -160,6 +175,5 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
 

@@ -9,8 +9,30 @@
 import Foundation
 
 
-/* 5/1 @ 10:10pm - left off at 6:13 from https://www.youtube.com/watch?v=vamgwY7nSf4
-Closures, completion handler, action & granted
-
+/* 
+ 
+ **Questions**
+ 
+ What's going on in the @IBAction func choosePhoto closures? I'm still having trouble wrapping my head around closures & completion handlers.
+ 
+ how to put photo into collection view?
+ 
+ how to persist data? CoreData?
+ 
+ Why does picture get cut off?
+ 
+ **Notes**
+ 
+ add an X button to delete photo
+ 
+ add date to photo
+ 
+ what should i study
+ 
+ singleton
+ 
+ nsnotification center
+ 
+ Why did you make ImagesModel NSObject?
  
 */
