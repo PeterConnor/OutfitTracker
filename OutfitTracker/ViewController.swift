@@ -34,11 +34,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
     }
     
-    @IBAction func saveName(segue: UIStoryboardSegue) {
+    @IBAction func saveButton(segue: UIStoryboardSegue) {
         let photoPickerController = segue.source as! PhotoPickerController
         let photoImage = photoPickerController.photoImage.image
         model.images.append(photoImage!)
         imageCollectionView.reloadData()
     }
+    
+    @IBAction func cancelButton(segue: UIStoryboardSegue) {
+        
+    }
+    
+    
+    
 }
 

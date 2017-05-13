@@ -15,8 +15,6 @@ import Foundation
  
  What's going on in the @IBAction func choosePhoto closures? I'm still having trouble wrapping my head around closures & completion handlers.
  
- how to put photo into collection view?
- 
  how to persist data? CoreData?
  
  Why does picture get cut off?
@@ -27,12 +25,6 @@ import Foundation
  
  add date to photo
  
- what should i study
- 
- singleton
- 
- nsnotification center
- 
- Why did you make ImagesModel NSObject?
- 
+ add cancel button
+
 */

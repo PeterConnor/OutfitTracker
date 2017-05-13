@@ -93,33 +93,41 @@
                                     <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="Kdz-wu-TQ5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7K-h4-kHX">
-                                <rect key="frame" x="16" y="542" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add to Library"/>
-                                <connections>
-                                    <action selector="addToLibrary:" destination="y9p-ib-IHT" eventType="touchUpInside" id="Ucl-UN-tIj"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KfB-49-QEG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Pick Photo" id="kbh-D7-1WQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ueZ-qD-Jqf">
+                                            <connections>
+                                                <segue destination="pml-cr-fT8" kind="unwind" unwindAction="cancelButtonWithSegue:" id="z8s-VP-tY3"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="ayd-2X-eWT">
                                             <connections>
-                                                <segue destination="pml-cr-fT8" kind="unwind" unwindAction="saveNameWithSegue:" id="W40-C7-Hxb"/>
+                                                <segue destination="pml-cr-fT8" kind="unwind" unwindAction="saveButtonWithSegue:" id="sPf-CY-F6G"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-61-enY">
+                                <rect key="frame" x="341" y="48" width="34" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="ⓧ"/>
+                                <connections>
+                                    <action selector="deleteImage:" destination="y9p-ib-IHT" eventType="touchUpInside" id="ay8-Nk-eSx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="addToLibrary" destination="A7K-h4-kHX" id="OFj-Cx-MAC"/>
+                        <outlet property="cancelButton" destination="ueZ-qD-Jqf" id="9UD-xG-ddo"/>
                         <outlet property="photoImage" destination="bYT-DX-AcS" id="6Eq-O6-O6Z"/>
+                        <outlet property="saveButton" destination="ayd-2X-eWT" id="75c-OD-Oab"/>
+                        <outlet property="xButton" destination="7Eh-61-enY" id="BSp-21-cld"/>
                         <segue destination="pml-cr-fT8" kind="unwind" identifier="dismissSegue" unwindAction="unwindWithSegue:" id="09g-l4-enM"/>
                     </connections>
                 </viewController>

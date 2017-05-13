@@ -16,21 +16,23 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBOutlet weak var photoImage: UIImageView!
     var imagePicker: UIImagePickerController!
+    @IBOutlet var saveButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var xButton: UIButton!
     
-    @IBOutlet weak var addToLibrary: UIButton!
-    
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        if photoImage.image != nil {
-            addToLibrary.isHidden = false
+        if photoImage.image == nil {
+            saveButton.isEnabled = false
+            xButton.isHidden = true
         } else {
-            addToLibrary.isHidden = true
+            saveButton.isEnabled = true
+            xButton.isHidden = false
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -177,6 +179,13 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func deleteImage(_ sender: Any) {
+        photoImage.image = nil
+        xButton.isHidden = true
+        saveButton.isEnabled = false
+    }
+    
 
     
     
