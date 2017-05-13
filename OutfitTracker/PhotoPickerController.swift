@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 import Photos
 
+
+
 class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var photoImage: UIImageView!
@@ -175,5 +177,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+
+    
+    
 }
 

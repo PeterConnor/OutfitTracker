@@ -33,5 +33,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.customImageView.image = model.images[indexPath.row]
         return cell
     }
+    
+    @IBAction func saveName(segue: UIStoryboardSegue) {
+        let photoPickerController = segue.source as! PhotoPickerController
+        let photoImage = photoPickerController.photoImage.image
+        model.images.append(photoImage!)
+        imageCollectionView.reloadData()
+    }
 }
 
