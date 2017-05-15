@@ -34,6 +34,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        model.images.remove(at: indexPath.item)
+        collectionView.deleteItems(at: [indexPath])
+        print(model.images.count)
+        imageCollectionView.reloadData()
+        print(model.images.count)
+    }
+    
     @IBAction func saveButton(segue: UIStoryboardSegue) {
         let photoPickerController = segue.source as! PhotoPickerController
         let photoImage = photoPickerController.photoImage.image
