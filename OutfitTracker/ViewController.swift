@@ -13,6 +13,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var model = ImagesModel.shared
     @IBOutlet weak var imageCollectionView: UICollectionView!
+    
     private let reuseIdentifier = "imageCell"
     
     override func viewDidLoad() {
@@ -31,29 +32,30 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CustomCollectionViewCell
         cell.customImageView.image = model.images[indexPath.row]
+        cell.dateLabel.text = model.dates[indexPath.row]
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         model.images.remove(at: indexPath.item)
         collectionView.deleteItems(at: [indexPath])
-        print(model.images.count)
-        imageCollectionView.reloadData()
-        print(model.images.count)
     }
     
     @IBAction func saveButton(segue: UIStoryboardSegue) {
         let photoPickerController = segue.source as! PhotoPickerController
         let photoImage = photoPickerController.photoImage.image
         model.images.append(photoImage!)
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, M.d.yy"
+        let dateLabel = dateFormatter.string(from: date)
+        model.dates.append(dateLabel)
         imageCollectionView.reloadData()
     }
     
     @IBAction func cancelButton(segue: UIStoryboardSegue) {
         
     }
-    
-    
-    
 }
 

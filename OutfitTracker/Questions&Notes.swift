@@ -21,10 +21,10 @@ import Foundation
  
  **Notes**
  
- add an X button to delete photo
- 
  add date to photo
  
- add cancel button
-
+ add alerts to delete cell and maybe x button.
+ 
+ what's happening in the singleton?
+ 
 */

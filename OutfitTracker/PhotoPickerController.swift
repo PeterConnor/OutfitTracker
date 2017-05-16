@@ -121,10 +121,6 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func addToLibrary(_ sender: UIButton) {
-        //?
-    }
-    
     func handleDenied() {
         
         let alertController = UIAlertController(title: "Camera Access Denied", message: "This app does not have acces to your device's camera. Please update your settings.", preferredStyle: .alert)
