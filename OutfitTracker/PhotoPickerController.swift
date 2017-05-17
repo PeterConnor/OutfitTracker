@@ -193,5 +193,45 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             }
         return true
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        moveDistance(textField: textField, moveDistance: -250, up: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        moveDistance(textField: textField, moveDistance: -250, up: false)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard string.characters.count > 0 else {
+            return true
+        }
+        
+        let currentText = textField.text ?? ""
+        let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
+        
+        // 1. Here's the first change...
+        return allowedIntoTextField(text: prospectiveText)
+    }
+    
+    // 2. ...and here's the second!
+    func allowedIntoTextField(text: String) -> Bool {
+        return text.characters.count <= 5
+    
+}
+    
+    func moveDistance(textField: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
+        
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+        
+    }
+    
 }
 

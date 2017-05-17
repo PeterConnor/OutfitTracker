@@ -27,4 +27,6 @@ import Foundation
  
  add alerts to delete cell and maybe x button.
  
+ inline if statement
+ 
 */
