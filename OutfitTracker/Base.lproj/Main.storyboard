@@ -150,6 +150,7 @@
                         <outlet property="cancelButton" destination="ueZ-qD-Jqf" id="9UD-xG-ddo"/>
                         <outlet property="photoImage" destination="bYT-DX-AcS" id="6Eq-O6-O6Z"/>
                         <outlet property="saveButton" destination="ayd-2X-eWT" id="75c-OD-Oab"/>
+                        <outlet property="textField" destination="6vj-49-89H" id="OUg-A0-xdF"/>
                         <outlet property="xButton" destination="7Eh-61-enY" id="BSp-21-cld"/>
                         <segue destination="pml-cr-fT8" kind="unwind" identifier="dismissSegue" unwindAction="unwindWithSegue:" id="09g-l4-enM"/>
                     </connections>

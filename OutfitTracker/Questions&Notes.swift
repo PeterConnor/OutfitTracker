@@ -19,12 +19,12 @@ import Foundation
  
  Why does picture get cut off?
  
- **Notes**
- 
- add date to photo
- 
- add alerts to delete cell and maybe x button.
+ difference between indexpath and indexpath.row
  
  what's happening in the singleton?
+ 
+ **Notes**
+ 
+ add alerts to delete cell and maybe x button.
  
 */

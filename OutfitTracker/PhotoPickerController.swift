@@ -12,13 +12,15 @@ import Photos
 
 
 
-class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var photoImage: UIImageView!
     var imagePicker: UIImagePickerController!
     @IBOutlet var saveButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var xButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    var note = ""
     
 
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +35,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -182,8 +185,13 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         saveButton.isEnabled = false
     }
     
-
-    
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            note = text
+            print(note)
+            textField.resignFirstResponder()
+            }
+        return true
+    }
 }
 

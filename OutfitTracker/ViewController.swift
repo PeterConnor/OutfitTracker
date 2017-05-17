@@ -33,6 +33,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CustomCollectionViewCell
         cell.customImageView.image = model.images[indexPath.row]
         cell.dateLabel.text = model.dates[indexPath.row]
+        cell.noteLabel.text = model.notes[indexPath.row]
         
         return cell
     }
@@ -46,6 +47,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let photoPickerController = segue.source as! PhotoPickerController
         let photoImage = photoPickerController.photoImage.image
         model.images.append(photoImage!)
+        model.notes.append(photoPickerController.note)
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E, M.d.yy"
