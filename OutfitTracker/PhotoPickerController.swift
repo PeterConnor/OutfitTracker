@@ -203,23 +203,15 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        guard string.characters.count > 0 else {
-            return true
+        if range.length + range.location > (textField.text?.characters.count)! {
+            return false
         }
         
-        let currentText = textField.text ?? ""
-        let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
+        let newLength = (textField.text?.characters.count)! + string.characters.count - range.length
         
-        // 1. Here's the first change...
-        return allowedIntoTextField(text: prospectiveText)
+            return newLength <= 5
     }
     
-    // 2. ...and here's the second!
-    func allowedIntoTextField(text: String) -> Bool {
-        return text.characters.count <= 5
-    
-}
     
     func moveDistance(textField: UITextField, moveDistance: Int, up: Bool) {
         let moveDuration = 0.3
@@ -230,6 +222,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         UIView.setAnimationDuration(moveDuration)
         self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
         UIView.commitAnimations()
+        
+        
         
     }
     
