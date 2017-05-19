@@ -1,0 +1,91 @@
+//
+//  CoreDataManager.swift
+//  OutfitTracker
+//
+//  Created by Pete Connor on 5/18/17.
+//  Copyright © 2017 c0nman. All rights reserved.
+//
+
+import Foundation
+import UIKit
+import CoreData
+
+class CoreDataManager: NSObject {
+    private class func getContext() -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+
+class func storeObject(item: ImageItem) {
+    let context = getContext()
+    
+    if let entity = NSEntityDescription.entity(forEntityName: "ImageEntity", in: context) {
+        let managedObject = NSManagedObject(entity: entity, insertInto: context)
+        
+        //save date
+        managedObject.setValue(item.date, forKey: "date")
+        managedObject.setValue(item.note, forKey: "note")
+        let imageData = UIImageJPEGRepresentation(item.image, 1)
+        managedObject.setValue(imageData, forKey: "imageVal")
+        
+        do {
+            try context.save()
+            print("Successfully saved data!")
+        } catch {
+            print("Error saving data!")
+            print(error.localizedDescription)
+        }
+        
+    } else {
+        print("Entity is null")
+    }
+    
+}
+    
+    class func fetchObjects() -> [ImageItem] {
+        var objects = [ImageItem]()
+        
+        let fetchRequest: NSFetchRequest<ImageEntity> = ImageEntity.fetchRequest()
+        do {
+            let fetchResult = try getContext().fetch(fetchRequest)
+            print("ResultRN: \(fetchResult)")
+            for item in fetchResult {
+                let imageFromData = UIImage(data: item.imageVal! as Data)
+                let itemImage = ImageItem(img: imageFromData!, date: item.date!, note: item.note!)
+                objects.append(itemImage)
+            }
+        } catch {
+            print("Error fetching data!")
+            print(error.localizedDescription)
+        }
+        return objects
+    }
+    
+    // delete everything from core data
+    class func cleanCoreData() {
+        let fetchRequest: NSFetchRequest<ImageEntity> = ImageEntity.fetchRequest()
+        
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        
+        do {
+            print("Deleting contents of Core Data!")
+            try getContext().execute(deleteRequest)
+        } catch {
+            print("Error cleaning contents of Core Data")
+            print(error.localizedDescription)
+        }
+    }
+}
+    
+    struct ImageItem {
+        var image: UIImage
+        var date: String
+        var note: String
+        
+        init(img: UIImage, date: String, note: String) {
+            self.image = img
+            self.date = date
+            self.note = note
+    }
+
+}

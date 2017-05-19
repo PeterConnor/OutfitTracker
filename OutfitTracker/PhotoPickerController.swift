@@ -209,7 +209,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         
         let newLength = (textField.text?.characters.count)! + string.characters.count - range.length
         
-            return newLength <= 5
+            return newLength <= 10
     }
     
     

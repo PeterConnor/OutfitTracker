@@ -29,4 +29,12 @@ import Foundation
  
  inline if statement
  
+ make image bigger
+ 
+ what is the app delegate
+ 
+ make collectionview look nice w/o pics loaded
+ 
+ ad blur view
+ 
 */

@@ -11,14 +11,17 @@ import UIKit
 
 class ImagesModel: NSObject {
     static let shared: ImagesModel = ImagesModel()
-    var images: [UIImage]
-    var notes: [String]
-    var dates: [String]
+    //var images: [UIImage]
+    //var notes: [String]
+    //var dates: [String]
+    
+    var imageItems: [ImageItem]
     
     private override init() {
-        images = []
-        notes = []
-        dates = []
+        //images = []
+        //notes = []
+        //dates = []
+        imageItems = CoreDataManager.fetchObjects()
         super.init()
     }
 }

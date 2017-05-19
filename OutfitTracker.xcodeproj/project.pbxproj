@@ -17,6 +17,7 @@
 		FA7D438E1EC009950061EACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438D1EC009950061EACB /* ViewController.swift */; };
 		FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438F1EC009E40061EACB /* ImagesModel.swift */; };
 		FAE826801EC12EEA000C4353 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */; };
+		FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FA7D438D1EC009950061EACB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7D438F1EC009E40061EACB /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5371051EB037F100AF69A4 /* AppDelegate.swift */,
+				FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */,
 				FA7D438F1EC009E40061EACB /* ImagesModel.swift */,
 				FA7D438D1EC009950061EACB /* ViewController.swift */,
 				FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */,
@@ -158,6 +161,7 @@
 				FA3710DD1EB821E20097AA56 /* Questions&Notes.swift in Sources */,
 				FA5371061EB037F100AF69A4 /* AppDelegate.swift in Sources */,
 				FA53710E1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld in Sources */,
+				FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */,
 				FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
