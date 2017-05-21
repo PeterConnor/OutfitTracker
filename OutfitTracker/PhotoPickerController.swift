@@ -22,6 +22,9 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var textField: UITextField!
     var note = ""
     
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         if photoImage.image == nil {

@@ -42,29 +42,46 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-4W-syd">
                                                     <rect key="frame" x="0.0" y="0.0" width="125" height="145"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTz-iN-c2y">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTz-iN-c2y">
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="145"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-vd-30B">
-                                                            <rect key="frame" x="0.0" y="103" width="125" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-gG-ZCx">
-                                                            <rect key="frame" x="0.0" y="124" width="125" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGW-5O-Vsl">
+                                                            <rect key="frame" x="0.0" y="103" width="125" height="42"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1AB-Rl-fce">
+                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="42"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-gG-ZCx">
+                                                                        <rect key="frame" x="0.0" y="21" width="125" height="21"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-vd-30B">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="21"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="42" id="ze8-L8-ITJ"/>
+                                                            </constraints>
+                                                            <blurEffect style="light"/>
+                                                        </visualEffectView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="3eO-gG-ZCx" secondAttribute="trailing" id="68s-7a-KoX"/>
-                                                        <constraint firstItem="3eO-gG-ZCx" firstAttribute="top" secondItem="Py5-vd-30B" secondAttribute="bottom" id="CEH-GP-roM"/>
-                                                        <constraint firstItem="3eO-gG-ZCx" firstAttribute="leading" secondItem="Ddg-4W-syd" secondAttribute="leading" id="Igs-Fp-eUC"/>
-                                                        <constraint firstAttribute="bottom" secondItem="3eO-gG-ZCx" secondAttribute="bottom" id="kb8-Hu-gZp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vGW-5O-Vsl" secondAttribute="trailing" id="CqY-cT-KRE"/>
+                                                        <constraint firstItem="qTz-iN-c2y" firstAttribute="top" secondItem="Ddg-4W-syd" secondAttribute="top" id="InP-wu-JTq"/>
+                                                        <constraint firstAttribute="bottom" secondItem="vGW-5O-Vsl" secondAttribute="bottom" id="RSm-bn-gCI"/>
+                                                        <constraint firstItem="vGW-5O-Vsl" firstAttribute="trailing" secondItem="qTz-iN-c2y" secondAttribute="trailing" id="XLi-hv-axk"/>
+                                                        <constraint firstItem="vGW-5O-Vsl" firstAttribute="leading" secondItem="Ddg-4W-syd" secondAttribute="leading" id="rF7-a4-Imj"/>
+                                                        <constraint firstItem="vGW-5O-Vsl" firstAttribute="bottom" secondItem="qTz-iN-c2y" secondAttribute="bottom" id="xTn-rW-8zZ"/>
+                                                        <constraint firstItem="vGW-5O-Vsl" firstAttribute="leading" secondItem="qTz-iN-c2y" secondAttribute="leading" id="yTr-6o-PRW"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -161,6 +178,10 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tjx-76-fOf" appends="YES" id="plZ-ZT-WJL"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="ueZ-qD-Jqf" id="9UD-xG-ddo"/>
@@ -173,8 +194,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLr-ql-Ds6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pml-cr-fT8" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="tjx-76-fOf">
+                    <connections>
+                        <action selector="onTap:" destination="y9p-ib-IHT" id="2kp-fI-d0T"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1608.8" y="-530.28485757121439"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jyN-bF-qUz">
+            <objects>
+                <viewController id="Rcw-6b-tTk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y9I-4G-bor"/>
+                        <viewControllerLayoutGuide type="bottom" id="dJK-XB-DMu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gxS-4y-crY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKA-qX-3QE">
+                                <rect key="frame" x="0.0" y="47" width="375" height="620"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bKA-qX-3QE" firstAttribute="top" secondItem="gxS-4y-crY" secondAttribute="top" id="Ndz-g1-swL"/>
+                            <constraint firstItem="dJK-XB-DMu" firstAttribute="top" secondItem="bKA-qX-3QE" secondAttribute="bottom" id="VjU-xf-EtO"/>
+                            <constraint firstItem="bKA-qX-3QE" firstAttribute="leading" secondItem="gxS-4y-crY" secondAttribute="leading" id="dEk-cI-blp"/>
+                            <constraint firstAttribute="trailing" secondItem="bKA-qX-3QE" secondAttribute="trailing" id="xSv-Ab-mH7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kzc-fH-QcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608.8" y="130.88455772113943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bii-FZ-hCP">

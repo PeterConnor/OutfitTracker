@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -48,10 +49,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        model.imageItems.remove(at: indexPath.item)
-        collectionView.deleteItems(at: [indexPath])
+        /// need to delete
+        /*model.imageItems.remove(at: indexPath.item)
+        let itemList = CoreDataManager.fetchObjects()
+        let item = itemList[indexPath.row]
+        //collectionView.deleteItems(at: [indexPath])
+        print("model items")
+        print(model.imageItems[indexPath.row])
+        print("coredata items")*/
         
-        /// NEEED TO REMOVE FROM CORE DATA OR ENLARGE****
     }
     
     @IBAction func saveButton(segue: UIStoryboardSegue) {

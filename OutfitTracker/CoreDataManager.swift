@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 class CoreDataManager: NSObject {
-    private class func getContext() -> NSManagedObjectContext {
+     class func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
@@ -41,6 +41,29 @@ class func storeObject(item: ImageItem) {
     }
     
 }
+    
+    class func deleteItem() {
+        let context = getContext()
+        
+        let fetchRequest: NSFetchRequest<ImageEntity> = ImageEntity.fetchRequest()
+        
+        do {
+            let arrayItems = try getContext().fetch(fetchRequest)
+            
+        
+            do {
+                try context.save()
+                print("Successfully saved data!")
+            } catch {
+                print("Error saving data!")
+                print(error.localizedDescription)
+            }
+            
+        } catch {
+            print("Entity is null")
+        }
+    }
+    
     
     class func fetchObjects() -> [ImageItem] {
         var objects = [ImageItem]()
