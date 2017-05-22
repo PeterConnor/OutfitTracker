@@ -225,9 +225,6 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         UIView.setAnimationDuration(moveDuration)
         self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
         UIView.commitAnimations()
-        
-        
-        
     }
     
 }

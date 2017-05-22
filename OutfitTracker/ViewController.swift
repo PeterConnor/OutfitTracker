@@ -67,7 +67,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //model.notes.append(photoPickerController.note)
         //model.dates.append(dateLabel)
         
-        let item = ImageItem(img: photoImage!, date: generateDate(), note: photoPickerController.note)
+        let item = ImageItem(img: photoImage!, date: generateDate(), note: photoPickerController.textField.text!)
         print(item)
         model.imageItems.append(item)
         
@@ -101,5 +101,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBAction func cancelButton(segue: UIStoryboardSegue) {
         
     }
+    
+    @IBAction func deleteButton(segue: UIStoryboardSegue) {
+        let largeImageViewController = segue.source as! LargeImageViewController
+        CoreDataManager.deleteObject(item: model.imageItems[largeImageViewController.number])
+        model.imageItems.remove(at: largeImageViewController.number)
+        imageCollectionView.deleteItems(at: largeImageViewController.indexPathNumber)
+        dismiss(animated: true, completion: nil)
+        imageCollectionView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowLargeImage" {
+            let newViewController = segue.destination as! LargeImageViewController
+            let indexPath = self.imageCollectionView.indexPath(for: sender as! UICollectionViewCell)!
+            newViewController.newImageItem = model.imageItems[indexPath.row]
+            newViewController.indexPathNumber = [indexPath]
+            newViewController.number = Int(indexPath.row)
+            
+        }
+    }
+    
 }
 

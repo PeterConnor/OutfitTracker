@@ -42,26 +42,21 @@ class func storeObject(item: ImageItem) {
     
 }
     
-    class func deleteItem() {
-        let context = getContext()
+    class func deleteObject(item: ImageItem) {
         
         let fetchRequest: NSFetchRequest<ImageEntity> = ImageEntity.fetchRequest()
+        let predicate = NSPredicate(format: "note == %@", item.note)
+        fetchRequest.predicate = predicate
         
-        do {
-            let arrayItems = try getContext().fetch(fetchRequest)
-            
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
         
             do {
-                try context.save()
-                print("Successfully saved data!")
+                try getContext().execute(deleteRequest)
+                print("Successfully deleted data!")
             } catch {
                 print("Error saving data!")
                 print(error.localizedDescription)
             }
-            
-        } catch {
-            print("Entity is null")
-        }
     }
     
     
