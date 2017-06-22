@@ -15,8 +15,6 @@ import Foundation
  
  What's going on in the @IBAction func choosePhoto closures? I'm still having trouble wrapping my head around closures & completion handlers.
  
- how to persist data? CoreData?
- 
  Why does picture get cut off?
  
  difference between indexpath and indexpath.row
@@ -27,10 +25,18 @@ import Foundation
  
  add alerts to delete cell and maybe x button.
  
- make image bigger
- 
  make collectionview look nice w/o pics loaded
  
- nsuserdefaults? How else to persist
+ add search bar
+ 
+ Add to facebook / Add to instagram
+ 
+ how to learn w/o youtube & tutorials?
+ 
+ whats happening inside searchbar func
+ 
+ ad search magnifying button and navigationItem.titleView = searchBar
+ 
+ 
  
 */

@@ -43,20 +43,23 @@ class func storeObject(item: ImageItem) {
 }
     
     class func deleteObject(item: ImageItem) {
-        
         let fetchRequest: NSFetchRequest<ImageEntity> = ImageEntity.fetchRequest()
-        let predicate = NSPredicate(format: "note == %@", item.note)
-        fetchRequest.predicate = predicate
+        
+        fetchRequest.predicate = NSCompoundPredicate(type:.and, subpredicates:[
+            NSPredicate(format: "note == %@", item.note),
+            NSPredicate(format: "date == %@", item.date)])
         
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
         
-            do {
-                try getContext().execute(deleteRequest)
-                print("Successfully deleted data!")
-            } catch {
-                print("Error saving data!")
-                print(error.localizedDescription)
-            }
+        
+        // execute request
+        do {
+            print("Deleting object from Core Data!")
+            try getContext().execute(deleteRequest)
+        } catch {
+            print("Error deleting object from Core Data")
+            print(error.localizedDescription)
+        }
     }
     
     

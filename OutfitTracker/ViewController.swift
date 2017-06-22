@@ -10,16 +10,37 @@ import Foundation
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     var model = ImagesModel.shared
     @IBOutlet weak var imageCollectionView: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     private let reuseIdentifier = "imageCell"
     
+    var notes = [String]()
+    
+    var filteredSearches = [String]()
+
     override func viewDidLoad() {
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
+        searchBar.delegate = self
+        
+        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        filteredSearches = [String]()
+        for i in model.imageItems {
+            let note = i.note
+            print("THE NOTE:\(note)")
+            filteredSearches.append(note)
+            notes.append(note)
+            print("notes!!!!!!: \(filteredSearches)")
+            print(filteredSearches.count)
+            imageCollectionView.reloadData()
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -27,7 +48,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return model.imageItems.count
+        return filteredSearches.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -42,7 +63,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         print(currentItem.image)
         cell.customImageView.image = currentItem.image
         cell.dateLabel.text = currentItem.date
-        cell.noteLabel.text = currentItem.note
+        cell.noteLabel.text = filteredSearches[indexPath.row]
         
         
         return cell
@@ -122,5 +143,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredSearches = searchText.isEmpty ? notes : notes.filter {(item: String) -> Bool in
+            return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+      imageCollectionView.reloadData()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        imageCollectionView.reloadData()
+    }
+
+
+
 }
 
