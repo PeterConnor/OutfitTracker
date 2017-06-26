@@ -32,6 +32,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewWillAppear(_ animated: Bool) {
         filteredSearches = [String]()
+        notes = [String]()
         for i in model.imageItems {
             let note = i.note
             print("THE NOTE:\(note)")
@@ -39,7 +40,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             notes.append(note)
             print("notes!!!!!!: \(filteredSearches)")
             print(filteredSearches.count)
-            imageCollectionView.reloadData()
         }
     }
     
@@ -127,18 +127,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let largeImageViewController = segue.source as! LargeImageViewController
         CoreDataManager.deleteObject(item: model.imageItems[largeImageViewController.number])
         model.imageItems.remove(at: largeImageViewController.number)
+        notes.remove(at: largeImageViewController.number)
+        filteredSearches.remove(at: largeImageViewController.number)
         imageCollectionView.deleteItems(at: largeImageViewController.indexPathNumber)
         dismiss(animated: true, completion: nil)
+        print("is this it???")
         imageCollectionView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowLargeImage" {
+            
             let newViewController = segue.destination as! LargeImageViewController
             let indexPath = self.imageCollectionView.indexPath(for: sender as! UICollectionViewCell)!
             newViewController.newImageItem = model.imageItems[indexPath.row]
             newViewController.indexPathNumber = [indexPath]
             newViewController.number = Int(indexPath.row)
+            
             
         }
     }

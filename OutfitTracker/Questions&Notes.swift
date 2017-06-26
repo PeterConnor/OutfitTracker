@@ -21,22 +21,38 @@ import Foundation
  
  what's happening in the singleton?
  
- **Notes**
- 
- add alerts to delete cell and maybe x button.
- 
- make collectionview look nice w/o pics loaded
- 
- add search bar
- 
- Add to facebook / Add to instagram
- 
  how to learn w/o youtube & tutorials?
  
  whats happening inside searchbar func
  
+ How do i load apps long term?
+ 
+ where to get design ideas?
+ 
+ **Notes**
+ 
+ add alerts to delete cell.
+ 
+ make collectionview look nice w/o pics loaded
+ 
  ad search magnifying button and navigationItem.titleView = searchBar
  
+ banner ads?
  
+ new user intro pages
+ 
+ calendar Apple JT
+ 
+ ad to fb and insta (others?). Option should be avail after u take/choose photo AND when u go to detail screen. (for save locally too).
+ 
+ change date format to something nicer.
+ 
+ if u enter letters on searchbar and hit cancel, imagecollectionview doesnt reset.
+ 
+ app crashes if u select video
+ 
+ delete all?
+ 
+ start using the app.
  
 */

@@ -19,4 +19,15 @@ class LargeImageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         largePhotoImage.image = newImageItem.image
     }
+    
+    @IBAction func saveToPhone(_ sender: Any) {
+        let imageData = UIImagePNGRepresentation(largePhotoImage.image!)
+        let compressedImage = UIImage(data: imageData!)
+        UIImageWriteToSavedPhotosAlbum(compressedImage!, nil, nil, nil)
+        
+        let alert = UIAlertController(title: "Saved", message: "Your photo has been saved", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
