@@ -31,28 +31,26 @@ import Foundation
  
  **Notes**
  
- add alerts to delete cell.
+add alerts to delete cell.
  
- make collectionview look nice w/o pics loaded
+make collectionview look nice w/o pics loaded
  
- ad search magnifying button and navigationItem.titleView = searchBar
+ad search magnifying button and navigationItem.titleView = searchBar
  
- banner ads?
+banner ads?
  
- new user intro pages
+new user intro pages
  
- calendar Apple JT
+calendar Apple JT
  
- ad to fb and insta (others?). Option should be avail after u take/choose photo AND when u go to detail screen. (for save locally too).
+change date format to something nicer.
  
- change date format to something nicer.
+app crashes if u select video
  
- if u enter letters on searchbar and hit cancel, imagecollectionview doesnt reset.
+delete all?
  
- app crashes if u select video
- 
- delete all?
- 
- start using the app.
+start using the app.
+
+feedback
  
 */

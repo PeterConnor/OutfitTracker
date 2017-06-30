@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Outfit Tracker-->
         <scene sceneID="naU-5e-bZs">
             <objects>
                 <viewController id="zJz-04-Lv7" customClass="ViewController" customModule="OutfitTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,6 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUz-wW-9ok">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6CB-Be-13M">
                                 <rect key="frame" x="0.0" y="116" width="375" height="562"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,6 +96,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Ddg-4W-syd" secondAttribute="trailing" id="Bjz-Zp-Pcg"/>
                                             <constraint firstItem="Ddg-4W-syd" firstAttribute="leading" secondItem="QwV-pi-6Fg" secondAttribute="leading" id="KRp-eL-TKc"/>
                                             <constraint firstItem="Ddg-4W-syd" firstAttribute="top" secondItem="QwV-pi-6Fg" secondAttribute="top" id="Wvq-r9-SRT"/>
+                                            <constraint firstItem="Ddg-4W-syd" firstAttribute="top" secondItem="QwV-pi-6Fg" secondAttribute="top" id="h2x-2S-5ef"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="customImageView" destination="qTz-iN-c2y" id="FBK-ug-svf"/>
@@ -101,15 +107,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUz-wW-9ok">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tMS-0e-f72">
+                    <navigationItem key="navigationItem" title="Outfit Tracker" id="tMS-0e-f72">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="X6l-X7-iz1">
                             <connections>
                                 <segue destination="y9p-ib-IHT" kind="presentation" id="2lS-U5-8qD"/>
@@ -228,7 +229,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="vaF-h7-Enw">
+                                    <navigationItem title="Photo Details" id="vaF-h7-Enw">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="5gS-Lx-nYG">
                                             <connections>
                                                 <segue destination="dhi-XV-tPJ" kind="unwind" unwindAction="cancelButtonWithSegue:" id="dEw-f5-SYD"/>
@@ -242,17 +243,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D4-Oy-jtf">
-                                <rect key="frame" x="136" y="617" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save To Phone"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7X-Bt-WEK">
-                                <rect key="frame" x="136" y="616" width="102" height="30"/>
+                                <rect key="frame" x="16" y="617" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save To Phone"/>
                                 <connections>
                                     <action selector="saveToPhone:" destination="Rcw-6b-tTk" eventType="touchUpInside" id="qg4-V0-AWS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ya-Bm-TCw">
+                                <rect key="frame" x="167" y="617" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButtonAction:" destination="Rcw-6b-tTk" eventType="touchUpInside" id="cqA-2o-mXj"/>
                                 </connections>
                             </button>
                         </subviews>

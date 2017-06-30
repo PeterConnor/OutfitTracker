@@ -23,24 +23,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var filteredSearches = [String]()
 
+    var tap = UITapGestureRecognizer()
+    
     override func viewDidLoad() {
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         searchBar.delegate = self
-        
+        tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         }
     
     override func viewWillAppear(_ animated: Bool) {
-        filteredSearches = [String]()
-        notes = [String]()
-        for i in model.imageItems {
-            let note = i.note
-            print("THE NOTE:\(note)")
-            filteredSearches.append(note)
-            notes.append(note)
-            print("notes!!!!!!: \(filteredSearches)")
-            print(filteredSearches.count)
-        }
+        resetFilteredSearches()
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -157,16 +150,36 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.searchBar.showsCancelButton = true
+        view.addGestureRecognizer(tap)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = ""
+        resetFilteredSearches()
+        view.removeGestureRecognizer(tap)
         searchBar.resignFirstResponder()
         imageCollectionView.reloadData()
+        
     }
-
-
-
+    
+    func resetFilteredSearches() {
+        filteredSearches = [String]()
+        notes = [String]()
+        for i in model.imageItems {
+            let note = i.note
+            print("THE NOTE:\(note)")
+            filteredSearches.append(note)
+            notes.append(note)
+            print("notes!!!!!!: \(filteredSearches)")
+            print(filteredSearches.count)
+        }
+    }
+    
+    func dismissKeyboard() {
+        view.removeGestureRecognizer(tap)
+        searchBar.resignFirstResponder()
+    }
+    
 }
 

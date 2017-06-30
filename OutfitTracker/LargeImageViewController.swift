@@ -30,4 +30,13 @@ class LargeImageViewController: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func shareButtonAction(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: [largePhotoImage.image!], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    
 }

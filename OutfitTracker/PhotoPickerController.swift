@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 import Photos
-
+import MobileCoreServices
 
 
 class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
@@ -162,7 +162,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func displayPicker(type: UIImagePickerControllerSourceType) {
-        self.imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: type)!
+        self.imagePicker.mediaTypes = [kUTTypeImage as String]
         self.imagePicker.sourceType = type
         self.imagePicker.allowsEditing = true
         
