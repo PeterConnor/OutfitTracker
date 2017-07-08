@@ -12,7 +12,7 @@ import Photos
 import MobileCoreServices
 
 
-class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, GroupDelegate {
 
     @IBOutlet weak var photoImage: UIImageView!
     var imagePicker: UIImagePickerController!
@@ -20,6 +20,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var xButton: UIButton!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var groupButton: UIButton!
+    
     var note = ""
     
     @IBAction func onTap(_ sender: Any) {
@@ -227,5 +229,15 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         UIView.commitAnimations()
     }
     
+    func userDidPickGroup(group: String) {
+        groupButton.setTitle(group, for: .normal)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showGroupVC" {
+            let  groupViewController = segue.destination as! GroupViewController
+            groupViewController.delegate = self
+        }
+    }
 }
 

@@ -39,7 +39,7 @@ ad search magnifying button and navigationItem.titleView = searchBar
  
 banner ads?
  
-new user intro pages
+new user intro pages?
  
 calendar Apple JT
  
@@ -53,8 +53,10 @@ feedback
  
 group, occassion, event
 
-allow user to delete & take new photo in detail view
+allow user to delete & take new photo in detail view (allow editing for date, note, group. See WJ app for date - picker view).
  
 searchbar - segment view. click segment. Then, search by date, group, or note!!!
+ 
+take photo is 1 too many steps...should automatically go to camera.
  
 */

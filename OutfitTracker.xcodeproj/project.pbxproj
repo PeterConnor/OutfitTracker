@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BABFB8CF74F9CED80013CF9B /* Pods_OutfitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE35931A17F088A98A327AA9 /* Pods_OutfitTracker.framework */; };
 		FA3710DD1EB821E20097AA56 /* Questions&Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */; };
+		FA52E1FD1F1146EE00F4B1BA /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */; };
 		FA5371061EB037F100AF69A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5371051EB037F100AF69A4 /* AppDelegate.swift */; };
 		FA5371081EB037F100AF69A4 /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5371071EB037F100AF69A4 /* PhotoPickerController.swift */; };
 		FA53710B1EB037F100AF69A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5371091EB037F100AF69A4 /* Main.storyboard */; };
@@ -17,8 +18,6 @@
 		FA5371131EB037F100AF69A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5371111EB037F100AF69A4 /* LaunchScreen.storyboard */; };
 		FA7D438E1EC009950061EACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438D1EC009950061EACB /* ViewController.swift */; };
 		FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438F1EC009E40061EACB /* ImagesModel.swift */; };
-		FA8788441F05CE6D00BFD6A2 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8788431F05CE6D00BFD6A2 /* CalendarViewController.swift */; };
-		FA8788461F05CF7000BFD6A2 /* CustomCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8788451F05CF7000BFD6A2 /* CustomCalendarCell.swift */; };
 		FAE826801EC12EEA000C4353 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */; };
 		FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */; };
 		FAF02ABD1ED224E40088CB40 /* LargeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */; };
@@ -29,6 +28,7 @@
 		383F97023BF30A17AEB77065 /* Pods-OutfitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker.release.xcconfig"; sourceTree = "<group>"; };
 		AE35931A17F088A98A327AA9 /* Pods_OutfitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Questions&Notes.swift"; sourceTree = "<group>"; };
+		FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		FA5371021EB037F100AF69A4 /* OutfitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutfitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5371051EB037F100AF69A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA5371071EB037F100AF69A4 /* PhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
@@ -39,8 +39,6 @@
 		FA5371141EB037F100AF69A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA7D438D1EC009950061EACB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7D438F1EC009E40061EACB /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
-		FA8788431F05CE6D00BFD6A2 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		FA8788451F05CF7000BFD6A2 /* CustomCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalendarCell.swift; sourceTree = "<group>"; };
 		FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeImageViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +101,7 @@
 				FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */,
 				FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */,
 				FA5371071EB037F100AF69A4 /* PhotoPickerController.swift */,
-				FA8788431F05CE6D00BFD6A2 /* CalendarViewController.swift */,
-				FA8788451F05CF7000BFD6A2 /* CustomCalendarCell.swift */,
+				FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */,
 				FA5371091EB037F100AF69A4 /* Main.storyboard */,
 				FA53710F1EB037F100AF69A4 /* Assets.xcassets */,
 				FA5371111EB037F100AF69A4 /* LaunchScreen.storyboard */,
@@ -239,15 +236,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8788441F05CE6D00BFD6A2 /* CalendarViewController.swift in Sources */,
 				FA7D438E1EC009950061EACB /* ViewController.swift in Sources */,
 				FAE826801EC12EEA000C4353 /* CustomCollectionViewCell.swift in Sources */,
 				FA5371081EB037F100AF69A4 /* PhotoPickerController.swift in Sources */,
 				FA3710DD1EB821E20097AA56 /* Questions&Notes.swift in Sources */,
+				FA52E1FD1F1146EE00F4B1BA /* GroupViewController.swift in Sources */,
 				FA5371061EB037F100AF69A4 /* AppDelegate.swift in Sources */,
 				FAF02ABD1ED224E40088CB40 /* LargeImageViewController.swift in Sources */,
 				FA53710E1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld in Sources */,
-				FA8788461F05CF7000BFD6A2 /* CustomCalendarCell.swift in Sources */,
 				FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */,
 				FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */,
 			);
