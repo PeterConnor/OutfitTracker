@@ -19,12 +19,14 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var groupList = ["test"]
     var delegate: GroupDelegate? = nil
+    var tap = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         textField.delegate = self
+        tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         
     }
 
@@ -65,6 +67,14 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        view.addGestureRecognizer(tap)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        view.removeGestureRecognizer(tap)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text != nil && textField.text != "" {
             groupList.append(textField.text!)
@@ -78,6 +88,14 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func dismissKeyboard() {
+        view.removeGestureRecognizer(tap)
+        textField.text = nil
+        textField.resignFirstResponder()
+    }
+    
+   
 
     /*
     // Override to support conditional editing of the table view.

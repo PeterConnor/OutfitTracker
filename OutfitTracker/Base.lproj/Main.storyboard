@@ -269,6 +269,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="SQM-m3-XMA" id="M6P-gV-i6e"/>
