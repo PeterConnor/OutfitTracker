@@ -50,8 +50,6 @@ delete all?
 start using the app.
 
 feedback
- 
-group, occassion, event
 
 allow user to delete & take new photo in detail view (allow editing for date, note, group. See WJ app for date - picker view).
  

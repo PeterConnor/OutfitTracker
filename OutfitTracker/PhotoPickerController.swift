@@ -23,6 +23,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var groupButton: UIButton!
     
     var note = ""
+    var groupGlobal = ""
     
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
@@ -231,6 +232,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     func userDidPickGroup(group: String) {
         groupButton.setTitle(group, for: .normal)
+        groupGlobal = group
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -21,13 +21,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UUz-wW-9ok">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="UUz-wW-9ok">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e47-2X-W40">
+                                <rect key="frame" x="0.0" y="116" width="375" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Note"/>
+                                    <segment title="Group"/>
+                                    <segment title="Date"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="zJz-04-Lv7" eventType="valueChanged" id="bog-JT-0CW"/>
+                                </connections>
+                            </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6CB-Be-13M">
-                                <rect key="frame" x="0.0" y="116" width="375" height="562"/>
+                                <rect key="frame" x="0.0" y="145" width="375" height="533"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zNH-T7-L7Z">
@@ -120,6 +132,7 @@
                     <connections>
                         <outlet property="imageCollectionView" destination="6CB-Be-13M" id="cii-ek-CrP"/>
                         <outlet property="searchBar" destination="UUz-wW-9ok" id="Fc9-0e-vwl"/>
+                        <outlet property="segmentedControl" destination="e47-2X-W40" id="QXs-oH-djW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVp-Sk-cra" userLabel="First Responder" sceneMemberID="firstResponder"/>
