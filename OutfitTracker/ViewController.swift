@@ -23,6 +23,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var notes = [String]()
     
+    var itemList = [ImageItem]()
+    
     var noteSearches = [String]()
 
     var tap = UITapGestureRecognizer()
@@ -33,10 +35,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         searchBar.delegate = self
         tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         searchBar.placeholder = "Search"
+        itemList = model.imageItems
         }
     
     override func viewWillAppear(_ animated: Bool) {
         resetFilteredSearches()
+        itemList = model.imageItems
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -52,15 +56,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
         let currentItem = model.imageItems[indexPath.row]
-        print(currentItem.date)
-        print(currentItem.note)
-        print(currentItem.image)
-        print("LOOK HERE!!! \(currentItem.group)")
-        cell.customImageView.image = currentItem.image
-        cell.dateLabel.text = currentItem.date
-        cell.noteLabel.text = noteSearches[indexPath.row]
+        print("*****START*****")
+        print("notesearches: \(noteSearches)")
+        print("notes \(notes)")
+        //print("imageItems \(model.imageItems)")
+        print("date: \(currentItem.date)")
+        print("Note: \(currentItem.note)")
+        print("Image: \(currentItem.image)")
+        print("Group: \(currentItem.group)")
         
-        
+            print("indexPath.row = \(indexPath.row)")
+            cell.customImageView.image = itemList[indexPath.row].image
+            cell.dateLabel.text = currentItem.date
+            cell.noteLabel.text = noteSearches[indexPath.row]
+
         return cell
     }
     
@@ -73,8 +82,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let photoImage = photoPickerController.photoImage.image
         
         let item = ImageItem(img: photoImage!, date: generateDate(), note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal)
-        print(item)
         model.imageItems.append(item)
+        itemList.append(item)
         
         CoreDataManager.storeObject(item: item)
         
@@ -111,11 +120,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let largeImageViewController = segue.source as! LargeImageViewController
         CoreDataManager.deleteObject(item: model.imageItems[largeImageViewController.number])
         model.imageItems.remove(at: largeImageViewController.number)
+        itemList = model.imageItems
         notes.remove(at: largeImageViewController.number)
         noteSearches.remove(at: largeImageViewController.number)
         imageCollectionView.deleteItems(at: largeImageViewController.indexPathNumber)
         dismiss(animated: true, completion: nil)
-        print("is this it???")
         imageCollectionView.reloadData()
     }
     
@@ -136,6 +145,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         noteSearches = searchText.isEmpty ? notes : notes.filter {(item: String) -> Bool in
             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
+        print("noteSearches in searchBar!!!!!\(noteSearches)")
+        itemList = []
+        for i in model.imageItems {
+            if noteSearches.contains(i.note) {
+                itemList.append(i)
+            }
+        }
+        print("itemListNOTE: \(itemList) AND \(itemList.count) ***************")
       imageCollectionView.reloadData()
     }
     
@@ -148,6 +165,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         searchBar.showsCancelButton = false
         searchBar.text = ""
         resetFilteredSearches()
+        itemList = model.imageItems
         view.removeGestureRecognizer(tap)
         searchBar.resignFirstResponder()
         imageCollectionView.reloadData()
@@ -159,11 +177,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         notes = [String]()
         for i in model.imageItems {
             let note = i.note
-            print("THE NOTE:\(note)")
             noteSearches.append(note)
             notes.append(note)
-            print("notes!!!!!!: \(noteSearches)")
-            print(noteSearches.count)
         }
     }
     
