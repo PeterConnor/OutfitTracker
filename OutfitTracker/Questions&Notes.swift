@@ -31,30 +31,29 @@ import Foundation
  
  **Notes**
  
+is take photo button too choppy? Have 2 buttons....1 take photo, 2. choose photo from library!)
+ 
+ad search magnifying button and navigationItem.titleView = searchBar?
+segmentedControl should appear and push collection view down when searchBar is tapped.
+ 
 add alerts to delete cell.
  
 make collectionview look nice w/o pics loaded
  
-ad search magnifying button and navigationItem.titleView = searchBar
- 
-banner ads?
- 
-new user intro pages?
- 
-calendar Apple JT
+Add instructions to support page.
  
 change date format to something nicer.
  
-delete all?
+Add Delete all to support page with an alert button.
  
 start using the app.
 
-feedback
-
 allow user to delete & take new photo in detail view (allow editing for date, note, group. See WJ app for date - picker view).
+
+search bar search button should dismiss
  
-searchbar - segment view. click segment. Then, search by date, group, or note!!!
+ disable done button when adding group
  
-take photo is 1 too many steps...should automatically go to camera.
+ groups don't persist...
  
 */

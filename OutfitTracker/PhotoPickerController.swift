@@ -43,6 +43,9 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         textField.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -241,5 +244,6 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             groupViewController.delegate = self
         }
     }
+
 }
 

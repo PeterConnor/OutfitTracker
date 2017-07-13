@@ -9,6 +9,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Support View Controller-->
+        <scene sceneID="y0x-c3-Bx1">
+            <objects>
+                <viewController id="plv-CN-B4Z" customClass="SupportViewController" customModule="OutfitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j7T-zM-IK6"/>
+                        <viewControllerLayoutGuide type="bottom" id="rTb-Db-DnR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AZh-mK-Lyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-ml-J1U">
+                                <rect key="frame" x="149" y="318" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send Email"/>
+                                <connections>
+                                    <action selector="sendEmail:" destination="plv-CN-B4Z" eventType="touchUpInside" id="ats-eq-ZOP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TM-2k-pME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="-1254"/>
+        </scene>
         <!--Outfit Tracker-->
         <scene sceneID="naU-5e-bZs">
             <objects>
@@ -123,7 +151,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Outfit Tracker" id="tMS-0e-f72">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X6l-X7-iz1">
+                        <barButtonItem key="leftBarButtonItem" title="⚙" id="rLC-S6-gAR">
+                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.5098191352739726" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="plv-CN-B4Z" kind="show" id="ZiM-Y9-BAn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="X6l-X7-iz1">
                             <connections>
                                 <segue destination="y9p-ib-IHT" kind="presentation" id="2lS-U5-8qD"/>
                             </connections>

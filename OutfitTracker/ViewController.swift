@@ -22,10 +22,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     private let reuseIdentifier = "imageCell"
     
     var notes = [String]()
+    var groups = [String]()
+    var dates = [String]()
     
     var itemList = [ImageItem]()
     
-    var noteSearches = [String]()
+    var searches = [String]()
 
     var tap = UITapGestureRecognizer()
     
@@ -36,10 +38,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         searchBar.placeholder = "Search"
         itemList = model.imageItems
+        //CoreDataManager.cleanCoreData()
         }
     
     override func viewWillAppear(_ animated: Bool) {
-        resetFilteredSearches()
+        resetSearches()
         itemList = model.imageItems
     }
     
@@ -48,7 +51,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return noteSearches.count
+        return searches.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,7 +60,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let currentItem = model.imageItems[indexPath.row]
         print("*****START*****")
-        print("notesearches: \(noteSearches)")
+        print("searches: \(searches)")
         print("notes \(notes)")
         //print("imageItems \(model.imageItems)")
         print("date: \(currentItem.date)")
@@ -66,9 +69,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         print("Group: \(currentItem.group)")
         
             print("indexPath.row = \(indexPath.row)")
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
             cell.customImageView.image = itemList[indexPath.row].image
-            cell.dateLabel.text = currentItem.date
-            cell.noteLabel.text = noteSearches[indexPath.row]
+            cell.dateLabel.text = itemList[indexPath.row].date
+            cell.noteLabel.text = searches[indexPath.row]
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            cell.customImageView.image = itemList[indexPath.row].image
+            cell.dateLabel.text = itemList[indexPath.row].date
+            cell.noteLabel.text = itemList[indexPath.row].note
+        } else if segmentedControl.selectedSegmentIndex == 2 {
+            cell.customImageView.image = itemList[indexPath.row].image
+            cell.dateLabel.text = searches[indexPath.row]
+            cell.noteLabel.text = itemList[indexPath.row].note
+        }
 
         return cell
     }
@@ -121,8 +135,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         CoreDataManager.deleteObject(item: model.imageItems[largeImageViewController.number])
         model.imageItems.remove(at: largeImageViewController.number)
         itemList = model.imageItems
-        notes.remove(at: largeImageViewController.number)
-        noteSearches.remove(at: largeImageViewController.number)
+        ///DO I NEED THESE ********
+        //notes.remove(at: largeImageViewController.number)
+        //groups.remove(at: largeImageViewController.number)
+        print(largeImageViewController.number)
+        //dates.remove(at: largeImageViewController.number)
+        //searches.remove(at: largeImageViewController.number)
+        resetSearches()
         imageCollectionView.deleteItems(at: largeImageViewController.indexPathNumber)
         dismiss(animated: true, completion: nil)
         imageCollectionView.reloadData()
@@ -142,16 +161,42 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        noteSearches = searchText.isEmpty ? notes : notes.filter {(item: String) -> Bool in
-            return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
-        }
-        print("noteSearches in searchBar!!!!!\(noteSearches)")
-        itemList = []
-        for i in model.imageItems {
-            if noteSearches.contains(i.note) {
-                itemList.append(i)
+        if segmentedControl.selectedSegmentIndex == 0 {
+            searches = searchText.isEmpty ? notes : notes.filter {(item: String) -> Bool in
+                return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            }
+            print("searches in searchBar!!!!!\(searches)")
+            itemList = []
+            for i in model.imageItems {
+                if searches.contains(i.note) {
+                    itemList.append(i)
+                }
+            }
+        } else if segmentedControl.selectedSegmentIndex == 1 {
+            searches = searchText.isEmpty ? groups : groups.filter {(item: String) -> Bool in
+                return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            }
+            print("searches in searchBar!!!!!\(searches)")
+            itemList = []
+            for i in model.imageItems {
+                if searches.contains(i.group) {
+                    itemList.append(i)
+                }
+            }
+        } else if segmentedControl.selectedSegmentIndex == 2 {
+            searches = searchText.isEmpty ? dates : dates.filter {(item: String) -> Bool in
+                return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+            }
+            print("searches in searchBar!!!!!\(searches)")
+            itemList = []
+            for i in model.imageItems {
+                if searches.contains(i.date) {
+                    itemList.append(i)
+                }
             }
         }
+
+        
         print("itemListNOTE: \(itemList) AND \(itemList.count) ***************")
       imageCollectionView.reloadData()
     }
@@ -164,7 +209,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.text = ""
-        resetFilteredSearches()
+        resetSearches()
         itemList = model.imageItems
         view.removeGestureRecognizer(tap)
         searchBar.resignFirstResponder()
@@ -172,13 +217,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
-    func resetFilteredSearches() {
-        noteSearches = [String]()
+    func resetSearches() {
+        searches = [String]()
         notes = [String]()
+        groups = [String]()
+        dates = [String]()
+        
         for i in model.imageItems {
-            let note = i.note
-            noteSearches.append(note)
-            notes.append(note)
+            if segmentedControl.selectedSegmentIndex == 0 {
+                let note = i.note
+                searches.append(note)
+                notes.append(note)
+            } else if segmentedControl.selectedSegmentIndex == 1 {
+                let group = i.group
+                searches.append(group)
+                groups.append(group)
+            } else if segmentedControl.selectedSegmentIndex == 2 {
+                let date = i.date
+                searches.append(date)
+                dates.append(date)
+            }
         }
     }
     
@@ -198,7 +256,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             searchBar.placeholder = "Search"
         }
     }
-    
     
 }
 
