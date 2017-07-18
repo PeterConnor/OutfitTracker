@@ -29,28 +29,18 @@ import Foundation
  
  where to get design ideas?
  
- how to text/maximize performace?
+ how to text/maximize performance?
+ 
+ start using the app.
  
  **Notes**
  
 Have 2 buttons....1 take photo, 2. choose photo from library!
  
-add alerts to delete cell.
- 
 make collectionview look nice w/o pics loaded
  
 Add instructions to support page.
- 
-change date format to something nicer.
- 
-refresh ViewController when deleteAll is pressed in supportVC
- 
-start using the app.
 
 allow user to delete & take new photo in detail view (allow editing for date, note, group. See WJ app for date - picker view).
- 
-Persist groups
- 
-simulator crashes
  
 */

@@ -377,6 +377,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Delete" id="h9C-8C-2kn">
                                             <connections>
+                                                <action selector="deleteButton:" destination="Rcw-6b-tTk" id="Ct8-be-O7A"/>
                                                 <segue destination="dhi-XV-tPJ" kind="unwind" unwindAction="deleteButtonWithSegue:" id="sVU-2t-UJd"/>
                                             </connections>
                                         </barButtonItem>

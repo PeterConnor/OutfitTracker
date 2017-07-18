@@ -53,6 +53,18 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
     }
     
     @IBAction func deleteAll(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "WARNING!", message: "Are you sure you want to delete all entries?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Yes, I'm sure", style: .default, handler: deleteConfirmation)
+        let dismiss = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(yesAction)
+        alert.addAction(dismiss)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func deleteConfirmation(action: UIAlertAction) {
         CoreDataManager.cleanCoreData()
         ImagesModel.shared.imageItems = []
     }
