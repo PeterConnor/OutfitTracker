@@ -38,12 +38,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         searchBar.placeholder = "Search"
         itemList = model.imageItems
-        //CoreDataManager.cleanCoreData()
         }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         resetSearches()
         itemList = model.imageItems
+        imageCollectionView.reloadData()
+        print("check?")
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -61,12 +63,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let currentItem = model.imageItems[indexPath.row]
         print("*****START*****")
         print("searches: \(searches)")
-        print("notes \(notes)")
-        //print("imageItems \(model.imageItems)")
+        print("imageItems count \(model.imageItems.count)")
         print("date: \(currentItem.date)")
+        print("dates: \(dates)")
         print("Note: \(currentItem.note)")
-        print("Image: \(currentItem.image)")
+        print("Notes: \(notes)")
+        //print("Image: \(currentItem.image)")
         print("Group: \(currentItem.group)")
+        print("Groups: \(groups)")
         
             print("indexPath.row = \(indexPath.row)")
         
@@ -74,14 +78,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.customImageView.image = itemList[indexPath.row].image
             cell.dateLabel.text = itemList[indexPath.row].date
             cell.noteLabel.text = searches[indexPath.row]
+            cell.groupLabel.text = itemList[indexPath.row].group
         } else if segmentedControl.selectedSegmentIndex == 1 {
             cell.customImageView.image = itemList[indexPath.row].image
             cell.dateLabel.text = itemList[indexPath.row].date
             cell.noteLabel.text = itemList[indexPath.row].note
+            cell.groupLabel.text = searches[indexPath.row]
         } else if segmentedControl.selectedSegmentIndex == 2 {
             cell.customImageView.image = itemList[indexPath.row].image
             cell.dateLabel.text = searches[indexPath.row]
             cell.noteLabel.text = itemList[indexPath.row].note
+            cell.groupLabel.text = itemList[indexPath.row].group
         }
 
         return cell
@@ -107,7 +114,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func generateDate() -> String {
         let date = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "E, M.d.yy"
+        dateFormatter.dateFormat = "E  MM/d/yy"
         let dateLabel = dateFormatter.string(from: date)
         return dateLabel
     }
@@ -197,7 +204,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
 
         
-        print("itemListNOTE: \(itemList) AND \(itemList.count) ***************")
+        print("itemListNOTE: \(itemList) AND \(itemList.count)")
       imageCollectionView.reloadData()
     }
     
@@ -245,7 +252,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         searchBar.resignFirstResponder()
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
     @IBAction func segmentedControl(_ sender: Any) {
+        searchBar.text = ""
+        resetSearches()
+        itemList = model.imageItems
+        imageCollectionView.reloadData()
         if segmentedControl.selectedSegmentIndex == 0 {
             searchBar.placeholder = "Search by Note"
         } else if segmentedControl.selectedSegmentIndex == 1 {

@@ -17,7 +17,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    var groupList = ["test"]
+    var groupList = [String]()
     var delegate: GroupDelegate? = nil
     var tap = UITapGestureRecognizer()
     
@@ -27,6 +27,10 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         textField.delegate = self
         tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        
+        if let persistedGroupList = UserDefaults.standard.object(forKey: "groupList") {
+            groupList = persistedGroupList as! [String]
+        }
         
     }
 
@@ -78,6 +82,8 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text != nil && textField.text != "" {
             groupList.append(textField.text!)
+            UserDefaults.standard.set(groupList, forKey: "groupList")
+            
             tableView.reloadData()
         }
         textField.resignFirstResponder()

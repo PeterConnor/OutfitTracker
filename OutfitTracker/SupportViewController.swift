@@ -52,6 +52,12 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
         controller.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func deleteAll(_ sender: Any) {
+        CoreDataManager.cleanCoreData()
+        ImagesModel.shared.imageItems = []
+    }
+    
+    
     /*
     // MARK: - Navigation
 

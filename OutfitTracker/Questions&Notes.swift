@@ -29,12 +29,11 @@ import Foundation
  
  where to get design ideas?
  
+ how to text/maximize performace?
+ 
  **Notes**
  
-is take photo button too choppy? Have 2 buttons....1 take photo, 2. choose photo from library!)
- 
-ad search magnifying button and navigationItem.titleView = searchBar?
-segmentedControl should appear and push collection view down when searchBar is tapped.
+Have 2 buttons....1 take photo, 2. choose photo from library!
  
 add alerts to delete cell.
  
@@ -44,16 +43,14 @@ Add instructions to support page.
  
 change date format to something nicer.
  
-Add Delete all to support page with an alert button.
+refresh ViewController when deleteAll is pressed in supportVC
  
 start using the app.
 
 allow user to delete & take new photo in detail view (allow editing for date, note, group. See WJ app for date - picker view).
-
-search bar search button should dismiss
  
- disable done button when adding group
+Persist groups
  
- groups don't persist...
+simulator crashes
  
 */

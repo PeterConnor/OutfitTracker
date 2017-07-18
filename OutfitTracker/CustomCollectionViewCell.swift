@@ -14,4 +14,5 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var customImageView: UIImageView!
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var groupLabel: UILabel!
 }
