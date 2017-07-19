@@ -21,6 +21,10 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var xButton: UIButton!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var groupButton: UIButton!
+    @IBOutlet weak var takePhotoButton: UIButton!
+    @IBOutlet weak var photoLibraryButton: UIButton!
+    
+    
     
     var note = ""
     var groupGlobal = ""
@@ -37,6 +41,12 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             saveButton.isEnabled = true
             xButton.isHidden = false
         }
+        if !(UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            takePhotoButton.isHidden = true
+        }
+        if !(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
+            photoLibraryButton.isHidden = true
+        }
     }
     
     override func viewDidLoad() {
@@ -51,14 +61,54 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func choosePhoto(_ sender: UIButton) {
+    
+    @IBAction func photoLibraryAction(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
+                
+                let status = PHPhotoLibrary.authorizationStatus()
+                
+                if (status == .authorized) {
+                    self.displayPicker(type: .photoLibrary)
+                }
+                
+                if (status == .restricted) {
+                    
+                    self.handleRestricted()
+                }
+                
+                if (status == .denied) {
+                    
+                    self.handleDenied()
+                }
+                
+                if (status == .notDetermined) {
+                    
+                    PHPhotoLibrary.requestAuthorization({ (status) in
+                        if (status == PHAuthorizationStatus.authorized) {
+                            self.displayPicker(type: .photoLibrary)
+                        }
+                    })
+                    
+                }
+                
+                
+            }
+    }
+    
+    
+    @IBAction func choosePhoto(_ sender: UIButton) {
+        print("yo")
+        
+        //let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
         if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
-            let cameraAction = UIAlertAction(title: "Use Camera", style: .default) { (action) in
+            //let cameraAction = UIAlertAction(title: "Use Camera", style: .default) { (action) in
                 
                 let status = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
                 
@@ -87,11 +137,12 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
                 }
                 
             }
-            
-        alertController.addAction(cameraAction)
-        }
+    }
+    
+        //alertController.addAction(cameraAction)
+        //}
         
-        if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
+        /*if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
             let photoLibraryAction = UIAlertAction(title: "Use Photo Library", style: .default) { (action) in
                 
                 let status = PHPhotoLibrary.authorizationStatus()
@@ -123,15 +174,15 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 }
             
-            alertController.addAction(photoLibraryAction)
+            //alertController.addAction(photoLibraryAction)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        //let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     
-        alertController.addAction(cancelAction)
+      //  alertController.addAction(cancelAction)
         
-        present(alertController, animated: true, completion: nil)
-    }
+      //  present(alertController, animated: true, completion: nil)
+    } */
     
     func handleDenied() {
         
@@ -220,7 +271,6 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         
             return newLength <= 10
     }
-    
     
     func moveDistance(textField: UITextField, moveDistance: Int, up: Bool) {
         let moveDuration = 0.3
