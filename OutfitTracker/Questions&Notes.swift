@@ -15,27 +15,17 @@ import Foundation
  
  What's going on in the @IBAction func choosePhoto closures? I'm still having trouble wrapping my head around closures & completion handlers.
  
- Why does picture get cut off?
- 
- difference between indexpath and indexpath.row
- 
  what's happening in the singleton?
  
  how to learn w/o youtube & tutorials?
  
  whats happening inside searchbar func
  
- How do i load apps long term?
- 
- where to get design ideas?
- 
  how to text/maximize performance?
  
- start using the app.
+ better way to commit rather thana branching.
  
  **Notes**
- 
-Have 2 buttons....1 take photo, 2. choose photo from library!
  
 make collectionview look nice w/o pics loaded
  

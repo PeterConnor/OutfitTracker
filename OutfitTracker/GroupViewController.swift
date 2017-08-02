@@ -31,9 +31,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let persistedGroupList = UserDefaults.standard.object(forKey: "groupList") {
             groupList = persistedGroupList as! [String]
         }
-        
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -271,6 +271,13 @@
                                     <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="9se-Nv-LI4"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEh-UO-ofE">
+                                <rect key="frame" x="16" y="618" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -280,6 +287,7 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="ueZ-qD-Jqf" id="9UD-xG-ddo"/>
+                        <outlet property="dateTextField" destination="dEh-UO-ofE" id="D8g-UV-p7f"/>
                         <outlet property="groupButton" destination="IW4-5l-fQ8" id="r5W-ge-DrJ"/>
                         <outlet property="photoImage" destination="bYT-DX-AcS" id="6Eq-O6-O6Z"/>
                         <outlet property="photoLibraryButton" destination="3Sz-Rp-JKe" id="C4J-IW-NNT"/>

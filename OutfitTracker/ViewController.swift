@@ -102,7 +102,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let photoPickerController = segue.source as! PhotoPickerController
         let photoImage = photoPickerController.photoImage.image
         
-        let item = ImageItem(img: photoImage!, date: generateDate(), note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal)
+        let item = ImageItem(img: photoImage!, date: photoPickerController.dateTextField.text!, note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal)
         model.imageItems.append(item)
         itemList.append(item)
         
@@ -271,6 +271,5 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             searchBar.placeholder = "Search"
         }
     }
-    
 }
 

@@ -23,8 +23,9 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var groupButton: UIButton!
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var photoLibraryButton: UIButton!
+    @IBOutlet weak var dateTextField: UITextField!
     
-    
+    let datePicker = UIDatePicker()
     
     var note = ""
     var groupGlobal = ""
@@ -52,6 +53,13 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+        
+        createDatePicker()
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E  MM/d/yy"
+        dateTextField.text = dateFormatter.string(from: date)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -293,6 +301,31 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             let  groupViewController = segue.destination as! GroupViewController
             groupViewController.delegate = self
         }
+    }
+    
+    func createDatePicker() {
+        
+        datePicker.datePickerMode = .date
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: true)
+        
+        dateTextField.inputAccessoryView = toolbar
+        
+        dateTextField.inputView = datePicker
+        
+    }
+    
+    func donePressed() {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E  MM/d/yy"
+        
+        dateTextField.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
     }
 
 }
