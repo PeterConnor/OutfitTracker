@@ -30,6 +30,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     var note = ""
     var groupGlobal = ""
     
+    var editedItem: ImageItem?
+    
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
     }
@@ -60,6 +62,17 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E  MM/d/yy"
         dateTextField.text = dateFormatter.string(from: date)
+        
+        if editedItem != nil {
+            photoImage.image = editedItem?.image
+            textField.text = editedItem?.note
+            dateTextField.text = editedItem?.date
+            groupButton.setTitle(editedItem?.group, for: .normal)
+            groupGlobal = editedItem!.group
+            
+            
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

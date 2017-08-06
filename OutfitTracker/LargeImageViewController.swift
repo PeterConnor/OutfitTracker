@@ -37,4 +37,9 @@ class LargeImageViewController: UIViewController {
         
         self.present(activityVC, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! PhotoPickerController
+        destinationVC.editedItem = newImageItem
+    }
 }
