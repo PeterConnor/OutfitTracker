@@ -31,6 +31,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     var groupGlobal = ""
     
     var editedItem: ImageItem?
+    var indexPathNumber: [IndexPath]?
+    var number: Int?
     
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
@@ -72,7 +74,10 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             
             
         }
-        
+        if number != nil {
+            print("NUMBERRRRRRRRRRRR: \(number!)")
+          print(indexPathNumber!)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -122,8 +127,6 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func choosePhoto(_ sender: UIButton) {
-        print("yo")
-        
         //let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -269,7 +272,6 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text {
             note = text
-            print(note)
             textField.resignFirstResponder()
             }
         return true

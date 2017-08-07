@@ -21,7 +21,7 @@ import Foundation
  
  whats happening inside searchbar func
  
- how to text/maximize performance?
+ how to test/maximize performance?
  
  better way to commit rather thana branching.
  
@@ -31,6 +31,10 @@ make collectionview look nice w/o pics loaded
  
 Add instructions to support page.
 
-allow user to delete & take new photo in detail view (allow editing for date, note, group. See WJ app for date - picker view).
+button text doesnt load on simulator when u edit
+
+sort sollectionview by date
+
+ does largeimageview close when save/cancel button are clicked on photopickerVC
  
 */

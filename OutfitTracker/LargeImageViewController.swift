@@ -39,7 +39,11 @@ class LargeImageViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! PhotoPickerController
-        destinationVC.editedItem = newImageItem
+        if segue.identifier == "showPhotoPickerVC" {
+            let destinationVC = segue.destination as! PhotoPickerController
+            destinationVC.editedItem = newImageItem
+            destinationVC.indexPathNumber = indexPathNumber
+            destinationVC.number = number
+        }
     }
 }

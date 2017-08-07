@@ -45,7 +45,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         resetSearches()
         itemList = model.imageItems
         imageCollectionView.reloadData()
-        print("check?")
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -61,18 +60,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         
         let currentItem = model.imageItems[indexPath.row]
-        print("*****START*****")
-        print("searches: \(searches)")
-        print("imageItems count \(model.imageItems.count)")
-        print("date: \(currentItem.date)")
-        print("dates: \(dates)")
-        print("Note: \(currentItem.note)")
-        print("Notes: \(notes)")
+        //print("*****START*****")
+       // print("searches: \(searches)")
+        //print("imageItems count \(model.imageItems.count)")
+        //print("date: \(currentItem.date)")
+        //print("dates: \(dates)")
+        //print("Note: \(currentItem.note)")
+        //print("Notes: \(notes)")
         //print("Image: \(currentItem.image)")
-        print("Group: \(currentItem.group)")
-        print("Groups: \(groups)")
+        //print("Group: \(currentItem.group)")
+        //print("Groups: \(groups)")
         
-            print("indexPath.row = \(indexPath.row)")
+            //print("indexPath.row = \(indexPath.row)")
         
         if segmentedControl.selectedSegmentIndex == 0 {
             cell.customImageView.image = itemList[indexPath.row].image
@@ -100,6 +99,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func saveButton(segue: UIStoryboardSegue) {
         let photoPickerController = segue.source as! PhotoPickerController
+        
+        if photoPickerController.number != nil && photoPickerController.indexPathNumber != nil {
+            CoreDataManager.deleteObject(item: model.imageItems[photoPickerController.number!])
+            model.imageItems.remove(at: photoPickerController.number!)
+            itemList = model.imageItems
+            ///DO I NEED THESE ********
+            //notes.remove(at: largeImageViewController.number)
+            //groups.remove(at: largeImageViewController.number)
+            //print(largeImageViewController.number)
+            //dates.remove(at: largeImageViewController.number)
+            //searches.remove(at: largeImageViewController.number)
+            resetSearches()
+            imageCollectionView.deleteItems(at: photoPickerController.indexPathNumber!)
+            //dismiss(animated: true, completion: nil)
+        }
         let photoImage = photoPickerController.photoImage.image
         
         let item = ImageItem(img: photoImage!, date: photoPickerController.dateTextField.text!, note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal)
@@ -107,6 +121,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         itemList.append(item)
         
         CoreDataManager.storeObject(item: item)
+
         
         imageCollectionView.reloadData()
     }
@@ -145,7 +160,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         ///DO I NEED THESE ********
         //notes.remove(at: largeImageViewController.number)
         //groups.remove(at: largeImageViewController.number)
-        print(largeImageViewController.number)
+        //print(largeImageViewController.number)
         //dates.remove(at: largeImageViewController.number)
         //searches.remove(at: largeImageViewController.number)
         resetSearches()
@@ -162,8 +177,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             newViewController.newImageItem = model.imageItems[indexPath.row]
             newViewController.indexPathNumber = [indexPath]
             newViewController.number = Int(indexPath.row)
-            
-            
         }
     }
     
@@ -172,7 +185,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             searches = searchText.isEmpty ? notes : notes.filter {(item: String) -> Bool in
                 return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
-            print("searches in searchBar!!!!!\(searches)")
+            //print("searches in searchBar!!!!!\(searches)")
             itemList = []
             for i in model.imageItems {
                 if searches.contains(i.note) {
@@ -183,7 +196,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             searches = searchText.isEmpty ? groups : groups.filter {(item: String) -> Bool in
                 return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
-            print("searches in searchBar!!!!!\(searches)")
+            //print("searches in searchBar!!!!!\(searches)")
             itemList = []
             for i in model.imageItems {
                 if searches.contains(i.group) {
@@ -194,7 +207,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             searches = searchText.isEmpty ? dates : dates.filter {(item: String) -> Bool in
                 return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
-            print("searches in searchBar!!!!!\(searches)")
+            //print("searches in searchBar!!!!!\(searches)")
             itemList = []
             for i in model.imageItems {
                 if searches.contains(i.date) {
@@ -204,7 +217,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
 
         
-        print("itemListNOTE: \(itemList) AND \(itemList.count)")
+        //print("itemListNOTE: \(itemList) AND \(itemList.count)")
       imageCollectionView.reloadData()
     }
     

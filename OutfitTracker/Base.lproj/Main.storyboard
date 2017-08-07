@@ -423,7 +423,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <segue destination="y9p-ib-IHT" kind="show" id="qOd-al-Jje"/>
+                                    <segue destination="y9p-ib-IHT" kind="show" identifier="showPhotoPickerVC" id="qOd-al-Jje"/>
                                 </connections>
                             </button>
                         </subviews>
