@@ -37,4 +37,10 @@ sort sollectionview by date
 
  does largeimageview close when save/cancel button are clicked on photopickerVC
  
+ *credit*
+ 
+ Save by Тимур Минвалеев from the Noun Project
+ Share by Тимур Минвалеев from the Noun Project
+ edit by Gregor Cresnar from the Noun Project
+ 
 */

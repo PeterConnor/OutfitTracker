@@ -175,8 +175,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Outfit Tracker" id="tMS-0e-f72">
-                        <barButtonItem key="leftBarButtonItem" title="⚙" id="rLC-S6-gAR">
-                            <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.5098191352739726" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="SettingsImage" id="rLC-S6-gAR">
+                            <color key="tintColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="plv-CN-B4Z" kind="show" id="ZiM-Y9-BAn"/>
                             </connections>
@@ -402,26 +402,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7X-Bt-WEK">
-                                <rect key="frame" x="16" y="617" width="102" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7X-Bt-WEK">
+                                <rect key="frame" x="16" y="598" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save To Phone"/>
+                                <state key="normal" image="SaveImage" backgroundImage="SaveImage"/>
                                 <connections>
                                     <action selector="saveToPhone:" destination="Rcw-6b-tTk" eventType="touchUpInside" id="qg4-V0-AWS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ya-Bm-TCw">
-                                <rect key="frame" x="167" y="617" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ya-Bm-TCw">
+                                <rect key="frame" x="305" y="598" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
+                                <state key="normal" title="Share" image="ShareImage"/>
                                 <connections>
                                     <action selector="shareButtonAction:" destination="Rcw-6b-tTk" eventType="touchUpInside" id="cqA-2o-mXj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-I7-hP1">
-                                <rect key="frame" x="321" y="617" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-I7-hP1">
+                                <rect key="frame" x="160" y="598" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit"/>
+                                <state key="normal" title="Edit" image="EditImage"/>
                                 <connections>
                                     <segue destination="y9p-ib-IHT" kind="show" identifier="showPhotoPickerVC" id="qOd-al-Jje"/>
                                 </connections>
@@ -463,7 +463,13 @@
             <point key="canvasLocation" x="-18.399999999999999" y="-530.28485757121439"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EditImage" width="195" height="194"/>
+        <image name="SaveImage" width="228" height="295"/>
+        <image name="SettingsImage" width="25" height="25"/>
+        <image name="ShareImage" width="226" height="288"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qOd-al-Jje"/>
+        <segue reference="2lS-U5-8qD"/>
     </inferredMetricsTieBreakers>
 </document>
