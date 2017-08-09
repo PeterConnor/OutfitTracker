@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ImageEntity" representedClassName="ImageEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="actualDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="group" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageVal" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ImageEntity" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="ImageEntity" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

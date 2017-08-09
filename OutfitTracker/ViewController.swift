@@ -89,7 +89,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.noteLabel.text = itemList[indexPath.row].note
             cell.groupLabel.text = itemList[indexPath.row].group
         }
-
+        print(model.imageItems)
+        print(itemList)
         return cell
     }
     
@@ -116,7 +117,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         let photoImage = photoPickerController.photoImage.image
         
-        let item = ImageItem(img: photoImage!, date: photoPickerController.dateTextField.text!, note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal)
+        let item = ImageItem(img: photoImage!, date: photoPickerController.dateTextField.text!, note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal, actualDate: photoPickerController.actualDate)
         model.imageItems.append(item)
         itemList.append(item)
         

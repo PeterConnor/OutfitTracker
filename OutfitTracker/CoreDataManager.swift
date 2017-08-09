@@ -24,6 +24,7 @@ class func storeObject(item: ImageItem) {
         
         //save date
         managedObject.setValue(item.date, forKey: "date")
+        managedObject.setValue(item.actualDate, forKey: "actualDate")
         managedObject.setValue(item.note, forKey: "note")
         managedObject.setValue(item.group, forKey: "group")
         let imageData = UIImageJPEGRepresentation(item.image, 1)
@@ -49,7 +50,8 @@ class func storeObject(item: ImageItem) {
         fetchRequest.predicate = NSCompoundPredicate(type:.and, subpredicates:[
             NSPredicate(format: "note == %@", item.note),
             NSPredicate(format: "date == %@", item.date),
-            NSPredicate(format: "group == %@", item.group)])
+            NSPredicate(format: "group == %@", item.group),
+            NSPredicate(format: "actualDate == %@", item.actualDate as CVarArg)])
         
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
         
@@ -74,7 +76,7 @@ class func storeObject(item: ImageItem) {
             print("ResultRN: \(fetchResult)")
             for item in fetchResult {
                 let imageFromData = UIImage(data: item.imageVal! as Data)
-                let itemImage = ImageItem(img: imageFromData!, date: item.date!, note: item.note!, group: item.group!)
+                let itemImage = ImageItem(img: imageFromData!, date: item.date!, note: item.note!, group: item.group!, actualDate: item.actualDate! as Date)
                 objects.append(itemImage)
             }
         } catch {
@@ -105,12 +107,14 @@ class func storeObject(item: ImageItem) {
         var date: String
         var note: String
         var group: String
+        var actualDate: Date
         
-        init(img: UIImage, date: String, note: String, group: String) {
+        init(img: UIImage, date: String, note: String, group: String, actualDate: Date) {
             self.image = img
             self.date = date
             self.note = note
             self.group = group
+            self.actualDate = actualDate
     }
 
 }

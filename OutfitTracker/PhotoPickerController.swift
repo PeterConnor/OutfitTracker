@@ -29,6 +29,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     var note = ""
     var groupGlobal = ""
+    var actualDate = Date()
     
     var editedItem: ImageItem?
     var indexPathNumber: [IndexPath]?
@@ -340,6 +341,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         dateFormatter.dateFormat = "E  MM/d/yy"
         
         dateTextField.text = dateFormatter.string(from: datePicker.date)
+        actualDate = datePicker.date
         self.view.endEditing(true)
     }
 
