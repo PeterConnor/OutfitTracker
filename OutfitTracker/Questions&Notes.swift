@@ -35,6 +35,8 @@ button text doesnt load on simulator when u edit
 
 does largeimageview close when save/cancel button are clicked on photopickerVC? (Memory management)
  
+change color layout to grey, white, black.
+ 
  *credit*
  
  Save by Тимур Минвалеев from the Noun Project

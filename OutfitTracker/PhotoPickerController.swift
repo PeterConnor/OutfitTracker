@@ -24,6 +24,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var photoLibraryButton: UIButton!
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var orLabel: UILabel!
     
     let datePicker = UIDatePicker()
     
@@ -43,9 +44,15 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         if photoImage.image == nil {
             saveButton.isEnabled = false
             xButton.isHidden = true
+            photoLibraryButton.isHidden = false
+            takePhotoButton.isHidden = false
+            orLabel.isHidden = false
         } else {
             saveButton.isEnabled = true
             xButton.isHidden = false
+            photoLibraryButton.isHidden = true
+            takePhotoButton.isHidden = true
+            orLabel.isHidden = true
         }
         if !(UIImagePickerController.isSourceTypeAvailable(.camera)) {
             takePhotoButton.isHidden = true
@@ -57,6 +64,10 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        takePhotoButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+        photoLibraryButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+        
         textField.delegate = self
         
         createDatePicker()
