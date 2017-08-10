@@ -33,9 +33,7 @@ Add instructions to support page.
 
 button text doesnt load on simulator when u edit
 
-sort sollectionview by date
-
- does largeimageview close when save/cancel button are clicked on photopickerVC
+does largeimageview close when save/cancel button are clicked on photopickerVC? (Memory management)
  
  *credit*
  

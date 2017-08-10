@@ -76,8 +76,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             
         }
         if number != nil {
-            print("NUMBERRRRRRRRRRRR: \(number!)")
-          print(indexPathNumber!)
+            
         }
     }
     

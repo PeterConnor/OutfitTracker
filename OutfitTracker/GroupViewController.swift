@@ -69,6 +69,14 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            groupList.remove(at: indexPath.row)
+            UserDefaults.standard.set(groupList, forKey: "groupList")
+            tableView.reloadData()
+        }
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         view.addGestureRecognizer(tap)
     }

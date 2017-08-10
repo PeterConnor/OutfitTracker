@@ -89,8 +89,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.noteLabel.text = itemList[indexPath.row].note
             cell.groupLabel.text = itemList[indexPath.row].group
         }
-        print(model.imageItems)
-        print(itemList)
+        //print(model.imageItems)
+        //print(itemList)
         return cell
     }
     
@@ -104,7 +104,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if photoPickerController.number != nil && photoPickerController.indexPathNumber != nil {
             CoreDataManager.deleteObject(item: model.imageItems[photoPickerController.number!])
             model.imageItems.remove(at: photoPickerController.number!)
-            itemList = model.imageItems
+            print(model.imageItems)
+            
+            print(model.imageItems)
             ///DO I NEED THESE ********
             //notes.remove(at: largeImageViewController.number)
             //groups.remove(at: largeImageViewController.number)
@@ -120,6 +122,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let item = ImageItem(img: photoImage!, date: photoPickerController.dateTextField.text!, note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal, actualDate: photoPickerController.actualDate)
         model.imageItems.append(item)
         itemList.append(item)
+        model.imageItems.sort(by: { $0.actualDate < $1.actualDate})
+        itemList = model.imageItems
         
         CoreDataManager.storeObject(item: item)
 
