@@ -34,10 +34,8 @@ make collectionview look nice w/o pics loaded
 Add instructions to support page.
 
 button text doesnt load on simulator when u edit
-
-does largeimageview close when save/cancel button are clicked on photopickerVC? (Memory management)
  
-change color layout to grey, white, black.
+add "-" when no text
  
  *credit*
  
