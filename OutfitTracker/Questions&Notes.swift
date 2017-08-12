@@ -25,6 +25,8 @@ import Foundation
  
  better way to commit rather thana branching.
  
+ What happens when I update xcode?
+ 
  **Notes**
  
 make collectionview look nice w/o pics loaded
@@ -42,5 +44,11 @@ change color layout to grey, white, black.
  Save by Тимур Минвалеев from the Noun Project
  Share by Тимур Минвалеев from the Noun Project
  edit by Gregor Cresnar from the Noun Project
+ 
+ https://dribbble.com/
+ 
+ https://surayashivji.github.io/Inspo/
+ 
+ 
  
 */

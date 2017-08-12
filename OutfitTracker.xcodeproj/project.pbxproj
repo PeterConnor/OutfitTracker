@@ -19,10 +19,21 @@
 		FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438F1EC009E40061EACB /* ImagesModel.swift */; };
 		FA8312881F12E8130011BE62 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8312871F12E8130011BE62 /* SupportViewController.swift */; };
 		FACB07E51F3BE52C00D14AC4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */; };
+		FACB07ED1F3D354900D14AC4 /* OutfitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB07EC1F3D354900D14AC4 /* OutfitTrackerTests.swift */; };
 		FAE826801EC12EEA000C4353 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */; };
 		FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */; };
 		FAF02ABD1ED224E40088CB40 /* LargeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FACB07EF1F3D354900D14AC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA5370FA1EB037F100AF69A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA5371011EB037F100AF69A4;
+			remoteInfo = OutfitTracker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Questions&Notes.swift"; sourceTree = "<group>"; };
@@ -39,6 +50,9 @@
 		FA7D438F1EC009E40061EACB /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		FA8312871F12E8130011BE62 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		FACB07EA1F3D354900D14AC4 /* OutfitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutfitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACB07EC1F3D354900D14AC4 /* OutfitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitTrackerTests.swift; sourceTree = "<group>"; };
+		FACB07EE1F3D354900D14AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeImageViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +66,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FACB07E71F3D354900D14AC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5371041EB037F100AF69A4 /* OutfitTracker */,
+				FACB07EB1F3D354900D14AC4 /* OutfitTrackerTests */,
 				FA5371031EB037F100AF69A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5371021EB037F100AF69A4 /* OutfitTracker.app */,
+				FACB07EA1F3D354900D14AC4 /* OutfitTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +117,15 @@
 			path = OutfitTracker;
 			sourceTree = "<group>";
 		};
+		FACB07EB1F3D354900D14AC4 /* OutfitTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FACB07EC1F3D354900D14AC4 /* OutfitTrackerTests.swift */,
+				FACB07EE1F3D354900D14AC4 /* Info.plist */,
+			);
+			path = OutfitTrackerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +146,24 @@
 			productReference = FA5371021EB037F100AF69A4 /* OutfitTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FACB07E91F3D354900D14AC4 /* OutfitTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACB07F11F3D354900D14AC4 /* Build configuration list for PBXNativeTarget "OutfitTrackerTests" */;
+			buildPhases = (
+				FACB07E61F3D354900D14AC4 /* Sources */,
+				FACB07E71F3D354900D14AC4 /* Frameworks */,
+				FACB07E81F3D354900D14AC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACB07F01F3D354900D14AC4 /* PBXTargetDependency */,
+			);
+			name = OutfitTrackerTests;
+			productName = OutfitTrackerTests;
+			productReference = FACB07EA1F3D354900D14AC4 /* OutfitTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -128,6 +178,12 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = E5ZJ3PWQ3A;
 						ProvisioningStyle = Automatic;
+					};
+					FACB07E91F3D354900D14AC4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = E5ZJ3PWQ3A;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FA5371011EB037F100AF69A4;
 					};
 				};
 			};
@@ -145,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				FA5371011EB037F100AF69A4 /* OutfitTracker */,
+				FACB07E91F3D354900D14AC4 /* OutfitTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +214,13 @@
 				FA5371131EB037F100AF69A4 /* LaunchScreen.storyboard in Resources */,
 				FA5371101EB037F100AF69A4 /* Assets.xcassets in Resources */,
 				FA53710B1EB037F100AF69A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACB07E81F3D354900D14AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +246,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FACB07E61F3D354900D14AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACB07ED1F3D354900D14AC4 /* OutfitTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FACB07F01F3D354900D14AC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA5371011EB037F100AF69A4 /* OutfitTracker */;
+			targetProxy = FACB07EF1F3D354900D14AC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA5371091EB037F100AF69A4 /* Main.storyboard */ = {
@@ -325,6 +405,34 @@
 			};
 			name = Release;
 		};
+		FACB07F21F3D354900D14AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = E5ZJ3PWQ3A;
+				INFOPLIST_FILE = OutfitTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.c0nman.OutfitTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutfitTracker.app/OutfitTracker";
+			};
+			name = Debug;
+		};
+		FACB07F31F3D354900D14AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = E5ZJ3PWQ3A;
+				INFOPLIST_FILE = OutfitTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.c0nman.OutfitTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutfitTracker.app/OutfitTracker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +453,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FACB07F11F3D354900D14AC4 /* Build configuration list for PBXNativeTarget "OutfitTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACB07F21F3D354900D14AC4 /* Debug */,
+				FACB07F31F3D354900D14AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
