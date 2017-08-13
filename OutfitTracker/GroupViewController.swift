@@ -23,6 +23,9 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
         tableView.delegate = self
         tableView.dataSource = self
         textField.delegate = self
@@ -65,7 +68,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if let group = cell?.textLabel?.text {
             delegate!.userDidPickGroup(group: group)
             }
-            self.dismiss(animated: true, completion: nil)
+            navigationController?.popViewController(animated: true)
         }
     }
     

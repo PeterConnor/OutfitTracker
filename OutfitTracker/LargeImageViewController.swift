@@ -12,12 +12,42 @@ import UIKit
 class LargeImageViewController: UIViewController {
     
     @IBOutlet weak var largePhotoImage: UIImageView!
+    
+    @IBOutlet weak var saveButton: UIButton!
+    
+    @IBOutlet weak var editButton: UIButton!
+    
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    @IBOutlet weak var shareButton: UIButton!
+    
+    
     var newImageItem: ImageItem!
     var indexPathNumber: [IndexPath]!
     var number: Int!
     
     override func viewWillAppear(_ animated: Bool) {
         largePhotoImage.image = newImageItem.image
+    }
+    
+    override func viewDidLoad() {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let whiteDeleteButton = UIImage(named: "DeleteImage")?.withRenderingMode(.alwaysTemplate)
+        deleteButton.setImage(whiteDeleteButton, for: .normal)
+        deleteButton.tintColor = UIColor.white
+        
+        let whiteSaveButton = UIImage(named: "SaveImage")?.withRenderingMode(.alwaysTemplate)
+        saveButton.setImage(whiteSaveButton, for: .normal)
+        saveButton.tintColor = UIColor.white
+       
+        let whiteEditButton = UIImage(named: "EditImage")?.withRenderingMode(.alwaysTemplate)
+        editButton.setImage(whiteEditButton, for: .normal)
+        editButton.tintColor = UIColor.white
+        
+        let whiteShareButton = UIImage(named: "ShareImage")?.withRenderingMode(.alwaysTemplate)
+        shareButton.setImage(whiteShareButton, for: .normal)
+        shareButton.tintColor = UIColor.white
     }
     
     @IBAction func saveToPhone(_ sender: Any) {

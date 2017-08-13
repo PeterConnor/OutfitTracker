@@ -37,11 +37,20 @@ button text doesnt load on simulator when u edit
  
 add "-" when no text
  
+ change tint color of images to white. code below:
+ let templateImage = originalImage.imageWithRenderingMode(UIImageRenderingModeAlwaysTemplate)
+ myImageView.image = templateImage
+ myImageView.tintColor = UIColor.orangeColor()
+ 
  *credit*
  
  Save by Тимур Минвалеев from the Noun Project
  Share by Тимур Минвалеев from the Noun Project
  edit by Gregor Cresnar from the Noun Project
+ Delete by Agni from the Noun Project
+ Camera by Alfa Design from the Noun Project
+ photo library by icon 54 from the Noun Project
+ 
  
  https://dribbble.com/
  

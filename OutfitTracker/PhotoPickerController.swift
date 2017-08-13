@@ -16,7 +16,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
 
     @IBOutlet weak var photoImage: UIImageView!
     var imagePicker: UIImagePickerController!
-    @IBOutlet var saveButton: UIBarButtonItem!
+    @IBOutlet var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var xButton: UIButton!
     @IBOutlet weak var textField: UITextField!
@@ -64,6 +64,12 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        let whiteSaveButton = UIImage(named: "SavePhotoImage")?.withRenderingMode(.alwaysTemplate)
+        saveButton.setImage(whiteSaveButton, for: .normal)
+        saveButton.tintColor = UIColor.white
+        
+        
         
         takePhotoButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
         photoLibraryButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
@@ -278,6 +284,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         photoImage.image = nil
         xButton.isHidden = true
         saveButton.isEnabled = false
+        photoLibraryButton.isHidden = false
+        takePhotoButton.isHidden = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -326,6 +334,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         if segue.identifier == "showGroupVC" {
             let  groupViewController = segue.destination as! GroupViewController
             groupViewController.delegate = self
+            textField.resignFirstResponder()
         }
     }
     

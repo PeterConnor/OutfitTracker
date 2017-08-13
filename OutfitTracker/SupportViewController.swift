@@ -13,6 +13,8 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
 
         // Do any additional setup after loading the view.
     }
