@@ -55,10 +55,10 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             orLabel.isHidden = true
         }
         if !(UIImagePickerController.isSourceTypeAvailable(.camera)) {
-            takePhotoButton.isHidden = true
+            takePhotoButton.isEnabled = false
         }
         if !(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
-            photoLibraryButton.isHidden = true
+            photoLibraryButton.isEnabled = false
         }
     }
     

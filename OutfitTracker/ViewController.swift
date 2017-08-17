@@ -122,7 +122,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let item = ImageItem(img: photoImage!, date: photoPickerController.dateTextField.text!, note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal, actualDate: photoPickerController.actualDate)
         model.imageItems.append(item)
         itemList.append(item)
-        model.imageItems.sort(by: { $0.actualDate < $1.actualDate})
+        model.imageItems.sort(by: { $0.actualDate > $1.actualDate})
         itemList = model.imageItems
         
         CoreDataManager.storeObject(item: item)

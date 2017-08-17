@@ -35,12 +35,15 @@ Add instructions to support page.
 
 button text doesnt load on simulator when u edit
  
-add "-" when no text
+add "-" when no text...if text = nil, text = - in save
  
- change tint color of images to white. code below:
- let templateImage = originalImage.imageWithRenderingMode(UIImageRenderingModeAlwaysTemplate)
- myImageView.image = templateImage
- myImageView.tintColor = UIColor.orangeColor()
+ hide photopicker buttons when camera is unavail. add big library image (or grey it out?)
+ 
+ white frame around detail pic?
+ 
+ maybe make background of collectionview white since grey is used for label background?
+
+ credits
  
  *credit*
  
@@ -50,6 +53,7 @@ add "-" when no text
  Delete by Agni from the Noun Project
  Camera by Alfa Design from the Noun Project
  photo library by icon 54 from the Noun Project
+ t-shirt by Royyan Wijaya from the Noun Project
  
  
  https://dribbble.com/
