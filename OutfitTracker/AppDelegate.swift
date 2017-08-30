@@ -13,14 +13,16 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    static var helloThere = "hi"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UINavigationBar.appearance().barTintColor = UIColor.black
         UIBarButtonItem.appearance().tintColor = UIColor.white
         UIApplication.shared.statusBarStyle = .lightContent
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-
+        UINavigationBar.appearance().titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSForegroundColorAttributeName: UIColor.white]
+        
         return true
     }
 

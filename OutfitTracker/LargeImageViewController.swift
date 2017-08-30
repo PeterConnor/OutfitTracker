@@ -31,6 +31,7 @@ class LargeImageViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let whiteDeleteButton = UIImage(named: "DeleteImage")?.withRenderingMode(.alwaysTemplate)

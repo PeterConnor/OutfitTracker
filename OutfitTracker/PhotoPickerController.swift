@@ -22,7 +22,15 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var groupButton: UIButton!
     @IBOutlet weak var takePhotoButton: UIButton!
+    
+    @IBOutlet weak var takePhotoTextButton: UIButton!
+    
+    @IBOutlet weak var takePhotoButtonWithImage: UIButton!
+    @IBOutlet weak var photoLibraryButtonWithImage: UIButton!
     @IBOutlet weak var photoLibraryButton: UIButton!
+    
+    @IBOutlet weak var chooseFromGalleryButton: UIButton!
+    
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var orLabel: UILabel!
     
@@ -45,25 +53,34 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             saveButton.isEnabled = false
             xButton.isHidden = true
             photoLibraryButton.isHidden = false
+            photoLibraryButtonWithImage.isHidden = false
             takePhotoButton.isHidden = false
+            takePhotoButtonWithImage.isHidden = false
             orLabel.isHidden = false
         } else {
             saveButton.isEnabled = true
             xButton.isHidden = false
             photoLibraryButton.isHidden = true
+            photoLibraryButtonWithImage.isHidden = true
             takePhotoButton.isHidden = true
+            takePhotoButtonWithImage.isHidden = true
             orLabel.isHidden = true
         }
         if !(UIImagePickerController.isSourceTypeAvailable(.camera)) {
             takePhotoButton.isEnabled = false
+            takePhotoButtonWithImage.isEnabled = false
+            takePhotoButton.setTitle("\n\n\n\n\nCamera Unavailable", for: .normal)
+            takePhotoButton.setTitleColor(UIColor.gray, for: .disabled)
         }
         if !(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
             photoLibraryButton.isEnabled = false
+            photoLibraryButtonWithImage.isEnabled = false
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         let whiteSaveButton = UIImage(named: "SavePhotoImage")?.withRenderingMode(.alwaysTemplate)
         saveButton.setImage(whiteSaveButton, for: .normal)
@@ -88,6 +105,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             textField.text = editedItem?.note
             dateTextField.text = editedItem?.date
             groupButton.setTitle(editedItem?.group, for: .normal)
+            groupButton.setTitleColor(.black, for: .normal)
             groupGlobal = editedItem!.group
             
             
@@ -285,7 +303,9 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         xButton.isHidden = true
         saveButton.isEnabled = false
         photoLibraryButton.isHidden = false
+        photoLibraryButtonWithImage.isHidden = false
         takePhotoButton.isHidden = false
+        takePhotoButtonWithImage.isHidden = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -327,6 +347,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     func userDidPickGroup(group: String) {
         groupButton.setTitle(group, for: .normal)
+        groupButton.setTitleColor(.black, for: .normal)
         groupGlobal = group
     }
     

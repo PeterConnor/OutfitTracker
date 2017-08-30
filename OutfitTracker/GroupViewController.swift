@@ -23,7 +23,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         tableView.delegate = self
@@ -33,6 +33,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if let persistedGroupList = UserDefaults.standard.object(forKey: "groupList") {
             groupList = persistedGroupList as! [String]
+            
         }
     }
 
@@ -57,6 +58,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         cell.textLabel?.text = groupList[indexPath.row]
+        cell.textLabel?.textColor = .white
         
 
         return cell

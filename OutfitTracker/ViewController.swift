@@ -19,6 +19,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var directionsLabel: UILabel!
+    
+    
     private let reuseIdentifier = "imageCell"
     
     var notes = [String]()
@@ -32,19 +35,33 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var tap = UITapGestureRecognizer()
     
     override func viewDidLoad() {
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSForegroundColorAttributeName: UIColor.white]
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         searchBar.delegate = self
         tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         searchBar.placeholder = "Search"
         itemList = model.imageItems
+        itemList.sort(by: { $0.actualDate > $1.actualDate})
+
+        
         }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        model.imageItems.sort(by: { $0.actualDate > $1.actualDate})
         resetSearches()
         itemList = model.imageItems
+        itemList.sort(by: { $0.actualDate > $1.actualDate})
+
         imageCollectionView.reloadData()
+        
+        if itemList.count > 0 {
+            directionsLabel.isHidden = true
+        } else {
+            directionsLabel.isHidden = false
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -58,36 +75,41 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CustomCollectionViewCell
         
-        
-        let currentItem = model.imageItems[indexPath.row]
-        //print("*****START*****")
-       // print("searches: \(searches)")
-        //print("imageItems count \(model.imageItems.count)")
-        //print("date: \(currentItem.date)")
-        //print("dates: \(dates)")
-        //print("Note: \(currentItem.note)")
-        //print("Notes: \(notes)")
-        //print("Image: \(currentItem.image)")
-        //print("Group: \(currentItem.group)")
-        //print("Groups: \(groups)")
-        
-            //print("indexPath.row = \(indexPath.row)")
-        
         if segmentedControl.selectedSegmentIndex == 0 {
             cell.customImageView.image = itemList[indexPath.row].image
             cell.dateLabel.text = itemList[indexPath.row].date
             cell.noteLabel.text = searches[indexPath.row]
+            if cell.noteLabel.text == "" {
+                cell.noteLabel.text = "-"
+            }
             cell.groupLabel.text = itemList[indexPath.row].group
+            if cell.groupLabel.text == "" {
+                cell.groupLabel.text = "-"
+            }
         } else if segmentedControl.selectedSegmentIndex == 1 {
             cell.customImageView.image = itemList[indexPath.row].image
             cell.dateLabel.text = itemList[indexPath.row].date
             cell.noteLabel.text = itemList[indexPath.row].note
             cell.groupLabel.text = searches[indexPath.row]
+            if cell.noteLabel.text == "" {
+                cell.noteLabel.text = "-"
+            }
+            cell.groupLabel.text = itemList[indexPath.row].group
+            if cell.groupLabel.text == "" {
+                cell.groupLabel.text = "-"
+            }
         } else if segmentedControl.selectedSegmentIndex == 2 {
             cell.customImageView.image = itemList[indexPath.row].image
             cell.dateLabel.text = searches[indexPath.row]
             cell.noteLabel.text = itemList[indexPath.row].note
             cell.groupLabel.text = itemList[indexPath.row].group
+            if cell.noteLabel.text == "" {
+                cell.noteLabel.text = "-"
+            }
+            cell.groupLabel.text = itemList[indexPath.row].group
+            if cell.groupLabel.text == "" {
+                cell.groupLabel.text = "-"
+            }
         }
         //print(model.imageItems)
         //print(itemList)
@@ -97,25 +119,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
-    
+
     @IBAction func saveButton(segue: UIStoryboardSegue) {
         let photoPickerController = segue.source as! PhotoPickerController
         
         if photoPickerController.number != nil && photoPickerController.indexPathNumber != nil {
             CoreDataManager.deleteObject(item: model.imageItems[photoPickerController.number!])
             model.imageItems.remove(at: photoPickerController.number!)
-            print(model.imageItems)
+            itemList = model.imageItems
+            //resetSearches()
+            //imageCollectionView.deleteItems(at: photoPickerController.indexPathNumber!)
+            imageCollectionView.reloadData()
             
-            print(model.imageItems)
-            ///DO I NEED THESE ********
-            //notes.remove(at: largeImageViewController.number)
-            //groups.remove(at: largeImageViewController.number)
-            //print(largeImageViewController.number)
-            //dates.remove(at: largeImageViewController.number)
-            //searches.remove(at: largeImageViewController.number)
-            resetSearches()
-            imageCollectionView.deleteItems(at: photoPickerController.indexPathNumber!)
-            //dismiss(animated: true, completion: nil)
         }
         let photoImage = photoPickerController.photoImage.image
         
@@ -127,8 +142,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         CoreDataManager.storeObject(item: item)
 
-        
         imageCollectionView.reloadData()
+        
     }
     
     func generateDate() -> String {
@@ -163,12 +178,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         CoreDataManager.deleteObject(item: model.imageItems[largeImageViewController.number])
         model.imageItems.remove(at: largeImageViewController.number)
         itemList = model.imageItems
-        ///DO I NEED THESE ********
-        //notes.remove(at: largeImageViewController.number)
-        //groups.remove(at: largeImageViewController.number)
-        //print(largeImageViewController.number)
-        //dates.remove(at: largeImageViewController.number)
-        //searches.remove(at: largeImageViewController.number)
         resetSearches()
         imageCollectionView.deleteItems(at: largeImageViewController.indexPathNumber)
         dismiss(animated: true, completion: nil)

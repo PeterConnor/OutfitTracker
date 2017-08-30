@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wox-GM-HEs">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="rTb-Db-DnR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AZh-mK-Lyg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-ml-J1U" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
@@ -66,6 +67,28 @@
                                     <action selector="deleteAll:" destination="plv-CN-B4Z" eventType="touchUpInside" id="GcK-Ud-4Gf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgw-dL-qtl" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
+                                <rect key="frame" x="149" y="444" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <state key="normal" title="Credits">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="575-bw-a3p" kind="show" id="YfG-E3-cgM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -73,6 +96,212 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TM-2k-pME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884" y="-1254.4227886056972"/>
+        </scene>
+        <!--Credits View Controller-->
+        <scene sceneID="UgD-tl-Osw">
+            <objects>
+                <viewController id="575-bw-a3p" customClass="CreditsViewController" customModule="OutfitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g5K-oV-jeK"/>
+                        <viewControllerLayoutGuide type="bottom" id="McE-Y5-5sJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rov-6i-7Vm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kaC-xE-Pev">
+                                <rect key="frame" x="0.0" y="64" width="414" height="442"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save by Bernar Novalyi from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nx2-yv-AtE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save by Тимур Минвалеев from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B17-gH-hhq" userLabel="Тимур">
+                                        <rect key="frame" x="0.0" y="49" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share by Тимур Минвалеев from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa2-9Z-dUE">
+                                        <rect key="frame" x="0.0" y="98" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit by Gregor Cresnar from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-YM-L2y">
+                                        <rect key="frame" x="0.0" y="147" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete by Agni from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCS-xE-XUq">
+                                        <rect key="frame" x="0.0" y="196" width="414" height="50"/>
+                                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera by Alfa Design from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-ft-hRC">
+                                        <rect key="frame" x="0.0" y="246" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo library by icon 54 from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ps-Rz-jri">
+                                        <rect key="frame" x="0.0" y="295" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-shirt by Royyan Wijaya from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNp-ec-rYL">
+                                        <rect key="frame" x="0.0" y="344" width="414" height="49"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings by i cons from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUd-AT-fMV">
+                                        <rect key="frame" x="0.0" y="393" width="414" height="49"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="BMM-YM-L2y" firstAttribute="height" secondItem="Nx2-yv-AtE" secondAttribute="height" id="WeW-RU-LIm"/>
+                                    <constraint firstItem="wa2-9Z-dUE" firstAttribute="height" secondItem="Nx2-yv-AtE" secondAttribute="height" id="hkl-FN-FGt"/>
+                                    <constraint firstItem="bp1-ft-hRC" firstAttribute="height" secondItem="Nx2-yv-AtE" secondAttribute="height" id="iyJ-Rc-JgW"/>
+                                    <constraint firstItem="3Ps-Rz-jri" firstAttribute="height" secondItem="Nx2-yv-AtE" secondAttribute="height" id="uJq-Gp-184"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O60-cf-Ldq">
+                                <rect key="frame" x="92" y="526" width="230" height="190"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2OX-s9-Iqa">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqF-Ik-dLQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BxB-MN-pfP"/>
+                                                    <constraint firstAttribute="width" constant="50" id="QZI-xq-0Bt"/>
+                                                </constraints>
+                                                <state key="normal" image="DeleteImage"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTz-6A-CCL">
+                                                <rect key="frame" x="90" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="8DT-Oi-U7H"/>
+                                                </constraints>
+                                                <state key="normal" image="EditImage"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6VC-XE-Rus">
+                                                <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Ei5-wE-w8c"/>
+                                                </constraints>
+                                                <state key="normal" image="SavePhotoImage"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SkQ-I4-tsz">
+                                        <rect key="frame" x="0.0" y="70" width="230" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIw-HL-hBV">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="aF2-3k-XCi"/>
+                                                    <constraint firstAttribute="width" constant="50" id="d2w-rp-boD"/>
+                                                </constraints>
+                                                <state key="normal" image="PhotoLibraryImage"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D2-rh-hoR">
+                                                <rect key="frame" x="90" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="RjG-3t-qmM"/>
+                                                    <constraint firstAttribute="height" constant="50" id="grz-0p-2HQ"/>
+                                                </constraints>
+                                                <state key="normal" image="CameraImage"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6c-c5-8Ab">
+                                                <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="apH-7O-a4o"/>
+                                                    <constraint firstAttribute="width" constant="50" id="dtf-RM-iXz"/>
+                                                </constraints>
+                                                <state key="normal" image="SettingsImage"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="J59-en-N1R">
+                                        <rect key="frame" x="0.0" y="140" width="230" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g75-AG-kgV">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="3Ca-c1-gU3"/>
+                                                    <constraint firstAttribute="width" constant="50" id="pqz-Hj-Kp7"/>
+                                                </constraints>
+                                                <state key="normal" image="ShareImage"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCN-55-6xB">
+                                                <rect key="frame" x="90" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="1kb-PQ-m1J"/>
+                                                    <constraint firstAttribute="height" constant="50" id="KOY-lM-NJK"/>
+                                                </constraints>
+                                                <state key="normal" image="SaveImage"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jV-xq-dl1">
+                                                <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="0jC-hj-rlW"/>
+                                                    <constraint firstAttribute="width" constant="50" id="OQv-Tg-QlS"/>
+                                                </constraints>
+                                                <state key="normal" image="TshirtImage"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kaC-xE-Pev" secondAttribute="trailing" id="0FK-iP-9dg"/>
+                            <constraint firstItem="McE-Y5-5sJ" firstAttribute="top" secondItem="O60-cf-Ldq" secondAttribute="bottom" constant="20" id="AAg-EZ-Mhe"/>
+                            <constraint firstItem="kaC-xE-Pev" firstAttribute="top" secondItem="g5K-oV-jeK" secondAttribute="bottom" id="LPo-n1-rJp"/>
+                            <constraint firstItem="O60-cf-Ldq" firstAttribute="centerX" secondItem="Rov-6i-7Vm" secondAttribute="centerX" id="asI-Js-KwC"/>
+                            <constraint firstItem="kaC-xE-Pev" firstAttribute="leading" secondItem="Rov-6i-7Vm" secondAttribute="leading" id="cG1-nP-w9Z"/>
+                            <constraint firstItem="O60-cf-Ldq" firstAttribute="top" secondItem="kaC-xE-Pev" secondAttribute="bottom" constant="20" id="fZ1-hP-6Zm"/>
+                            <constraint firstItem="kaC-xE-Pev" firstAttribute="centerX" secondItem="Rov-6i-7Vm" secondAttribute="centerX" id="vu5-Ud-esB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="8D2-rh-hoR" id="WOA-YF-QDv"/>
+                        <outlet property="deleteButton" destination="eqF-Ik-dLQ" id="ipz-O7-XEd"/>
+                        <outlet property="editButton" destination="kTz-6A-CCL" id="g24-0l-c6F"/>
+                        <outlet property="photoLibraryButton" destination="mIw-HL-hBV" id="5zF-2K-IO1"/>
+                        <outlet property="saveButton" destination="OCN-55-6xB" id="cds-uq-qkE"/>
+                        <outlet property="savePhotoButton" destination="6VC-XE-Rus" id="msw-wJ-cnv"/>
+                        <outlet property="settingsButton" destination="e6c-c5-8Ab" id="tdU-oI-UKy"/>
+                        <outlet property="shareButton" destination="g75-AG-kgV" id="QYb-kG-Jmj"/>
+                        <outlet property="tshirtButton" destination="5jV-xq-dl1" id="wxY-c0-4g3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fve-jH-T8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1582" y="-1254"/>
         </scene>
         <!--Outfit Tracker-->
         <scene sceneID="naU-5e-bZs">
@@ -83,16 +312,16 @@
                         <viewControllerLayoutGuide type="bottom" id="z3q-ZE-D84"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HkP-D0-GHv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="UUz-wW-9ok">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e47-2X-W40">
-                                <rect key="frame" x="0.0" y="108" width="375" height="29"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="29"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
                                     <segment title="Note"/>
@@ -105,14 +334,23 @@
                                 </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6CB-Be-13M">
-                                <rect key="frame" x="0.0" y="137" width="375" height="530"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="137" width="414" height="599"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zNH-T7-L7Z">
                                     <size key="itemSize" width="125" height="185"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R1T-8g-lUa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="599"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <string key="text">Click the camera button 
+to add outfit entries</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="QwV-pi-6Fg" userLabel="Cell" customClass="CustomCollectionViewCell" customModule="OutfitTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
@@ -128,26 +366,26 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="123"/>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z47-ln-Ui1">
-                                                            <rect key="frame" x="0.0" y="123" width="125" height="61.5"/>
+                                                            <rect key="frame" x="0.0" y="123" width="125" height="62"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-vd-30B">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="20.5"/>
-                                                                    <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-vd-30B">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="20"/>
+                                                                    <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-uJ-siW">
-                                                                    <rect key="frame" x="0.0" y="20.5" width="125" height="20.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-uJ-siW">
+                                                                    <rect key="frame" x="0.0" y="20" width="125" height="21"/>
                                                                     <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-gG-ZCx">
-                                                                    <rect key="frame" x="0.0" y="41" width="125" height="20.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-gG-ZCx">
+                                                                    <rect key="frame" x="0.0" y="41" width="125" height="21"/>
                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
@@ -224,6 +462,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="directionsLabel" destination="R1T-8g-lUa" id="COi-cV-qpC"/>
                         <outlet property="imageCollectionView" destination="6CB-Be-13M" id="cii-ek-CrP"/>
                         <outlet property="searchBar" destination="UUz-wW-9ok" id="Fc9-0e-vwl"/>
                         <outlet property="segmentedControl" destination="e47-2X-W40" id="QXs-oH-djW"/>
@@ -242,194 +481,250 @@
                         <viewControllerLayoutGuide type="bottom" id="CPY-yP-Qco"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aIV-fH-RBz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYT-DX-AcS">
-                                <rect key="frame" x="16" y="96" width="343" height="364"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80222602739726023" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-nT-jLk">
+                                <rect key="frame" x="20" y="84" width="374" height="432"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYT-DX-AcS">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="432"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80222602739726023" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbB-8C-iWb">
+                                        <rect key="frame" x="0.0" y="215.66666666666669" width="374" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="axi-xs-d0C">
+                                        <rect key="frame" x="104.66666666666669" y="29" width="166" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="CameraImage">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="Kdz-wu-TQ5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Sob-0M-XSG">
+                                        <rect key="frame" x="141.33333333333334" y="131" width="91" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Take Photo">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="tec-FH-PRX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jOY-WW-XMn">
+                                        <rect key="frame" x="0.0" y="0.0" width="398.66666666666669" height="216.66666666666669"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="TNs-MM-5Uj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-Rp-JKe">
+                                        <rect key="frame" x="88.666666666666686" y="248.66666666666669" width="197.66666666666663" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="PhotoLibraryImage">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="9se-Nv-LI4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="K5U-7A-ciX">
+                                        <rect key="frame" x="102.33333333333331" y="358.66666666666669" width="170" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                        <state key="normal" title="Choose From Gallery">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="eRm-2n-cc2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s7x-jY-bNe">
+                                        <rect key="frame" x="0.0" y="217.66666666666671" width="374" height="214.33333333333329"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="epD-M1-51T"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-61-enY">
-                                <rect key="frame" x="325" y="64" width="34" height="37"/>
+                                <rect key="frame" x="381" y="58" width="30" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="ⓧ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="deleteImage:" destination="y9p-ib-IHT" eventType="touchUpInside" id="ay8-Nk-eSx"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Note?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6vj-49-89H">
-                                <rect key="frame" x="16" y="468" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbB-8C-iWb">
-                                <rect key="frame" x="16" y="275" width="343" height="3"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="axi-xs-d0C">
-                                <rect key="frame" x="105" y="132" width="165" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="CameraImage">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="Kdz-wu-TQ5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-Rp-JKe">
-                                <rect key="frame" x="105" y="320" width="165" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="PhotoLibraryImage">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="9se-Nv-LI4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s7x-jY-bNe">
-                                <rect key="frame" x="16" y="292" width="343" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
-                                <state key="normal">
-                                    <string key="title">
-
-
-
-
-
-Choose from Gallery</string>
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="epD-M1-51T"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEh-UO-ofE">
-                                <rect key="frame" x="16" y="586" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztn-SK-aVD">
-                                <rect key="frame" x="165" y="624" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="y79-lA-A1P">
+                                <rect key="frame" x="30" y="547" width="354" height="129"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Note" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6vj-49-89H">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="33"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW4-5l-fQ8" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="354" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <state key="normal" title="Add Group, Category, or Event">
+                                            <color key="titleColor" red="0.7841535210609436" green="0.78391718864440918" blue="0.80869549512863159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="k8R-ki-yM7" kind="show" identifier="showGroupVC" id="3HE-ZP-Ucm"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEh-UO-ofE">
+                                        <rect key="frame" x="0.0" y="96" width="354" height="33"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztn-SK-aVD">
+                                <rect key="frame" x="187" y="686" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="8tX-qz-4zr"/>
+                                    <constraint firstAttribute="height" constant="40" id="ANf-2O-sI2"/>
+                                </constraints>
                                 <state key="normal" title="Save" image="SavePhotoImage"/>
                                 <connections>
                                     <segue destination="pml-cr-fT8" kind="unwind" unwindAction="saveButtonWithSegue:" id="UJS-9g-On5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IW4-5l-fQ8" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
-                                <rect key="frame" x="16" y="527" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                <state key="normal" title="Add Group, Category, or Event">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="k8R-ki-yM7" kind="show" identifier="showGroupVC" id="3HE-ZP-Ucm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jOY-WW-XMn">
-                                <rect key="frame" x="16" y="102" width="343" height="188"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
-                                <state key="normal">
-                                    <string key="title">
-
-
-
-
-Take Photo</string>
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="TNs-MM-5Uj"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="y79-lA-A1P" firstAttribute="leading" secondItem="aIV-fH-RBz" secondAttribute="leadingMargin" constant="10" id="3iV-1f-FYE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y79-lA-A1P" secondAttribute="trailing" constant="10" id="9Bw-5x-0WQ"/>
+                            <constraint firstItem="y79-lA-A1P" firstAttribute="top" secondItem="AsY-nT-jLk" secondAttribute="bottom" constant="10" id="DoN-H9-A76"/>
+                            <constraint firstItem="CPY-yP-Qco" firstAttribute="top" secondItem="Ztn-SK-aVD" secondAttribute="bottom" constant="10" id="HcS-k2-1uh"/>
+                            <constraint firstItem="Ztn-SK-aVD" firstAttribute="top" secondItem="y79-lA-A1P" secondAttribute="bottom" constant="10" id="OLe-0v-sDC"/>
+                            <constraint firstItem="Ztn-SK-aVD" firstAttribute="centerX" secondItem="aIV-fH-RBz" secondAttribute="centerX" id="nMQ-zw-Dxl"/>
+                            <constraint firstItem="y79-lA-A1P" firstAttribute="centerX" secondItem="aIV-fH-RBz" secondAttribute="centerX" id="tHq-Hi-jp4"/>
+                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tjx-76-fOf" appends="YES" id="plZ-ZT-WJL"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="chooseFromGalleryButton" destination="K5U-7A-ciX" id="UND-Tn-bzF"/>
                         <outlet property="dateTextField" destination="dEh-UO-ofE" id="D8g-UV-p7f"/>
                         <outlet property="groupButton" destination="IW4-5l-fQ8" id="r5W-ge-DrJ"/>
                         <outlet property="orLabel" destination="YbB-8C-iWb" id="1dL-YO-yOo"/>
                         <outlet property="photoImage" destination="bYT-DX-AcS" id="6Eq-O6-O6Z"/>
-                        <outlet property="photoLibraryButton" destination="s7x-jY-bNe" id="TlM-vJ-gda"/>
+                        <outlet property="photoLibraryButton" destination="s7x-jY-bNe" id="nff-OW-hUr"/>
+                        <outlet property="photoLibraryButtonWithImage" destination="3Sz-Rp-JKe" id="aXc-MW-uuv"/>
                         <outlet property="saveButton" destination="Ztn-SK-aVD" id="iEt-6K-8lE"/>
                         <outlet property="takePhotoButton" destination="jOY-WW-XMn" id="biU-75-8ox"/>
+                        <outlet property="takePhotoButtonWithImage" destination="axi-xs-d0C" id="sb7-OQ-WNB"/>
+                        <outlet property="takePhotoTextButton" destination="Sob-0M-XSG" id="JRq-d1-2Dv"/>
                         <outlet property="textField" destination="6vj-49-89H" id="OUg-A0-xdF"/>
                         <outlet property="xButton" destination="7Eh-61-enY" id="BSp-21-cld"/>
                         <segue destination="pml-cr-fT8" kind="unwind" identifier="dismissSegue" unwindAction="unwindWithSegue:" id="09g-l4-enM"/>
@@ -454,11 +749,11 @@ Take Photo</string>
                         <viewControllerLayoutGuide type="bottom" id="t64-ri-c5q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tFd-Pt-yOa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Add Group, Category, or Event" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jAe-QG-IeK">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="9qr-Wx-vnw"/>
                                 </constraints>
@@ -467,16 +762,18 @@ Take Photo</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SQM-m3-XMA">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="628"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="7BF-4i-0uD">
-                                        <rect key="frame" x="0.0" y="1" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7BF-4i-0uD" id="HgC-8f-kkn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -511,41 +808,44 @@ Take Photo</string>
                         <viewControllerLayoutGuide type="bottom" id="dJK-XB-DMu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gxS-4y-crY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bKA-qX-3QE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="508"/>
+                                <rect key="frame" x="-21" y="64" width="456" height="608"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bKA-qX-3QE" secondAttribute="height" multiplier="3:4" id="ZUk-Vi-Bzg"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8j-qC-xHJ">
-                                <rect key="frame" x="0.0" y="571.5" width="375" height="98.5"/>
+                                <rect key="frame" x="0.0" y="640" width="414" height="99"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FVk-p6-3VD">
-                                        <rect key="frame" x="20" y="20" width="335" height="58.5"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="59"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7X-Bt-WEK">
-                                                <rect key="frame" x="0.0" y="0.0" width="69" height="58.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="59"/>
                                                 <state key="normal" title="Save" image="SaveImage" backgroundImage="SaveImage"/>
                                                 <connections>
                                                     <action selector="saveToPhone:" destination="Rcw-6b-tTk" eventType="touchUpInside" id="qg4-V0-AWS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-I7-hP1">
-                                                <rect key="frame" x="89" y="0.0" width="68.5" height="58.5"/>
+                                                <rect key="frame" x="99" y="0.0" width="78" height="59"/>
                                                 <state key="normal" title="Edit" image="EditImage"/>
                                                 <connections>
                                                     <segue destination="y9p-ib-IHT" kind="show" identifier="showPhotoPickerVC" id="qOd-al-Jje"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVk-rm-JTR">
-                                                <rect key="frame" x="177.5" y="0.0" width="69" height="58.5"/>
+                                                <rect key="frame" x="197" y="0.0" width="79" height="59"/>
                                                 <state key="normal" title="Delete" image="DeleteImage"/>
                                                 <connections>
                                                     <segue destination="dhi-XV-tPJ" kind="unwind" unwindAction="deleteButtonWithSegue:" id="laE-SK-cSC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ya-Bm-TCw">
-                                                <rect key="frame" x="266.5" y="0.0" width="68.5" height="58.5"/>
+                                                <rect key="frame" x="296" y="0.0" width="78" height="59"/>
                                                 <state key="normal" title="Share" image="ShareImage"/>
                                                 <connections>
                                                     <action selector="shareButtonAction:" destination="Rcw-6b-tTk" eventType="touchUpInside" id="cqA-2o-mXj"/>
@@ -566,12 +866,11 @@ Take Photo</string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="h8j-qC-xHJ" firstAttribute="top" secondItem="bKA-qX-3QE" secondAttribute="bottom" id="BcU-DG-ONt"/>
+                            <constraint firstItem="bKA-qX-3QE" firstAttribute="centerY" secondItem="gxS-4y-crY" secondAttribute="centerY" id="Bff-uS-bnf"/>
                             <constraint firstItem="dJK-XB-DMu" firstAttribute="top" secondItem="h8j-qC-xHJ" secondAttribute="bottom" constant="-3" id="LhN-aM-Kqx"/>
-                            <constraint firstItem="bKA-qX-3QE" firstAttribute="top" secondItem="y9I-4G-bor" secondAttribute="bottom" id="Nf4-Jw-Jws"/>
-                            <constraint firstAttribute="trailing" secondItem="bKA-qX-3QE" secondAttribute="trailing" id="PeJ-ro-QCn"/>
                             <constraint firstItem="h8j-qC-xHJ" firstAttribute="leading" secondItem="gxS-4y-crY" secondAttribute="leading" id="Phx-As-6FB"/>
-                            <constraint firstItem="bKA-qX-3QE" firstAttribute="leading" secondItem="gxS-4y-crY" secondAttribute="leading" id="c3C-QA-4qg"/>
+                            <constraint firstItem="bKA-qX-3QE" firstAttribute="centerX" secondItem="gxS-4y-crY" secondAttribute="centerX" id="dA2-ij-Kec"/>
+                            <constraint firstItem="bKA-qX-3QE" firstAttribute="top" secondItem="y9I-4G-bor" secondAttribute="bottom" id="iJZ-Gg-9AU"/>
                             <constraint firstAttribute="trailing" secondItem="h8j-qC-xHJ" secondAttribute="trailing" id="qZY-tc-Ysn"/>
                         </constraints>
                     </view>
@@ -608,14 +907,15 @@ Take Photo</string>
         </scene>
     </scenes>
     <resources>
-        <image name="CameraImage" width="268" height="206"/>
-        <image name="DeleteImage" width="193" height="248"/>
-        <image name="EditImage" width="195" height="194"/>
-        <image name="PhotoLibraryImage" width="302" height="275"/>
-        <image name="SaveImage" width="228" height="295"/>
-        <image name="SavePhotoImage" width="241" height="243"/>
+        <image name="CameraImage" width="178" height="137"/>
+        <image name="DeleteImage" width="128" height="165"/>
+        <image name="EditImage" width="130" height="129"/>
+        <image name="PhotoLibraryImage" width="201" height="183"/>
+        <image name="SaveImage" width="152" height="196"/>
+        <image name="SavePhotoImage" width="160" height="162"/>
         <image name="SettingsImage" width="25" height="25"/>
-        <image name="ShareImage" width="226" height="288"/>
+        <image name="ShareImage" width="150" height="192"/>
+        <image name="TshirtImage" width="181" height="178"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2lS-U5-8qD"/>
