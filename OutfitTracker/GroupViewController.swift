@@ -18,6 +18,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     var groupList = [String]()
+    let exampleGroupList = ["E.g. Family", "E.g. Friends", "E.g. Work"]
     var delegate: GroupDelegate? = nil
     var tap = UITapGestureRecognizer()
     
@@ -51,14 +52,24 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groupList.count
+        if groupList.count < 1 {
+            return 3
+        } else {
+            return groupList.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-        cell.textLabel?.text = groupList[indexPath.row]
-        cell.textLabel?.textColor = .white
+        if groupList.count < 1 {
+            cell.textLabel?.text = exampleGroupList[indexPath.row]
+            cell.textLabel?.textColor = .gray
+            cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)
+        } else {
+            cell.textLabel?.text = groupList[indexPath.row]
+            cell.textLabel?.textColor = .white
+            cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)
+        }
         
 
         return cell

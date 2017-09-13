@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -484,155 +485,208 @@ to add outfit entries</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-nT-jLk">
-                                <rect key="frame" x="20" y="84" width="374" height="432"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-nT-jLk">
+                                <rect key="frame" x="30" y="74" width="354" height="463"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYT-DX-AcS">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="432"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYT-DX-AcS">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="463"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80222602739726023" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbB-8C-iWb">
-                                        <rect key="frame" x="0.0" y="215.66666666666669" width="374" height="2"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="axi-xs-d0C">
-                                        <rect key="frame" x="104.66666666666669" y="29" width="166" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="CameraImage">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="Kdz-wu-TQ5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Sob-0M-XSG">
-                                        <rect key="frame" x="141.33333333333334" y="131" width="91" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Take Photo">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="tec-FH-PRX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jOY-WW-XMn">
-                                        <rect key="frame" x="0.0" y="0.0" width="398.66666666666669" height="216.66666666666669"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
-                                        <state key="normal">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="TNs-MM-5Uj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-Rp-JKe">
-                                        <rect key="frame" x="88.666666666666686" y="248.66666666666669" width="197.66666666666663" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="PhotoLibraryImage">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="9se-Nv-LI4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="K5U-7A-ciX">
-                                        <rect key="frame" x="102.33333333333331" y="358.66666666666669" width="170" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
-                                        <state key="normal" title="Choose From Gallery">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="eRm-2n-cc2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s7x-jY-bNe">
-                                        <rect key="frame" x="0.0" y="217.66666666666671" width="374" height="214.33333333333329"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
-                                        <state key="normal">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="epD-M1-51T"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJs-Zc-JGh">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="232"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wQv-tU-bZo">
+                                                <rect key="frame" x="40" y="20" width="274" height="192"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="axi-xs-d0C">
+                                                        <rect key="frame" x="48" y="0.0" width="178" height="144.66666666666666"/>
+                                                        <state key="normal" image="CameraImage">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="Kdz-wu-TQ5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Sob-0M-XSG">
+                                                        <rect key="frame" x="0.0" y="144.66666666666663" width="274" height="47.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                                        <state key="normal" title="Take Photo">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="tec-FH-PRX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Sob-0M-XSG" secondAttribute="trailing" id="HwU-Jf-yqi"/>
+                                                    <constraint firstItem="Sob-0M-XSG" firstAttribute="leading" secondItem="wQv-tU-bZo" secondAttribute="leading" id="Jho-iC-WFQ"/>
+                                                    <constraint firstItem="Sob-0M-XSG" firstAttribute="centerX" secondItem="wQv-tU-bZo" secondAttribute="centerX" id="rBh-hW-c0A"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jOY-WW-XMn">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="choosePhoto:" destination="y9p-ib-IHT" eventType="touchUpInside" id="TNs-MM-5Uj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="wQv-tU-bZo" firstAttribute="centerY" secondItem="OJs-Zc-JGh" secondAttribute="centerY" id="89G-Ss-C6I"/>
+                                            <constraint firstAttribute="bottom" secondItem="wQv-tU-bZo" secondAttribute="bottom" constant="20" id="K15-NK-64Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="wQv-tU-bZo" secondAttribute="trailing" constant="40" id="WBV-JP-WgW"/>
+                                            <constraint firstItem="jOY-WW-XMn" firstAttribute="leading" secondItem="OJs-Zc-JGh" secondAttribute="leading" id="ZbT-oQ-Ki5"/>
+                                            <constraint firstAttribute="trailing" secondItem="jOY-WW-XMn" secondAttribute="trailing" id="dNc-ue-xYp"/>
+                                            <constraint firstItem="jOY-WW-XMn" firstAttribute="top" secondItem="OJs-Zc-JGh" secondAttribute="top" id="fsJ-BB-zlr"/>
+                                            <constraint firstItem="wQv-tU-bZo" firstAttribute="top" secondItem="OJs-Zc-JGh" secondAttribute="top" constant="20" id="j6A-Hi-HD9"/>
+                                            <constraint firstItem="wQv-tU-bZo" firstAttribute="leading" secondItem="OJs-Zc-JGh" secondAttribute="leading" constant="40" id="rnA-Ed-2DH"/>
+                                            <constraint firstItem="wQv-tU-bZo" firstAttribute="centerX" secondItem="OJs-Zc-JGh" secondAttribute="centerX" id="yIj-m3-1N5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="led-mW-Ghb">
+                                        <rect key="frame" x="0.0" y="232" width="354" height="231"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-aj-4a0">
+                                                <rect key="frame" x="40" y="20" width="274" height="191"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-Rp-JKe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="143.66666666666669"/>
+                                                        <state key="normal" image="PhotoLibraryImage">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="9se-Nv-LI4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="K5U-7A-ciX">
+                                                        <rect key="frame" x="0.0" y="143.66666666666669" width="274" height="47.333333333333314"/>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                                        <state key="normal" title="Choose From Gallery">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="eRm-2n-cc2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="3Sz-Rp-JKe" firstAttribute="width" secondItem="K5U-7A-ciX" secondAttribute="height" multiplier="197:34" id="TrN-Hu-ovH"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s7x-jY-bNe">
+                                                <rect key="frame" x="0.0" y="197" width="354" height="34"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="photoLibraryAction:" destination="y9p-ib-IHT" eventType="touchUpInside" id="epD-M1-51T"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="s7x-jY-bNe" secondAttribute="bottom" id="8ET-0d-IIr"/>
+                                            <constraint firstItem="nwi-aj-4a0" firstAttribute="top" secondItem="led-mW-Ghb" secondAttribute="top" constant="20" id="Ijs-hh-Zsx"/>
+                                            <constraint firstAttribute="trailing" secondItem="s7x-jY-bNe" secondAttribute="trailing" id="WAR-BJ-6Pt"/>
+                                            <constraint firstAttribute="trailing" secondItem="nwi-aj-4a0" secondAttribute="trailing" constant="40" id="WcC-97-Gdg"/>
+                                            <constraint firstItem="nwi-aj-4a0" firstAttribute="centerY" secondItem="led-mW-Ghb" secondAttribute="centerY" id="aBm-Bg-D5K"/>
+                                            <constraint firstItem="nwi-aj-4a0" firstAttribute="centerX" secondItem="led-mW-Ghb" secondAttribute="centerX" id="fek-fj-L3M"/>
+                                            <constraint firstItem="nwi-aj-4a0" firstAttribute="leading" secondItem="led-mW-Ghb" secondAttribute="leading" constant="40" id="ih7-rf-1XR"/>
+                                            <constraint firstItem="s7x-jY-bNe" firstAttribute="leading" secondItem="led-mW-Ghb" secondAttribute="leading" id="lo8-25-UCX"/>
+                                            <constraint firstAttribute="bottom" secondItem="nwi-aj-4a0" secondAttribute="bottom" constant="20" id="oW1-Cj-khw"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bYT-DX-AcS" secondAttribute="bottom" id="65D-21-vHs"/>
+                                    <constraint firstItem="OJs-Zc-JGh" firstAttribute="top" secondItem="AsY-nT-jLk" secondAttribute="top" id="7VB-Jc-e3D"/>
+                                    <constraint firstItem="led-mW-Ghb" firstAttribute="leading" secondItem="AsY-nT-jLk" secondAttribute="leading" id="I5f-vj-9JS"/>
+                                    <constraint firstItem="nwi-aj-4a0" firstAttribute="width" secondItem="wQv-tU-bZo" secondAttribute="width" id="LKD-pV-Mxx"/>
+                                    <constraint firstAttribute="trailing" secondItem="led-mW-Ghb" secondAttribute="trailing" id="Voq-om-mGb"/>
+                                    <constraint firstAttribute="trailing" secondItem="OJs-Zc-JGh" secondAttribute="trailing" id="fmQ-oI-GnJ"/>
+                                    <constraint firstItem="bYT-DX-AcS" firstAttribute="leading" secondItem="AsY-nT-jLk" secondAttribute="leading" id="k5i-7i-6cK"/>
+                                    <constraint firstAttribute="trailing" secondItem="bYT-DX-AcS" secondAttribute="trailing" id="mkX-up-oFl"/>
+                                    <constraint firstItem="OJs-Zc-JGh" firstAttribute="height" secondItem="AsY-nT-jLk" secondAttribute="height" multiplier="1:2" id="saI-y8-mfm"/>
+                                    <constraint firstItem="bYT-DX-AcS" firstAttribute="top" secondItem="AsY-nT-jLk" secondAttribute="top" id="vGR-Tw-xbL"/>
+                                    <constraint firstItem="led-mW-Ghb" firstAttribute="height" secondItem="AsY-nT-jLk" secondAttribute="height" multiplier="1:2" id="vfr-aX-UXW"/>
+                                    <constraint firstAttribute="bottom" secondItem="led-mW-Ghb" secondAttribute="bottom" id="xWW-cx-JXv"/>
+                                    <constraint firstItem="K5U-7A-ciX" firstAttribute="height" secondItem="Sob-0M-XSG" secondAttribute="height" id="yTN-aU-923"/>
+                                    <constraint firstItem="OJs-Zc-JGh" firstAttribute="leading" secondItem="AsY-nT-jLk" secondAttribute="leading" id="ypz-Oi-dx9"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-61-enY">
                                 <rect key="frame" x="381" y="58" width="30" height="46"/>
@@ -647,6 +701,18 @@ to add outfit entries</string>
                                     <action selector="deleteImage:" destination="y9p-ib-IHT" eventType="touchUpInside" id="ay8-Nk-eSx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbB-8C-iWb">
+                                <rect key="frame" x="30" y="305" width="354" height="2"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="846-Gw-DGT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="y79-lA-A1P">
                                 <rect key="frame" x="30" y="547" width="354" height="129"/>
                                 <subviews>
@@ -661,7 +727,7 @@ to add outfit entries</string>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                         <state key="normal" title="Add Group, Category, or Event">
-                                            <color key="titleColor" red="0.7841535210609436" green="0.78391718864440918" blue="0.80869549512863159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.78023236989974976" green="0.77999532222747803" blue="0.80477422475814819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -702,12 +768,19 @@ to add outfit entries</string>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="y79-lA-A1P" firstAttribute="leading" secondItem="aIV-fH-RBz" secondAttribute="leadingMargin" constant="10" id="3iV-1f-FYE"/>
+                            <constraint firstItem="AsY-nT-jLk" firstAttribute="top" secondItem="RgY-fH-JPc" secondAttribute="bottom" constant="10" id="6er-sK-mDe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AsY-nT-jLk" secondAttribute="trailing" constant="10" id="8DE-cf-K3f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y79-lA-A1P" secondAttribute="trailing" constant="10" id="9Bw-5x-0WQ"/>
                             <constraint firstItem="y79-lA-A1P" firstAttribute="top" secondItem="AsY-nT-jLk" secondAttribute="bottom" constant="10" id="DoN-H9-A76"/>
                             <constraint firstItem="CPY-yP-Qco" firstAttribute="top" secondItem="Ztn-SK-aVD" secondAttribute="bottom" constant="10" id="HcS-k2-1uh"/>
                             <constraint firstItem="Ztn-SK-aVD" firstAttribute="top" secondItem="y79-lA-A1P" secondAttribute="bottom" constant="10" id="OLe-0v-sDC"/>
+                            <constraint firstItem="AsY-nT-jLk" firstAttribute="width" secondItem="y79-lA-A1P" secondAttribute="height" multiplier="118:43" id="dKB-nK-qzx"/>
+                            <constraint firstItem="YbB-8C-iWb" firstAttribute="leading" secondItem="AsY-nT-jLk" secondAttribute="leading" id="jnV-SF-pv5"/>
+                            <constraint firstItem="YbB-8C-iWb" firstAttribute="trailing" secondItem="AsY-nT-jLk" secondAttribute="trailing" id="mUo-Nr-e2N"/>
                             <constraint firstItem="Ztn-SK-aVD" firstAttribute="centerX" secondItem="aIV-fH-RBz" secondAttribute="centerX" id="nMQ-zw-Dxl"/>
+                            <constraint firstItem="AsY-nT-jLk" firstAttribute="leading" secondItem="aIV-fH-RBz" secondAttribute="leadingMargin" constant="10" id="sG4-DA-xWf"/>
                             <constraint firstItem="y79-lA-A1P" firstAttribute="centerX" secondItem="aIV-fH-RBz" secondAttribute="centerX" id="tHq-Hi-jp4"/>
+                            <constraint firstItem="YbB-8C-iWb" firstAttribute="centerY" secondItem="AsY-nT-jLk" secondAttribute="centerY" id="ucW-kK-Kik"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tjx-76-fOf" appends="YES" id="plZ-ZT-WJL"/>
@@ -770,7 +843,7 @@ to add outfit entries</string>
                                         <rect key="frame" x="0.0" y="1" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7BF-4i-0uD" id="HgC-8f-kkn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

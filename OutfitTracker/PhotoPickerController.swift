@@ -35,6 +35,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var orLabel: UILabel!
     
     let datePicker = UIDatePicker()
+    let magnesium = UIColor(red: CGFloat(199.0/255.0), green: CGFloat(199.0/255.0), blue: CGFloat(205.0/255.0), alpha: CGFloat(0.9))
+
     
     var note = ""
     var groupGlobal = ""
@@ -49,6 +51,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
         if photoImage.image == nil {
             saveButton.isEnabled = false
             xButton.isHidden = true
@@ -56,6 +59,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             photoLibraryButtonWithImage.isHidden = false
             takePhotoButton.isHidden = false
             takePhotoButtonWithImage.isHidden = false
+            takePhotoTextButton.isHidden = false
             orLabel.isHidden = false
         } else {
             saveButton.isEnabled = true
@@ -64,13 +68,15 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             photoLibraryButtonWithImage.isHidden = true
             takePhotoButton.isHidden = true
             takePhotoButtonWithImage.isHidden = true
+            takePhotoTextButton.isHidden = true
             orLabel.isHidden = true
         }
         if !(UIImagePickerController.isSourceTypeAvailable(.camera)) {
             takePhotoButton.isEnabled = false
             takePhotoButtonWithImage.isEnabled = false
-            takePhotoButton.setTitle("\n\n\n\n\nCamera Unavailable", for: .normal)
-            takePhotoButton.setTitleColor(UIColor.gray, for: .disabled)
+            takePhotoTextButton.isEnabled = false
+            takePhotoTextButton.setTitle("Camera Unavailable", for: .normal)
+            takePhotoTextButton.setTitleColor(UIColor.gray, for: .disabled)
         }
         if !(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
             photoLibraryButton.isEnabled = false
@@ -104,11 +110,20 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             photoImage.image = editedItem?.image
             textField.text = editedItem?.note
             dateTextField.text = editedItem?.date
-            groupButton.setTitle(editedItem?.group, for: .normal)
-            groupButton.setTitleColor(.black, for: .normal)
-            groupGlobal = editedItem!.group
             
-            
+            if editedItem?.group != "" {
+                groupButton.setTitle(editedItem?.group, for: .normal)
+                groupButton.setTitleColor(.black, for: .normal)
+                groupGlobal = editedItem!.group
+                print("THAT ran")
+                print(editedItem?.group)
+            } else {
+                groupButton.setTitleColor(magnesium, for: .normal)
+                groupButton.setTitle("Add Group, Category, or Event", for: .normal)
+                print("this ran")
+                print(groupButton.titleLabel?.text!)
+                print(groupButton.state)
+            }
         }
         if number != nil {
             
@@ -306,6 +321,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         photoLibraryButtonWithImage.isHidden = false
         takePhotoButton.isHidden = false
         takePhotoButtonWithImage.isHidden = false
+        takePhotoTextButton.isHidden = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

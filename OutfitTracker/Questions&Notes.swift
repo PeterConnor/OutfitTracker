@@ -31,11 +31,11 @@ import Foundation
  
  **Notes**
  
-preload groups? (Nah, but ask Suraya).
+if no group, label 1 = e.g. Family, label 2 = e.g. Friends, label 3 = e.g. Work
  
 Add instructions to support page.
  
-white frame around detail pic?
+Autolayout photopicker page.
  
  credit
  Profile picture by Sribala from the Noun Project
