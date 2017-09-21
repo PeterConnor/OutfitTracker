@@ -57,6 +57,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             xButton.isHidden = true
             photoLibraryButton.isHidden = false
             photoLibraryButtonWithImage.isHidden = false
+            chooseFromGalleryButton.isHidden = false
             takePhotoButton.isHidden = false
             takePhotoButtonWithImage.isHidden = false
             takePhotoTextButton.isHidden = false
@@ -66,6 +67,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             xButton.isHidden = false
             photoLibraryButton.isHidden = true
             photoLibraryButtonWithImage.isHidden = true
+            chooseFromGalleryButton.isHidden = true
             takePhotoButton.isHidden = true
             takePhotoButtonWithImage.isHidden = true
             takePhotoTextButton.isHidden = true
@@ -81,6 +83,9 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         if !(UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
             photoLibraryButton.isEnabled = false
             photoLibraryButtonWithImage.isEnabled = false
+            chooseFromGalleryButton.isEnabled = false
+            chooseFromGalleryButton.setTitle("Photo Library Unavailable", for: .normal)
+            chooseFromGalleryButton.setTitleColor(UIColor.gray, for: .disabled)
         }
     }
     
@@ -115,14 +120,9 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
                 groupButton.setTitle(editedItem?.group, for: .normal)
                 groupButton.setTitleColor(.black, for: .normal)
                 groupGlobal = editedItem!.group
-                print("THAT ran")
-                print(editedItem?.group)
             } else {
                 groupButton.setTitleColor(magnesium, for: .normal)
                 groupButton.setTitle("Add Group, Category, or Event", for: .normal)
-                print("this ran")
-                print(groupButton.titleLabel?.text!)
-                print(groupButton.state)
             }
         }
         if number != nil {
@@ -322,6 +322,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         takePhotoButton.isHidden = false
         takePhotoButtonWithImage.isHidden = false
         takePhotoTextButton.isHidden = false
+        chooseFromGalleryButton.isHidden = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
