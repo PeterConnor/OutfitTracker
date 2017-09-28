@@ -25,17 +25,19 @@ import Foundation
  
  better way to commit rather thana branching.
  
- What happens when I update xcode?
+xcode 9/ios 11
  
- why didn't date sorting work until i deleted the app and simulated again on phone?
+ Write instructions. add search example. just one - "golf"
  
- **Notes**
+why didn't date sorting work until i deleted the app and simulated again on phone?
+ 
+**Notes**
  
 if no group, label 1 = e.g. Family, label 2 = e.g. Friends, label 3 = e.g. Work
  
 Add instructions to support page.
  
-Autolayout photopicker page.
+ add Man by Eugen Belyakoff from the Noun Project
  
  credit
  Profile picture by Sribala from the Noun Project
