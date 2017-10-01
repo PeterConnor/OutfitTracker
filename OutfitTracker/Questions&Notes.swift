@@ -13,39 +13,32 @@ import Foundation
  
  **Questions**
  
- What's going on in the @IBAction func choosePhoto closures? I'm still having trouble wrapping my head around closures & completion handlers.
+What's going on in the @IBAction func choosePhoto closures? I'm still having trouble wrapping my head around closures & completion handlers.
  
- what's happening in the singleton?
+what's happening in the singleton...static?
  
- how to learn w/o youtube & tutorials?
+how to test/maximize performance?
  
- whats happening inside searchbar func
- 
- how to test/maximize performance?
- 
- better way to commit rather thana branching.
+better way to commit rather thana branching.
  
 xcode 9/ios 11
- 
- Write instructions. add search example. just one - "golf"
  
 why didn't date sorting work until i deleted the app and simulated again on phone?
  
 **Notes**
  
-if no group, label 1 = e.g. Family, label 2 = e.g. Friends, label 3 = e.g. Work
+write instructions wording
  
 Add instructions to support page.
+
+Code review - suraya
  
- add Man by Eugen Belyakoff from the Noun Project
+add notifications/alarms
  
- credit
- Profile picture by Sribala from the Noun Project
+add iAd
  
- https://dribbble.com/
- 
- https://surayashivji.github.io/Inspo/
- 
- 
+add search example. just one - "golf"
+
+ photo aspect in large image view controller
  
 */
