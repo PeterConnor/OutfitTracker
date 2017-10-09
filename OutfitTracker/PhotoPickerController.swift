@@ -91,7 +91,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         let whiteSaveButton = UIImage(named: "SavePhotoImage")?.withRenderingMode(.alwaysTemplate)
         saveButton.setImage(whiteSaveButton, for: .normal)
@@ -184,7 +184,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
             //let cameraAction = UIAlertAction(title: "Use Camera", style: .default) { (action) in
                 
-                let status = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+                let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
                 
                 if (status == .authorized) {
                     self.displayPicker(type: .camera)
@@ -202,7 +202,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 if (status == .notDetermined) {
                 
-                    AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granted) in
+                    AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted) in
                         if (granted) {
                             self.displayPicker(type: .camera)
                         }
@@ -392,7 +392,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
-    func donePressed() {
+    @objc func donePressed() {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E  MM/d/yy"

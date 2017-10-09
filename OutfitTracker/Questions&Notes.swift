@@ -36,9 +36,5 @@ Code review - suraya
 add notifications/alarms
  
 add iAd
- 
-add search example. just one - "golf"
 
- photo aspect in large image view controller
- 
 */

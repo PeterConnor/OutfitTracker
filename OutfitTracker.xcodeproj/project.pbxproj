@@ -24,6 +24,7 @@
 		FAE826801EC12EEA000C4353 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */; };
 		FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */; };
 		FAF02ABD1ED224E40088CB40 /* LargeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */; };
+		FAF3BC5B1F8B035000A8ED38 /* FinalInstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeImageViewController.swift; sourceTree = "<group>"; };
+		FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalInstructionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				FA5371071EB037F100AF69A4 /* PhotoPickerController.swift */,
 				FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */,
 				FA8312871F12E8130011BE62 /* SupportViewController.swift */,
+				FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */,
 				FAC669411F4FB32700432398 /* CreditsViewController.swift */,
 				FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */,
 				FA5371091EB037F100AF69A4 /* Main.storyboard */,
@@ -180,11 +183,13 @@
 					FA5371011EB037F100AF69A4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = E5ZJ3PWQ3A;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					FACB07E91F3D354900D14AC4 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = E5ZJ3PWQ3A;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FA5371011EB037F100AF69A4;
 					};
@@ -242,6 +247,7 @@
 				FA5371081EB037F100AF69A4 /* PhotoPickerController.swift in Sources */,
 				FA3710DD1EB821E20097AA56 /* Questions&Notes.swift in Sources */,
 				FA52E1FD1F1146EE00F4B1BA /* GroupViewController.swift in Sources */,
+				FAF3BC5B1F8B035000A8ED38 /* FinalInstructionViewController.swift in Sources */,
 				FA5371061EB037F100AF69A4 /* AppDelegate.swift in Sources */,
 				FAF02ABD1ED224E40088CB40 /* LargeImageViewController.swift in Sources */,
 				FA53710E1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld in Sources */,
@@ -393,7 +399,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.c0nman.OutfitTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -408,7 +415,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.c0nman.OutfitTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -422,7 +430,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.c0nman.OutfitTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutfitTracker.app/OutfitTracker";
 			};
 			name = Debug;
@@ -436,7 +445,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.c0nman.OutfitTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutfitTracker.app/OutfitTracker";
 			};
 			name = Release;

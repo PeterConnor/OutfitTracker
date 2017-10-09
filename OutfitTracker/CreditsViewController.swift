@@ -28,6 +28,11 @@ class CreditsViewController: UIViewController {
     
     @IBOutlet weak var savePhotoButton: UIButton!
     
+    @IBOutlet weak var cloudButton: UIButton!
+    
+    @IBOutlet weak var questionmanButton: UIButton!
+    
+    @IBOutlet weak var lightbulbButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +72,18 @@ class CreditsViewController: UIViewController {
         let whiteSavePhotoButton = UIImage(named: "SavePhotoImage")?.withRenderingMode(.alwaysTemplate)
         savePhotoButton.setImage(whiteSavePhotoButton, for: .normal)
         savePhotoButton.tintColor = UIColor.white
+        
+        let whiteCloudButton = UIImage(named: "cloud1")?.withRenderingMode(.alwaysTemplate)
+        cloudButton.setImage(whiteCloudButton, for: .normal)
+        cloudButton.tintColor = UIColor.white
+        
+        let whiteQuestionmanButton = UIImage(named: "questionman")?.withRenderingMode(.alwaysTemplate)
+        questionmanButton.setImage(whiteQuestionmanButton, for: .normal)
+        questionmanButton.tintColor = UIColor.white
+        
+        let whiteLightbulbButton = UIImage(named: "lightbulb")?.withRenderingMode(.alwaysTemplate)
+        lightbulbButton.setImage(whiteLightbulbButton, for: .normal)
+        lightbulbButton.tintColor = UIColor.white
 
         // Do any additional setup after loading the view.
     }
