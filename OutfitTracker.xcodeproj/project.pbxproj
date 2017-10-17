@@ -18,6 +18,8 @@
 		FA7D438E1EC009950061EACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438D1EC009950061EACB /* ViewController.swift */; };
 		FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438F1EC009E40061EACB /* ImagesModel.swift */; };
 		FA8312881F12E8130011BE62 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8312871F12E8130011BE62 /* SupportViewController.swift */; };
+		FAA4EC821F959E35008E536C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4EC811F959E35008E536C /* NotificationManager.swift */; };
+		FAA4EC841F959E3F008E536C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4EC831F959E3F008E536C /* NotificationViewController.swift */; };
 		FAC669421F4FB32700432398 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC669411F4FB32700432398 /* CreditsViewController.swift */; };
 		FACB07E51F3BE52C00D14AC4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */; };
 		FACB07ED1F3D354900D14AC4 /* OutfitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB07EC1F3D354900D14AC4 /* OutfitTrackerTests.swift */; };
@@ -51,6 +53,9 @@
 		FA7D438D1EC009950061EACB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7D438F1EC009E40061EACB /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		FA8312871F12E8130011BE62 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		FAA4EC801F959E1C008E536C /* OutfitTrackerAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OutfitTrackerAppIcon.png; path = ../../../../../Documents/OutfitTrackerAppIcon.png; sourceTree = "<group>"; };
+		FAA4EC811F959E35008E536C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationManager.swift; path = "../../../../Downloads/OutfitTracker-2/OutfitTracker/NotificationManager.swift"; sourceTree = "<group>"; };
+		FAA4EC831F959E3F008E536C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = "../../../../Downloads/OutfitTracker-2/OutfitTracker/NotificationViewController.swift"; sourceTree = "<group>"; };
 		FAC669411F4FB32700432398 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		FACB07EA1F3D354900D14AC4 /* OutfitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutfitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +124,9 @@
 				FA5371141EB037F100AF69A4 /* Info.plist */,
 				FA53710C1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld */,
 				FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */,
+				FAA4EC831F959E3F008E536C /* NotificationViewController.swift */,
+				FAA4EC811F959E35008E536C /* NotificationManager.swift */,
+				FAA4EC801F959E1C008E536C /* OutfitTrackerAppIcon.png */,
 			);
 			path = OutfitTracker;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 			files = (
 				FAC669421F4FB32700432398 /* CreditsViewController.swift in Sources */,
 				FACB07E51F3BE52C00D14AC4 /* RoundButton.swift in Sources */,
+				FAA4EC841F959E3F008E536C /* NotificationViewController.swift in Sources */,
 				FA7D438E1EC009950061EACB /* ViewController.swift in Sources */,
 				FAE826801EC12EEA000C4353 /* CustomCollectionViewCell.swift in Sources */,
 				FA8312881F12E8130011BE62 /* SupportViewController.swift in Sources */,
@@ -251,6 +260,7 @@
 				FA5371061EB037F100AF69A4 /* AppDelegate.swift in Sources */,
 				FAF02ABD1ED224E40088CB40 /* LargeImageViewController.swift in Sources */,
 				FA53710E1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld in Sources */,
+				FAA4EC821F959E35008E536C /* NotificationManager.swift in Sources */,
 				FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */,
 				FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */,
 			);
