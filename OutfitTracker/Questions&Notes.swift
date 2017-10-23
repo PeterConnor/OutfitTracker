@@ -27,14 +27,33 @@ why didn't date sorting work until i deleted the app and simulated again on phon
  
 **Notes**
  
-write instructions wording
+center notififaction repeat button. fix look.
  
-Add instructions to support page.
-
 Code review - suraya
  
-add notifications/alarms
- 
 add iAd
+ 
+ change where notification request happens (not in appdelegate). deal with all situations.
+ 
+ Change repeat to on.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 */

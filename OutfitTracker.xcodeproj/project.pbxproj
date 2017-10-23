@@ -15,6 +15,7 @@
 		FA53710E1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA53710C1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld */; };
 		FA5371101EB037F100AF69A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA53710F1EB037F100AF69A4 /* Assets.xcassets */; };
 		FA5371131EB037F100AF69A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5371111EB037F100AF69A4 /* LaunchScreen.storyboard */; };
+		FA6FB95F1F998FC400E35AA9 /* OutfitTrackerAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6FB95E1F998FC400E35AA9 /* OutfitTrackerAppIcon.png */; };
 		FA7D438E1EC009950061EACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438D1EC009950061EACB /* ViewController.swift */; };
 		FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438F1EC009E40061EACB /* ImagesModel.swift */; };
 		FA8312881F12E8130011BE62 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8312871F12E8130011BE62 /* SupportViewController.swift */; };
@@ -51,10 +52,10 @@
 		FA53710F1EB037F100AF69A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5371121EB037F100AF69A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5371141EB037F100AF69A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6FB95E1F998FC400E35AA9 /* OutfitTrackerAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OutfitTrackerAppIcon.png; path = ../../../../Downloads/OutfitTrackerAppIcon.png; sourceTree = "<group>"; };
 		FA7D438D1EC009950061EACB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7D438F1EC009E40061EACB /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		FA8312871F12E8130011BE62 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
-		FAA4EC801F959E1C008E536C /* OutfitTrackerAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OutfitTrackerAppIcon.png; path = ../../../../../Documents/OutfitTrackerAppIcon.png; sourceTree = "<group>"; };
 		FAA4EC811F959E35008E536C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationManager.swift; path = "../../../../Downloads/OutfitTracker-2/OutfitTracker/NotificationManager.swift"; sourceTree = "<group>"; };
 		FAA4EC831F959E3F008E536C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = "../../../../Downloads/OutfitTracker-2/OutfitTracker/NotificationViewController.swift"; sourceTree = "<group>"; };
 		FAA4EC851F96D788008E536C /* InstructionsPageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPageOneViewController.swift; sourceTree = "<group>"; };
@@ -128,7 +129,7 @@
 				FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */,
 				FAA4EC831F959E3F008E536C /* NotificationViewController.swift */,
 				FAA4EC811F959E35008E536C /* NotificationManager.swift */,
-				FAA4EC801F959E1C008E536C /* OutfitTrackerAppIcon.png */,
+				FA6FB95E1F998FC400E35AA9 /* OutfitTrackerAppIcon.png */,
 				FAA4EC851F96D788008E536C /* InstructionsPageOneViewController.swift */,
 			);
 			path = OutfitTracker;
@@ -230,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6FB95F1F998FC400E35AA9 /* OutfitTrackerAppIcon.png in Resources */,
 				FA5371131EB037F100AF69A4 /* LaunchScreen.storyboard in Resources */,
 				FA5371101EB037F100AF69A4 /* Assets.xcassets in Resources */,
 				FA53710B1EB037F100AF69A4 /* Main.storyboard in Resources */,

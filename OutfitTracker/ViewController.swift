@@ -44,8 +44,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         searchBar.placeholder = "Search"
         itemList = model.imageItems
         itemList.sort(by: { $0.actualDate > $1.actualDate})
-
-        
         }
     
     override func viewWillAppear(_ animated: Bool) {
