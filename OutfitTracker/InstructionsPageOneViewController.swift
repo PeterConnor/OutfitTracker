@@ -16,8 +16,8 @@ class InstructionsPageOneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.layer.masksToBounds = true
-        label.layer.cornerRadius = 10
+        //label.layer.masksToBounds = true
+        //label.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }

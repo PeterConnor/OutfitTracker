@@ -21,6 +21,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var directionsLabel: UILabel!
     
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
+    
     
     private let reuseIdentifier = "imageCell"
     
@@ -44,10 +48,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         searchBar.placeholder = "Search"
         itemList = model.imageItems
         itemList.sort(by: { $0.actualDate > $1.actualDate})
+        
+        self.navigationController?.navigationBar.tintColor = .white
+
         }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
         model.imageItems.sort(by: { $0.actualDate > $1.actualDate})
         resetSearches()
         itemList = model.imageItems
