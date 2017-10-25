@@ -74,7 +74,7 @@
                     <navigationItem key="navigationItem" id="hwC-od-gdh">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Pqv-rj-i9p">
                             <connections>
-                                <segue destination="2nk-yV-gWL" kind="show" id="SAl-k6-IAh"/>
+                                <segue destination="2nk-yV-gWL" kind="show" id="ue3-1V-5os"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1229,7 +1229,7 @@ to add outfit entries</string>
                     <navigationItem key="navigationItem" id="bdV-uo-oOL">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="iPL-kN-bgT">
                             <connections>
-                                <segue destination="HMw-b5-P12" kind="show" id="LgV-HG-Flx"/>
+                                <segue destination="HMw-b5-P12" kind="show" id="GFR-cs-vZ7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1249,12 +1249,23 @@ to add outfit entries</string>
                     <view key="view" contentMode="scaleToFill" id="ZlN-Kn-SpO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inst5" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-sq-xvn">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ei9-sq-xvn" secondAttribute="trailing" id="7ZJ-Ng-qTA"/>
+                            <constraint firstItem="70D-D5-liL" firstAttribute="top" secondItem="Ei9-sq-xvn" secondAttribute="bottom" id="atb-nk-sJv"/>
+                            <constraint firstItem="Ei9-sq-xvn" firstAttribute="top" secondItem="FTq-gz-ZKd" secondAttribute="bottom" id="ivf-Wg-zZc"/>
+                            <constraint firstItem="Ei9-sq-xvn" firstAttribute="leading" secondItem="ZlN-Kn-SpO" secondAttribute="leading" id="nZX-HT-Fu3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fcX-eq-NPx">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="7di-RY-Z1c">
                             <connections>
-                                <segue destination="iWU-Qg-C1O" kind="show" id="xDV-Xi-pxg"/>
+                                <segue destination="iWU-Qg-C1O" kind="show" id="bfI-R6-BdY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -2141,7 +2152,8 @@ to add outfit entries</string>
         <image name="inst1" width="249" height="402"/>
         <image name="inst2" width="248" height="400"/>
         <image name="inst3" width="248" height="402"/>
-        <image name="inst4" width="249" height="402"/>
+        <image name="inst4" width="249" height="401"/>
+        <image name="inst5" width="249" height="401"/>
         <image name="inst6" width="248" height="402"/>
         <image name="inst7" width="248" height="402"/>
         <image name="lightbulb" width="145" height="170"/>
