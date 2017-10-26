@@ -37,8 +37,8 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
         
-        mailComposerVC.setToRecipients(["peter.t.connor@gmail.com"])
-        mailComposerVC.setSubject("Outfit Tracker - Support")
+        mailComposerVC.setToRecipients(["c0nmanApps@gmail.com"])
+        mailComposerVC.setSubject("Outfit Tracker")
         
         return mailComposerVC
     }
