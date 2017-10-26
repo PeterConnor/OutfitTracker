@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 import CoreData
+import GoogleMobileAds
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, GADBannerViewDelegate {
     
     var model = ImagesModel.shared
     @IBOutlet weak var imageCollectionView: UICollectionView!
@@ -24,6 +25,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     @IBOutlet weak var settingsButton: UIBarButtonItem!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
     
     
     private let reuseIdentifier = "imageCell"
@@ -50,7 +53,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         itemList.sort(by: { $0.actualDate > $1.actualDate})
         
         self.navigationController?.navigationBar.tintColor = .white
-
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        bannerView.delegate = self
+        bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
+        bannerView.rootViewController = self
+        bannerView.load(request)
+        
         }
     
     override func viewWillAppear(_ animated: Bool) {

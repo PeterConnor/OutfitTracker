@@ -540,11 +540,18 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R1T-8g-lUa">
+                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aow-Fa-Gbz">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="587"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <string key="text">Click the camera button 
-to add outfit entries</string>
+                                    <string key="text">Click the camera icon to add 
+a new outfit entry  
+
+
+or 
+
+ 
+Click the settings icon 
+for instructions</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -630,6 +637,14 @@ to add outfit entries</string>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADe-z8-Yv0" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="686" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="8kl-tm-BuS"/>
+                                    <constraint firstAttribute="height" constant="50" id="ef4-xT-iau"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -637,9 +652,11 @@ to add outfit entries</string>
                             <constraint firstItem="UUz-wW-9ok" firstAttribute="leading" secondItem="HkP-D0-GHv" secondAttribute="leading" id="0G6-Zu-ioj"/>
                             <constraint firstItem="e47-2X-W40" firstAttribute="leading" secondItem="HkP-D0-GHv" secondAttribute="leading" id="G0b-zj-FsV"/>
                             <constraint firstItem="6CB-Be-13M" firstAttribute="top" secondItem="e47-2X-W40" secondAttribute="bottom" constant="1" id="GQ5-3B-lgL"/>
+                            <constraint firstItem="z3q-ZE-D84" firstAttribute="top" secondItem="ADe-z8-Yv0" secondAttribute="bottom" id="HSe-13-jD8"/>
                             <constraint firstAttribute="trailing" secondItem="e47-2X-W40" secondAttribute="trailing" id="Hmp-dG-DE2"/>
                             <constraint firstItem="UUz-wW-9ok" firstAttribute="top" secondItem="LfE-zT-yjd" secondAttribute="bottom" id="Jgl-nB-LfS"/>
                             <constraint firstAttribute="trailing" secondItem="6CB-Be-13M" secondAttribute="trailing" id="TU4-Iv-0jk"/>
+                            <constraint firstItem="ADe-z8-Yv0" firstAttribute="centerX" secondItem="HkP-D0-GHv" secondAttribute="centerX" id="bCI-89-igL"/>
                             <constraint firstAttribute="trailing" secondItem="UUz-wW-9ok" secondAttribute="trailing" id="k9O-D9-Cel"/>
                             <constraint firstAttribute="bottom" secondItem="6CB-Be-13M" secondAttribute="bottom" id="l4V-4v-BAS"/>
                             <constraint firstItem="e47-2X-W40" firstAttribute="top" secondItem="UUz-wW-9ok" secondAttribute="bottom" id="nfP-HO-5vS"/>
@@ -661,8 +678,9 @@ to add outfit entries</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bannerView" destination="ADe-z8-Yv0" id="Omu-DI-Mnr"/>
                         <outlet property="cameraButton" destination="G3G-Im-HZQ" id="XNf-CU-flk"/>
-                        <outlet property="directionsLabel" destination="R1T-8g-lUa" id="COi-cV-qpC"/>
+                        <outlet property="directionsLabel" destination="aow-Fa-Gbz" id="Z4G-RT-cmJ"/>
                         <outlet property="imageCollectionView" destination="6CB-Be-13M" id="cii-ek-CrP"/>
                         <outlet property="searchBar" destination="UUz-wW-9ok" id="Fc9-0e-vwl"/>
                         <outlet property="segmentedControl" destination="e47-2X-W40" id="QXs-oH-djW"/>
@@ -671,7 +689,7 @@ to add outfit entries</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVp-Sk-cra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919.20000000000005" y="-531.18440779610194"/>
+            <point key="canvasLocation" x="918.84057971014499" y="-531.52173913043487"/>
         </scene>
         <!--Photo Picker Controller-->
         <scene sceneID="puF-Eq-Vdw">

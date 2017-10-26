@@ -31,7 +31,10 @@ center notififaction repeat button. fix look.
  
 Code review - suraya
  
-add iAd
+add banner - https://developers.google.com/admob/ios/banner
+APP ID ca-app-pub-9017513021309308~9223293379
+Ad Unit ca-app-pub-9017513021309308/6032231248
+Need banner id
  
  change where notification request happens (not in appdelegate). deal with all situations.
  

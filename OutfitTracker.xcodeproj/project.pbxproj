@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		445B85AFF70AC6BB65EC27DE /* Pods_OutfitTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076028E5312993E54865B13E /* Pods_OutfitTrackerTests.framework */; };
+		E33858DB8B3298CC2DACB0A4 /* Pods_OutfitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CC5203A932091459D4BADD /* Pods_OutfitTracker.framework */; };
 		FA2FAD751FA1539A00C02CDC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2FAD741FA1538D00C02CDC /* iAd.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FA2FAD7F1FA16E0C00C02CDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */; };
 		FA3710DD1EB821E20097AA56 /* Questions&Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */; };
 		FA52E1FD1F1146EE00F4B1BA /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */; };
 		FA5371061EB037F100AF69A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5371051EB037F100AF69A4 /* AppDelegate.swift */; };
@@ -43,7 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		076028E5312993E54865B13E /* Pods_OutfitTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		169106FAC4E4D63574D8AE78 /* Pods-OutfitTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		49CC5203A932091459D4BADD /* Pods_OutfitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6426BCBC55242686318664DC /* Pods-OutfitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker.release.xcconfig"; sourceTree = "<group>"; };
+		92985434B7759F894A6CFC26 /* Pods-OutfitTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2FAD741FA1538D00C02CDC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Questions&Notes.swift"; sourceTree = "<group>"; };
 		FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		FA5371021EB037F100AF69A4 /* OutfitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutfitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +67,7 @@
 		FA7D438D1EC009950061EACB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7D438F1EC009E40061EACB /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		FA8312871F12E8130011BE62 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		FA85C8F22A6A97482E918879 /* Pods-OutfitTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAA4EC811F959E35008E536C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationManager.swift; path = "../../../../Downloads/OutfitTracker-2/OutfitTracker/NotificationManager.swift"; sourceTree = "<group>"; };
 		FAA4EC831F959E3F008E536C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = "../../../../Downloads/OutfitTracker-2/OutfitTracker/NotificationViewController.swift"; sourceTree = "<group>"; };
 		FAA4EC851F96D788008E536C /* InstructionsPageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPageOneViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2FAD751FA1539A00C02CDC /* iAd.framework in Frameworks */,
+				E33858DB8B3298CC2DACB0A4 /* Pods_OutfitTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,16 +96,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				445B85AFF70AC6BB65EC27DE /* Pods_OutfitTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		307F0B483331EA7E00040B96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				169106FAC4E4D63574D8AE78 /* Pods-OutfitTracker.debug.xcconfig */,
+				6426BCBC55242686318664DC /* Pods-OutfitTracker.release.xcconfig */,
+				92985434B7759F894A6CFC26 /* Pods-OutfitTrackerTests.debug.xcconfig */,
+				FA85C8F22A6A97482E918879 /* Pods-OutfitTrackerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FA2FAD731FA1538D00C02CDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				FA2FAD741FA1538D00C02CDC /* iAd.framework */,
+				49CC5203A932091459D4BADD /* Pods_OutfitTracker.framework */,
+				076028E5312993E54865B13E /* Pods_OutfitTrackerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,6 +131,7 @@
 				FACB07EB1F3D354900D14AC4 /* OutfitTrackerTests */,
 				FA5371031EB037F100AF69A4 /* Products */,
 				FA2FAD731FA1538D00C02CDC /* Frameworks */,
+				307F0B483331EA7E00040B96 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +162,7 @@
 				FA5371091EB037F100AF69A4 /* Main.storyboard */,
 				FA53710F1EB037F100AF69A4 /* Assets.xcassets */,
 				FA5371111EB037F100AF69A4 /* LaunchScreen.storyboard */,
+				FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */,
 				FA5371141EB037F100AF69A4 /* Info.plist */,
 				FA53710C1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld */,
 				FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */,
@@ -163,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA5371171EB037F100AF69A4 /* Build configuration list for PBXNativeTarget "OutfitTracker" */;
 			buildPhases = (
+				D6F5C12D4415897043755D9A /* [CP] Check Pods Manifest.lock */,
 				FA5370FE1EB037F100AF69A4 /* Sources */,
 				FA5370FF1EB037F100AF69A4 /* Frameworks */,
 				FA5371001EB037F100AF69A4 /* Resources */,
+				FAF5656FF5ACD7FF353A163E /* [CP] Embed Pods Frameworks */,
+				D60F37EA2F77F893763DA337 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FACB07F11F3D354900D14AC4 /* Build configuration list for PBXNativeTarget "OutfitTrackerTests" */;
 			buildPhases = (
+				5832ECE0D74D42E864B322F0 /* [CP] Check Pods Manifest.lock */,
 				FACB07E61F3D354900D14AC4 /* Sources */,
 				FACB07E71F3D354900D14AC4 /* Frameworks */,
 				FACB07E81F3D354900D14AC4 /* Resources */,
+				5558134A5318659ED88E763F /* [CP] Embed Pods Frameworks */,
+				243572F0CD5EE25CED574405 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +278,7 @@
 			files = (
 				FA6FB95F1F998FC400E35AA9 /* OutfitTrackerAppIcon.png in Resources */,
 				FA5371131EB037F100AF69A4 /* LaunchScreen.storyboard in Resources */,
+				FA2FAD7F1FA16E0C00C02CDC /* GoogleService-Info.plist in Resources */,
 				FA5371101EB037F100AF69A4 /* Assets.xcassets in Resources */,
 				FA53710B1EB037F100AF69A4 /* Main.storyboard in Resources */,
 			);
@@ -258,6 +292,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		243572F0CD5EE25CED574405 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5558134A5318659ED88E763F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5832ECE0D74D42E864B322F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D60F37EA2F77F893763DA337 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6F5C12D4415897043755D9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FAF5656FF5ACD7FF353A163E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA5370FE1EB037F100AF69A4 /* Sources */ = {
@@ -419,6 +546,7 @@
 		};
 		FA5371181EB037F100AF69A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 169106FAC4E4D63574D8AE78 /* Pods-OutfitTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E5ZJ3PWQ3A;
@@ -435,6 +563,7 @@
 		};
 		FA5371191EB037F100AF69A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6426BCBC55242686318664DC /* Pods-OutfitTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E5ZJ3PWQ3A;
@@ -451,6 +580,7 @@
 		};
 		FACB07F21F3D354900D14AC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92985434B7759F894A6CFC26 /* Pods-OutfitTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = E5ZJ3PWQ3A;
@@ -466,6 +596,7 @@
 		};
 		FACB07F31F3D354900D14AC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA85C8F22A6A97482E918879 /* Pods-OutfitTrackerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = E5ZJ3PWQ3A;
