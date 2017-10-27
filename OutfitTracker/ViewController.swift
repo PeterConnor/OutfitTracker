@@ -50,6 +50,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         searchBar.placeholder = "Search"
         itemList = model.imageItems
+        print(itemList)
         itemList.sort(by: { $0.actualDate > $1.actualDate})
         
         self.navigationController?.navigationBar.tintColor = .white

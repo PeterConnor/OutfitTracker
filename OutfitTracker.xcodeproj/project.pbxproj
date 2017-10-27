@@ -156,7 +156,6 @@
 				FA5371071EB037F100AF69A4 /* PhotoPickerController.swift */,
 				FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */,
 				FA8312871F12E8130011BE62 /* SupportViewController.swift */,
-				FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */,
 				FAC669411F4FB32700432398 /* CreditsViewController.swift */,
 				FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */,
 				FA5371091EB037F100AF69A4 /* Main.storyboard */,
@@ -170,6 +169,7 @@
 				FAA4EC811F959E35008E536C /* NotificationManager.swift */,
 				FA6FB95E1F998FC400E35AA9 /* OutfitTrackerAppIcon.png */,
 				FAA4EC851F96D788008E536C /* InstructionsPageOneViewController.swift */,
+				FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */,
 			);
 			path = OutfitTracker;
 			sourceTree = "<group>";

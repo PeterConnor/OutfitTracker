@@ -1392,10 +1392,10 @@ for instructions</string>
             </objects>
             <point key="canvasLocation" x="1121.7391304347827" y="-1952.4456521739132"/>
         </scene>
-        <!--Notification View Controller-->
+        <!--Notifications-->
         <scene sceneID="fMI-Cw-K7E">
             <objects>
-                <viewController id="jrx-c5-q3i" customClass="NotificationViewController" customModule="OutfitTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notifications" id="jrx-c5-q3i" customClass="NotificationViewController" customModule="OutfitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gB6-PU-qod"/>
                         <viewControllerLayoutGuide type="bottom" id="w5A-eS-DAm"/>
@@ -1419,17 +1419,17 @@ for instructions</string>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pg-XG-dTg">
-                                <rect key="frame" x="142" y="351.33333333333331" width="103" height="31"/>
+                                <rect key="frame" x="142" y="351.33333333333331" width="145" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" ambiguous="YES" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLg-PN-N4E">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" ambiguous="YES" text="Repeat Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLg-PN-N4E">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.67215564520000004" green="0.91608518360000002" blue="0.76768508530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DyI-vQ-lcT">
-                                        <rect key="frame" x="54" y="0.0" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DyI-vQ-lcT">
+                                        <rect key="frame" x="96" y="0.0" width="51" height="31"/>
                                         <color key="onTintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                     </switch>
                                 </subviews>

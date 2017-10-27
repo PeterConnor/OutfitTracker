@@ -13,7 +13,7 @@ class FinalInstructionViewController: UIViewController {
   
     @IBAction func doneButton(_ sender: Any) {
         navigationController!.popToViewController(navigationController!.viewControllers[0] as
-        UIViewController, animated: false)
+        UIViewController, animated: true)
         print("check")
     }
     
