@@ -56,7 +56,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.navigationController?.navigationBar.tintColor = .white
         
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
         bannerView.delegate = self
         bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
         bannerView.rootViewController = self
