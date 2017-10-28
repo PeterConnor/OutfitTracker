@@ -343,10 +343,8 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="BMM-YM-L2y" firstAttribute="height" secondItem="Nx2-yv-AtE" secondAttribute="height" id="WeW-RU-LIm"/>
                                     <constraint firstItem="wa2-9Z-dUE" firstAttribute="height" secondItem="Nx2-yv-AtE" secondAttribute="height" id="hkl-FN-FGt"/>
                                     <constraint firstItem="bp1-ft-hRC" firstAttribute="height" secondItem="Nx2-yv-AtE" secondAttribute="height" id="iyJ-Rc-JgW"/>
-                                    <constraint firstItem="3Ps-Rz-jri" firstAttribute="height" secondItem="Nx2-yv-AtE" secondAttribute="height" id="uJq-Gp-184"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O60-cf-Ldq">
@@ -696,18 +694,18 @@ for instructions</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-nT-jLk">
-                                <rect key="frame" x="30" y="94" width="354" height="443"/>
+                                <rect key="frame" x="30" y="74" width="354" height="463"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYT-DX-AcS">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="443"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="463"/>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJs-Zc-JGh">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="222"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="232"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wQv-tU-bZo">
-                                                <rect key="frame" x="117" y="54" width="120" height="115"/>
+                                                <rect key="frame" x="117" y="59" width="120" height="115"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="axi-xs-d0C">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="85"/>
@@ -766,7 +764,7 @@ for instructions</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jOY-WW-XMn">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="222"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="232"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                                 <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -799,10 +797,10 @@ for instructions</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="led-mW-Ghb">
-                                        <rect key="frame" x="0.0" y="222" width="354" height="221"/>
+                                        <rect key="frame" x="0.0" y="232" width="354" height="231"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-aj-4a0">
-                                                <rect key="frame" x="117.66666666666667" y="53.333333333333314" width="120.00000000000001" height="115"/>
+                                                <rect key="frame" x="117.66666666666667" y="58.333333333333314" width="120.00000000000001" height="115"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-Rp-JKe">
                                                         <rect key="frame" x="0.0" y="0.0" width="120.00000000000003" height="85"/>
@@ -861,7 +859,7 @@ for instructions</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s7x-jY-bNe">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="221"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="231"/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                                 <state key="normal">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -910,7 +908,7 @@ for instructions</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbB-8C-iWb">
-                                <rect key="frame" x="30" y="315" width="354" height="2"/>
+                                <rect key="frame" x="30" y="305" width="354" height="2"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="846-Gw-DGT"/>
@@ -972,7 +970,7 @@ for instructions</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-61-enY">
-                                <rect key="frame" x="374" y="75" width="30" height="46"/>
+                                <rect key="frame" x="374" y="55" width="30" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="ⓧ">
