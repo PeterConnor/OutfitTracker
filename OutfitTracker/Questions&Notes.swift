@@ -36,6 +36,8 @@ APP ID ca-app-pub-9017513021309308~9223293379
 Ad Unit ca-app-pub-9017513021309308/6032231248
  Need to test on device
  
+remove the code that sets these test devices (viewcontroller - request.testDevices) before you release your app
+ 
  change where notification request happens (not in appdelegate). deal with all situations.
  
  Change repeat to on.
