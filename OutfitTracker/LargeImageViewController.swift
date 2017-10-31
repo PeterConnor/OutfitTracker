@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
-class LargeImageViewController: UIViewController {
+class LargeImageViewController: UIViewController, GADBannerViewDelegate {
     
     @IBOutlet weak var largePhotoImage: UIImageView!
     
@@ -21,6 +22,7 @@ class LargeImageViewController: UIViewController {
     
     @IBOutlet weak var shareButton: UIButton!
     
+    @IBOutlet weak var bannerView: GADBannerView!
     
     var newImageItem: ImageItem!
     var indexPathNumber: [IndexPath]!
@@ -49,6 +51,13 @@ class LargeImageViewController: UIViewController {
         let whiteShareButton = UIImage(named: "ShareImage")?.withRenderingMode(.alwaysTemplate)
         shareButton.setImage(whiteShareButton, for: .normal)
         shareButton.tintColor = UIColor.white
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
+        bannerView.delegate = self
+        bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
+        bannerView.rootViewController = self
+        bannerView.load(request)
     }
     
     @IBAction func saveToPhone(_ sender: Any) {

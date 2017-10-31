@@ -10,9 +10,10 @@ import UIKit
 import AVFoundation
 import Photos
 import MobileCoreServices
+import GoogleMobileAds
 
 
-class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, GroupDelegate {
+class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, GroupDelegate, GADBannerViewDelegate {
 
     @IBOutlet weak var photoImage: UIImageView!
     var imagePicker: UIImagePickerController!
@@ -33,6 +34,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var orLabel: UILabel!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
     
     let datePicker = UIDatePicker()
     let magnesium = UIColor(red: CGFloat(199.0/255.0), green: CGFloat(199.0/255.0), blue: CGFloat(205.0/255.0), alpha: CGFloat(0.9))
@@ -128,6 +131,13 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         if number != nil {
             
         }
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
+        bannerView.delegate = self
+        bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
+        bannerView.rootViewController = self
+        bannerView.load(request)
     }
     
     override func viewDidAppear(_ animated: Bool) {

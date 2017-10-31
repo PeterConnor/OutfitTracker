@@ -37,6 +37,7 @@ Need to test on device
 remove the code that sets these test devices (viewcontroller - request.testDevices) before you release your app
  
 is repeat on?
+ask suraya about camera bug
  
  
  

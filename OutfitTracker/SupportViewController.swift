@@ -8,13 +8,23 @@
 
 import UIKit
 import MessageUI
+import GoogleMobileAds
 
-class SupportViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class SupportViewController: UIViewController, MFMailComposeViewControllerDelegate, GADBannerViewDelegate {
 
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
+        bannerView.delegate = self
+        bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
+        bannerView.rootViewController = self
+        bannerView.load(request)
 
         // Do any additional setup after loading the view.
     }

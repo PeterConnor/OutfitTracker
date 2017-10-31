@@ -61,7 +61,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
         bannerView.rootViewController = self
         bannerView.load(request)
-        
         }
     
     override func viewWillAppear(_ animated: Bool) {

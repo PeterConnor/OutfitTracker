@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class CreditsViewController: UIViewController {
+class CreditsViewController: UIViewController, GADBannerViewDelegate {
     
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -33,6 +34,9 @@ class CreditsViewController: UIViewController {
     @IBOutlet weak var questionmanButton: UIButton!
     
     @IBOutlet weak var lightbulbButton: UIButton!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +90,13 @@ class CreditsViewController: UIViewController {
         lightbulbButton.tintColor = UIColor.white
 
         // Do any additional setup after loading the view.
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
+        bannerView.delegate = self
+        bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
+        bannerView.rootViewController = self
+        bannerView.load(request)
     }
 
     override func didReceiveMemoryWarning() {

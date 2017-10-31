@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 protocol GroupDelegate {
     func userDidPickGroup(group: String)
 }
 
-class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, GADBannerViewDelegate {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     
     var groupList = [String]()
     let exampleGroupList = ["E.g. Family", "E.g. Friends", "E.g. Work"]
@@ -34,8 +38,15 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if let persistedGroupList = UserDefaults.standard.object(forKey: "groupList") {
             groupList = persistedGroupList as! [String]
-            
         }
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
+        bannerView.delegate = self
+        bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
+        bannerView.rootViewController = self
+        bannerView.load(request)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -122,6 +133,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         textField.text = nil
         textField.resignFirstResponder()
     }
+    
     
    
 
