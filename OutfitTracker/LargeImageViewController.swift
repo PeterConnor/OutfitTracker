@@ -22,6 +22,12 @@ class LargeImageViewController: UIViewController, GADBannerViewDelegate {
     
     @IBOutlet weak var shareButton: UIButton!
     
+    @IBOutlet weak var noteLabel: UILabel!
+    
+    @IBOutlet weak var groupLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var bannerView: GADBannerView!
     
     var newImageItem: ImageItem!
@@ -30,6 +36,21 @@ class LargeImageViewController: UIViewController, GADBannerViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         largePhotoImage.image = newImageItem.image
+        print(newImageItem.group, "ahhhhhhh")
+        print(newImageItem.note, "yooooooo")
+        
+        if newImageItem.note == "" {
+            noteLabel.text = "-"
+        } else {
+            noteLabel.text = newImageItem.note
+        }
+        if newImageItem.group == "" {
+            groupLabel.text = "-"
+        } else {
+            groupLabel.text = newImageItem.group
+        }
+        
+        dateLabel.text = newImageItem.date
     }
     
     override func viewDidLoad() {

@@ -37,7 +37,15 @@ Need to test on device
 remove the code that sets these test devices (viewcontroller - request.testDevices) before you release your app
  
 is repeat on?
+noteworthy labels get cut off on bottom
+need to add banner logic/properly test
 ask suraya about camera bug
+ask about sorting
+ask about cleaning git
+ask why outfit tracker-2 affects my project (deleted outfittracker2 from downloads and this stopped working. Also, OT2 is in Source Control Navigator.
+disable tableview cell if it still says e.g.
+why are 5s simulator cells diff sizes
+clean code
  
  
  

@@ -30,6 +30,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.tableView.rowHeight = 44.0
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -124,6 +125,16 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return true
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if range.length + range.location > (textField.text?.count)! {
+            return false
+        }
+        
+        let newLength = (textField.text?.count)! + string.count - range.length
+        
+        return newLength <= 13
+    }
+    
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -133,6 +144,8 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         textField.text = nil
         textField.resignFirstResponder()
     }
+    
+    
     
     
    

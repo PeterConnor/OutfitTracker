@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>OutfitTracker would like to access your camera</string>
+	<key>NSMainStoryboardFile</key>
+	<string>Main</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>OutfitTracker would like to access your photo library</string>
 	<key>UILaunchStoryboardName</key>
