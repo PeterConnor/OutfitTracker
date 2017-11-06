@@ -27,23 +27,18 @@ why didn't date sorting work until i deleted the app and simulated again on phon
  
 **Notes**
  
-Code review - suraya
- 
 add banner - https://developers.google.com/admob/ios/banner
 APP ID ca-app-pub-9017513021309308~9223293379
 Ad Unit ca-app-pub-9017513021309308/6032231248
 Need to test on device
- 
 remove the code that sets these test devices (viewcontroller - request.testDevices) before you release your app
  
-is repeat on?
 noteworthy labels get cut off on bottom
 need to add banner logic/properly test
 ask suraya about camera bug
 ask about sorting
 ask about cleaning git
 ask why outfit tracker-2 affects my project (deleted outfittracker2 from downloads and this stopped working. Also, OT2 is in Source Control Navigator.
-disable tableview cell if it still says e.g.
 why are 5s simulator cells diff sizes
 clean code
  

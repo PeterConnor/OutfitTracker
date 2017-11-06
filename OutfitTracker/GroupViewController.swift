@@ -74,10 +74,12 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         if groupList.count < 1 {
+            cell.isUserInteractionEnabled = false
             cell.textLabel?.text = exampleGroupList[indexPath.row]
             cell.textLabel?.textColor = .gray
             cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)
         } else {
+            cell.isUserInteractionEnabled = true
             cell.textLabel?.text = groupList[indexPath.row]
             cell.textLabel?.textColor = .white
             cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)

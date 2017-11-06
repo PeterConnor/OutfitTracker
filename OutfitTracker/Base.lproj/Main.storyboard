@@ -1242,13 +1242,13 @@ for instructions</string>
                                 <rect key="frame" x="40" y="84" width="334" height="483"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fm-bZ-XvD">
-                                        <rect key="frame" x="20" y="20" width="294" height="324.66666666666669"/>
+                                        <rect key="frame" x="20" y="20" width="294" height="332.33333333333331"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5c0-Ld-6EV">
-                                        <rect key="frame" x="20" y="364.66666666666669" width="294" height="108.33333333333331"/>
+                                        <rect key="frame" x="20" y="362.33333333333331" width="294" height="110.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptf-x2-WRA">
-                                                <rect key="frame" x="0.0" y="0.0" width="294" height="36.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="37"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
@@ -1256,7 +1256,7 @@ for instructions</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsR-GR-72x">
-                                                <rect key="frame" x="0.0" y="36.333333333333314" width="294" height="36"/>
+                                                <rect key="frame" x="0.0" y="37" width="294" height="37"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
@@ -1264,7 +1264,7 @@ for instructions</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-ow-JeU">
-                                                <rect key="frame" x="0.0" y="72.333333333333314" width="294" height="36"/>
+                                                <rect key="frame" x="0.0" y="74.000000000000057" width="294" height="36.666666666666657"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
@@ -1281,7 +1281,7 @@ for instructions</string>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="9fm-bZ-XvD" firstAttribute="leading" secondItem="Uby-LW-uZn" secondAttribute="leading" constant="20" id="48p-BN-Jkp"/>
-                                    <constraint firstItem="5c0-Ld-6EV" firstAttribute="top" secondItem="9fm-bZ-XvD" secondAttribute="bottom" constant="20" id="7yF-Ng-hDV"/>
+                                    <constraint firstItem="5c0-Ld-6EV" firstAttribute="top" secondItem="9fm-bZ-XvD" secondAttribute="bottom" constant="10" id="7yF-Ng-hDV"/>
                                     <constraint firstAttribute="trailing" secondItem="5c0-Ld-6EV" secondAttribute="trailing" constant="20" id="L9p-fx-OuA"/>
                                     <constraint firstItem="5c0-Ld-6EV" firstAttribute="leading" secondItem="Uby-LW-uZn" secondAttribute="leading" constant="20" id="OA2-kO-lQ5"/>
                                     <constraint firstItem="9fm-bZ-XvD" firstAttribute="height" secondItem="5c0-Ld-6EV" secondAttribute="height" multiplier="3" id="dcl-Sa-C1i"/>
@@ -1578,16 +1578,16 @@ for instructions</string>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jv8-h3-OqW">
-                                <rect key="frame" x="107" y="412" width="200" height="76.666666666666686"/>
+                                <rect key="frame" x="30" y="412" width="354" height="76.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT REMINDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45f-qI-byZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="38.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="38.333333333333336"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                         <color key="textColor" red="0.458770752" green="0.45885384080000002" blue="0.45876550669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0h 0m 0s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="0so-6O-mwb">
-                                        <rect key="frame" x="0.0" y="38.333333333333314" width="200" height="38.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="38.333333333333314" width="354" height="38.333333333333343"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1597,7 +1597,6 @@ for instructions</string>
                                     <constraint firstItem="45f-qI-byZ" firstAttribute="leading" secondItem="jv8-h3-OqW" secondAttribute="leading" id="Kkv-3h-T3i"/>
                                     <constraint firstAttribute="trailing" secondItem="0so-6O-mwb" secondAttribute="trailing" id="Zz5-HO-BkV"/>
                                     <constraint firstAttribute="trailing" secondItem="45f-qI-byZ" secondAttribute="trailing" id="b1b-eD-oEJ"/>
-                                    <constraint firstAttribute="width" constant="200" id="jPe-Q3-B7i"/>
                                     <constraint firstAttribute="height" constant="76.666666666666671" id="kY0-Jk-v4F"/>
                                     <constraint firstItem="45f-qI-byZ" firstAttribute="top" secondItem="jv8-h3-OqW" secondAttribute="top" id="qVF-AS-wFh"/>
                                     <constraint firstItem="0so-6O-mwb" firstAttribute="leading" secondItem="jv8-h3-OqW" secondAttribute="leading" id="sIY-lC-vD5"/>
@@ -1649,6 +1648,7 @@ for instructions</string>
                             <constraint firstItem="zgQ-zp-xWN" firstAttribute="centerX" secondItem="WFy-tJ-mD3" secondAttribute="centerX" id="2HJ-b6-mpB"/>
                             <constraint firstAttribute="trailing" secondItem="F8t-hj-PDr" secondAttribute="trailing" id="6iK-DS-WWO"/>
                             <constraint firstItem="zg2-7s-pNC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hlm-A6-1Ge" secondAttribute="bottom" constant="10" id="B8v-gP-9ya"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jv8-h3-OqW" secondAttribute="trailing" constant="10" id="CGJ-XF-gqu"/>
                             <constraint firstItem="w5A-eS-DAm" firstAttribute="top" secondItem="zg2-7s-pNC" secondAttribute="bottom" id="NF1-OV-fnt"/>
                             <constraint firstItem="hlm-A6-1Ge" firstAttribute="centerX" secondItem="WFy-tJ-mD3" secondAttribute="centerX" id="PD4-yV-Tkm"/>
                             <constraint firstItem="F8t-hj-PDr" firstAttribute="top" secondItem="gB6-PU-qod" secondAttribute="bottom" constant="86" id="Qaz-yV-SkU"/>
@@ -1658,6 +1658,7 @@ for instructions</string>
                             <constraint firstItem="zg2-7s-pNC" firstAttribute="centerX" secondItem="WFy-tJ-mD3" secondAttribute="centerX" id="ZJn-PV-adc"/>
                             <constraint firstItem="jv8-h3-OqW" firstAttribute="top" secondItem="5pg-XG-dTg" secondAttribute="bottom" constant="30" id="eWh-HI-LFU"/>
                             <constraint firstItem="jv8-h3-OqW" firstAttribute="centerX" secondItem="WFy-tJ-mD3" secondAttribute="centerX" id="gEJ-2q-9Yr"/>
+                            <constraint firstItem="jv8-h3-OqW" firstAttribute="leading" secondItem="WFy-tJ-mD3" secondAttribute="leadingMargin" constant="10" id="k8g-YS-BwZ"/>
                             <constraint firstItem="5pg-XG-dTg" firstAttribute="centerX" secondItem="WFy-tJ-mD3" secondAttribute="centerX" id="lfL-Mp-nS3"/>
                             <constraint firstItem="hlm-A6-1Ge" firstAttribute="top" secondItem="zgQ-zp-xWN" secondAttribute="bottom" constant="15" id="zXs-7m-Bfx"/>
                         </constraints>
