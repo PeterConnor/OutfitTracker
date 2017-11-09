@@ -50,7 +50,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         searchBar.placeholder = "Search"
         itemList = model.imageItems
-        print(itemList)
         itemList.sort(by: { $0.actualDate > $1.actualDate})
         
         self.navigationController?.navigationBar.tintColor = .white
@@ -128,9 +127,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell.groupLabel.text = "-"
             }
         }
-        //print(model.imageItems)
-        //print(itemList)
+        
         return cell
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -144,8 +143,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             CoreDataManager.deleteObject(item: model.imageItems[photoPickerController.number!])
             model.imageItems.remove(at: photoPickerController.number!)
             itemList = model.imageItems
-            //resetSearches()
-            //imageCollectionView.deleteItems(at: photoPickerController.indexPathNumber!)
             imageCollectionView.reloadData()
             
         }
@@ -186,10 +183,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return 1.0
     }
     
-    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: CGFloat((collectionView.frame.size.width / 3) - 20), height: CGFloat(100))
-    }*/
-    
     @IBAction func cancelButton(segue: UIStoryboardSegue) {
         
     }
@@ -221,7 +214,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             searches = searchText.isEmpty ? notes : notes.filter {(item: String) -> Bool in
                 return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
-            //print("searches in searchBar!!!!!\(searches)")
             itemList = []
             for i in model.imageItems {
                 if searches.contains(i.note) {
@@ -232,7 +224,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             searches = searchText.isEmpty ? groups : groups.filter {(item: String) -> Bool in
                 return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
-            //print("searches in searchBar!!!!!\(searches)")
             itemList = []
             for i in model.imageItems {
                 if searches.contains(i.group) {
@@ -243,7 +234,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             searches = searchText.isEmpty ? dates : dates.filter {(item: String) -> Bool in
                 return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
-            //print("searches in searchBar!!!!!\(searches)")
             itemList = []
             for i in model.imageItems {
                 if searches.contains(i.date) {
@@ -253,7 +243,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
 
         
-        //print("itemListNOTE: \(itemList) AND \(itemList.count)")
       imageCollectionView.reloadData()
     }
     
@@ -319,6 +308,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else {
             searchBar.placeholder = "Search"
         }
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        bannerView.isHidden = false
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        bannerView.isHidden = true
     }
 }
 

@@ -33,14 +33,11 @@ Ad Unit ca-app-pub-9017513021309308/6032231248
 Need to test on device
 remove the code that sets these test devices (viewcontroller - request.testDevices) before you release your app
  
-noteworthy labels get cut off on bottom
-need to add banner logic/properly test
-ask suraya about camera bug
+ask suraya about camera bug (Should I submit with system icon, even though it doesnt look right on my device?)
 ask about sorting
 ask about cleaning git
 ask why outfit tracker-2 affects my project (deleted outfittracker2 from downloads and this stopped working. Also, OT2 is in Source Control Navigator.
-why are 5s simulator cells diff sizes
-clean code
+ask why are 5s simulator group rows diff sizes
  
  
  

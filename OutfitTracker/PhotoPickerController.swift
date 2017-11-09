@@ -187,13 +187,10 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func choosePhoto(_ sender: UIButton) {
-        //let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
         if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
-            //let cameraAction = UIAlertAction(title: "Use Camera", style: .default) { (action) in
-                
                 let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
                 
                 if (status == .authorized) {
@@ -222,51 +219,6 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
                 
             }
     }
-    
-        //alertController.addAction(cameraAction)
-        //}
-        
-        /*if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
-            let photoLibraryAction = UIAlertAction(title: "Use Photo Library", style: .default) { (action) in
-                
-                let status = PHPhotoLibrary.authorizationStatus()
-                
-                if (status == .authorized) {
-                    self.displayPicker(type: .photoLibrary)
-                }
-                
-                if (status == .restricted) {
-                    
-                    self.handleRestricted()
-                }
-                
-                if (status == .denied) {
-                    
-                    self.handleDenied()
-                }
-                
-                if (status == .notDetermined) {
-                    
-                    PHPhotoLibrary.requestAuthorization({ (status) in
-                        if (status == PHAuthorizationStatus.authorized) {
-                            self.displayPicker(type: .photoLibrary)
-                            }
-                        })
-
-                    }
-
-                
-                }
-            
-            //alertController.addAction(photoLibraryAction)
-        }
-        
-        //let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-    
-      //  alertController.addAction(cancelAction)
-        
-      //  present(alertController, animated: true, completion: nil)
-    } */
     
     func handleDenied() {
         
@@ -410,6 +362,14 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         dateTextField.text = dateFormatter.string(from: datePicker.date)
         actualDate = datePicker.date
         self.view.endEditing(true)
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        bannerView.isHidden = false
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        bannerView.isHidden = true
     }
 
 }

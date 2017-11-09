@@ -11,8 +11,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Noteworthy.ttc">
-            <string>Noteworthy-Light</string>
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+        </array>
+        <array key="Baskerville.ttc">
+            <string>Baskerville-SemiBoldItalic</string>
         </array>
     </customFonts>
     <scenes>
@@ -572,7 +575,7 @@ or 
 Click the settings icon 
 for instructions</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <cells>
@@ -587,52 +590,45 @@ for instructions</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="125" height="185"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTz-iN-c2y">
-                                                            <rect key="frame" x="10" y="10" width="105" height="119"/>
+                                                            <rect key="frame" x="10" y="10" width="105" height="121"/>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z47-ln-Ui1">
-                                                            <rect key="frame" x="10" y="129" width="105" height="54"/>
+                                                            <rect key="frame" x="10" y="131" width="105" height="54"/>
                                                             <subviews>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-vd-30B">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-vd-30B">
                                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="18"/>
                                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="18" id="kPU-Rc-6lz"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-uJ-siW">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-uJ-siW">
                                                                     <rect key="frame" x="0.0" y="18" width="105" height="18"/>
                                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="18" id="M6v-N2-x7b"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-gG-ZCx">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-gG-ZCx">
                                                                     <rect key="frame" x="0.0" y="36" width="105" height="18"/>
                                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="18" id="U3v-6L-epk"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstItem="Ceb-uJ-siW" firstAttribute="height" secondItem="3eO-gG-ZCx" secondAttribute="height" id="3LN-d2-yfQ"/>
                                                                 <constraint firstItem="Py5-vd-30B" firstAttribute="top" secondItem="z47-ln-Ui1" secondAttribute="top" id="KKs-Ej-zLH"/>
                                                                 <constraint firstItem="Ceb-uJ-siW" firstAttribute="leading" secondItem="z47-ln-Ui1" secondAttribute="leading" id="PMz-y1-xe6"/>
                                                                 <constraint firstAttribute="bottom" secondItem="3eO-gG-ZCx" secondAttribute="bottom" id="TPn-wa-sty"/>
                                                                 <constraint firstItem="3eO-gG-ZCx" firstAttribute="top" secondItem="Ceb-uJ-siW" secondAttribute="bottom" id="VAz-pr-GC3"/>
                                                                 <constraint firstItem="Py5-vd-30B" firstAttribute="leading" secondItem="z47-ln-Ui1" secondAttribute="leading" id="cTd-6o-BrP"/>
                                                                 <constraint firstItem="3eO-gG-ZCx" firstAttribute="leading" secondItem="z47-ln-Ui1" secondAttribute="leading" id="eDN-4q-Om5"/>
+                                                                <constraint firstItem="Py5-vd-30B" firstAttribute="height" secondItem="Ceb-uJ-siW" secondAttribute="height" id="kbN-eY-65F"/>
                                                                 <constraint firstItem="Ceb-uJ-siW" firstAttribute="top" secondItem="Py5-vd-30B" secondAttribute="bottom" id="ovI-qR-sNO"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Ceb-uJ-siW" secondAttribute="trailing" id="vEM-1M-Y32"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Py5-vd-30B" secondAttribute="trailing" id="wza-QD-Kng"/>
@@ -642,7 +638,8 @@ for instructions</string>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="z47-ln-Ui1" secondAttribute="bottom" constant="2" id="Abg-OV-kxg"/>
+                                                        <constraint firstItem="qTz-iN-c2y" firstAttribute="width" secondItem="z47-ln-Ui1" secondAttribute="height" multiplier="35:18" id="9Vh-Cl-rwh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="z47-ln-Ui1" secondAttribute="bottom" id="Abg-OV-kxg"/>
                                                         <constraint firstAttribute="trailing" secondItem="qTz-iN-c2y" secondAttribute="trailing" constant="10" id="Pl4-WB-une"/>
                                                         <constraint firstItem="qTz-iN-c2y" firstAttribute="leading" secondItem="Ddg-4W-syd" secondAttribute="leading" constant="10" id="R1A-qx-86Y"/>
                                                         <constraint firstItem="z47-ln-Ui1" firstAttribute="leading" secondItem="Ddg-4W-syd" secondAttribute="leading" constant="10" id="p4a-JB-ruO"/>
@@ -1014,7 +1011,7 @@ for instructions</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Eh-61-enY">
-                                <rect key="frame" x="374" y="55" width="30" height="46"/>
+                                <rect key="frame" x="372" y="57" width="30" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="ⓧ">
@@ -1046,9 +1043,9 @@ for instructions</string>
                             <constraint firstItem="y79-lA-A1P" firstAttribute="top" secondItem="AsY-nT-jLk" secondAttribute="bottom" constant="10" id="DoN-H9-A76"/>
                             <constraint firstItem="CPY-yP-Qco" firstAttribute="top" secondItem="ahZ-8d-Mhf" secondAttribute="bottom" id="H1Y-5c-fhq"/>
                             <constraint firstItem="CPY-yP-Qco" firstAttribute="top" secondItem="Ztn-SK-aVD" secondAttribute="bottom" constant="60" id="HcS-k2-1uh"/>
-                            <constraint firstItem="jOY-WW-XMn" firstAttribute="top" secondItem="7Eh-61-enY" secondAttribute="bottom" constant="-27" id="Hpw-Rk-YvL"/>
+                            <constraint firstItem="jOY-WW-XMn" firstAttribute="top" secondItem="7Eh-61-enY" secondAttribute="bottom" constant="-29" id="Hpw-Rk-YvL"/>
                             <constraint firstItem="Ztn-SK-aVD" firstAttribute="top" secondItem="y79-lA-A1P" secondAttribute="bottom" constant="10" id="OLe-0v-sDC"/>
-                            <constraint firstItem="7Eh-61-enY" firstAttribute="leading" secondItem="jOY-WW-XMn" secondAttribute="trailing" constant="-10" id="UQE-jh-5MV"/>
+                            <constraint firstItem="7Eh-61-enY" firstAttribute="leading" secondItem="jOY-WW-XMn" secondAttribute="trailing" constant="-12" id="UQE-jh-5MV"/>
                             <constraint firstItem="AsY-nT-jLk" firstAttribute="width" secondItem="y79-lA-A1P" secondAttribute="height" multiplier="118:43" id="dKB-nK-qzx"/>
                             <constraint firstItem="YbB-8C-iWb" firstAttribute="leading" secondItem="AsY-nT-jLk" secondAttribute="leading" id="jnV-SF-pv5"/>
                             <constraint firstItem="YbB-8C-iWb" firstAttribute="trailing" secondItem="AsY-nT-jLk" secondAttribute="trailing" id="mUo-Nr-e2N"/>
@@ -1251,7 +1248,7 @@ for instructions</string>
                                                 <rect key="frame" x="0.0" y="0.0" width="294" height="37"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Baskerville-SemiBoldItalic" family="Baskerville" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1259,7 +1256,7 @@ for instructions</string>
                                                 <rect key="frame" x="0.0" y="37" width="294" height="37"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Baskerville-SemiBoldItalic" family="Baskerville" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1267,7 +1264,7 @@ for instructions</string>
                                                 <rect key="frame" x="0.0" y="74.000000000000057" width="294" height="36.666666666666657"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Baskerville-SemiBoldItalic" family="Baskerville" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1534,7 +1531,7 @@ for instructions</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8t-hj-PDr">
                                 <rect key="frame" x="0.0" y="150" width="414" height="160"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ohk-6q-DOB">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ohk-6q-DOB">
                                         <rect key="frame" x="20" y="20" width="374" height="120"/>
                                         <date key="date" timeIntervalSinceReferenceDate="506973084.93827999">
                                             <!--2017-01-24 17:51:24 +0000-->
@@ -2343,6 +2340,6 @@ for instructions</string>
         <image name="questionman" width="590" height="585"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qOd-al-Jje"/>
+        <segue reference="Upk-gP-Qc4"/>
     </inferredMetricsTieBreakers>
 </document>

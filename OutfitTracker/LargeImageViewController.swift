@@ -36,8 +36,6 @@ class LargeImageViewController: UIViewController, GADBannerViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         largePhotoImage.image = newImageItem.image
-        print(newImageItem.group, "ahhhhhhh")
-        print(newImageItem.note, "yooooooo")
         
         if newImageItem.note == "" {
             noteLabel.text = "-"
@@ -106,5 +104,13 @@ class LargeImageViewController: UIViewController, GADBannerViewDelegate {
             destinationVC.indexPathNumber = indexPathNumber
             destinationVC.number = number
         }
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        bannerView.isHidden = false
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        bannerView.isHidden = true
     }
 }
