@@ -701,7 +701,7 @@ for instructions</string>
                                 <segue destination="plv-CN-B4Z" kind="show" id="ZiM-Y9-BAn"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="SmallCameraImage" id="G3G-Im-HZQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="G3G-Im-HZQ">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="y9p-ib-IHT" kind="show" id="Upk-gP-Qc4"/>
@@ -2324,7 +2324,6 @@ for instructions</string>
         <image name="SearchExample" width="250" height="444"/>
         <image name="SettingsImage" width="25" height="25"/>
         <image name="ShareImage" width="150" height="192"/>
-        <image name="SmallCameraImage" width="17" height="13"/>
         <image name="TshirtImage" width="181" height="178"/>
         <image name="cloud1" width="162" height="194"/>
         <image name="cloud2" width="210" height="202"/>

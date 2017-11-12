@@ -38,6 +38,7 @@ ask about sorting
 ask about cleaning git
 ask why outfit tracker-2 affects my project (deleted outfittracker2 from downloads and this stopped working. Also, OT2 is in Source Control Navigator.
 ask why are 5s simulator group rows diff sizes
+test flight
  
  
  
