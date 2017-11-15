@@ -118,6 +118,9 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             photoImage.image = editedItem?.image
             textField.text = editedItem?.note
             dateTextField.text = editedItem?.date
+            datePicker.date = (editedItem?.actualDate)!
+            datePicker.setDate((editedItem?.actualDate)!, animated: true)
+            actualDate = (editedItem?.actualDate)!
             
             if editedItem?.group != "" {
                 groupButton.setTitle(editedItem?.group, for: .normal)

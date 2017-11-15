@@ -147,7 +147,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
         }
         let photoImage = photoPickerController.photoImage.image
-        
+        print(photoPickerController.actualDate)
         let item = ImageItem(img: photoImage!, date: photoPickerController.dateTextField.text!, note: photoPickerController.textField.text!, group: photoPickerController.groupGlobal, actualDate: photoPickerController.actualDate)
         model.imageItems.append(item)
         itemList.append(item)

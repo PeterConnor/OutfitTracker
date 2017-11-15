@@ -33,12 +33,13 @@ Ad Unit ca-app-pub-9017513021309308/6032231248
 Need to test on device
 remove the code that sets these test devices (viewcontroller - request.testDevices) before you release your app
  
-ask suraya about camera bug (Should I submit with system icon, even though it doesnt look right on my device?)
-ask about sorting
+ask about camera bug
 ask about cleaning git
-ask why outfit tracker-2 affects my project (deleted outfittracker2 from downloads and this stopped working. Also, OT2 is in Source Control Navigator.
+ask why outfit tracker-2 affects my project (deleted outfittracker2 from downloads and this stopped working. Also, OT2 is in Source Control Navigator.)
 ask why are 5s simulator group rows diff sizes
-test flight
+groupList is gray on first entry
+deployment target?
+console messages
  
  
  

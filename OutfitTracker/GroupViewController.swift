@@ -35,7 +35,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         textField.delegate = self
-        tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         
         if let persistedGroupList = UserDefaults.standard.object(forKey: "groupList") {
             groupList = persistedGroupList as! [String]
@@ -52,18 +52,15 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if groupList.count < 1 {
             return 3
         } else {
@@ -74,6 +71,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         if groupList.count < 1 {
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             cell.isUserInteractionEnabled = false
             cell.textLabel?.text = exampleGroupList[indexPath.row]
             cell.textLabel?.textColor = .gray
@@ -100,10 +98,14 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if groupList.count < 1 {
+            return
+        } else {
         if editingStyle == .delete {
             groupList.remove(at: indexPath.row)
             UserDefaults.standard.set(groupList, forKey: "groupList")
             tableView.reloadData()
+            }
         }
     }
     
@@ -121,6 +123,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
             UserDefaults.standard.set(groupList, forKey: "groupList")
             
             tableView.reloadData()
+
         }
         textField.resignFirstResponder()
         textField.text = nil
@@ -141,7 +144,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dismiss(animated: true, completion: nil)
     }
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.removeGestureRecognizer(tap)
         textField.text = nil
         textField.resignFirstResponder()
