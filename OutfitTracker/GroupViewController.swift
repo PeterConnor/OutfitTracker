@@ -42,7 +42,6 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
         bannerView.delegate = self
         bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
         bannerView.rootViewController = self
@@ -83,7 +82,6 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)
         }
         
-
         return cell
     }
     
@@ -148,14 +146,6 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         view.removeGestureRecognizer(tap)
         textField.text = nil
         textField.resignFirstResponder()
-    }
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        bannerView.isHidden = false
-    }
-    
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        bannerView.isHidden = true
     }
 
 }

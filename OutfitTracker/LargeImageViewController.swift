@@ -72,7 +72,6 @@ class LargeImageViewController: UIViewController, GADBannerViewDelegate {
         shareButton.tintColor = UIColor.white
         
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
         bannerView.delegate = self
         bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
         bannerView.rootViewController = self
@@ -104,13 +103,5 @@ class LargeImageViewController: UIViewController, GADBannerViewDelegate {
             destinationVC.indexPathNumber = indexPathNumber
             destinationVC.number = number
         }
-    }
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        bannerView.isHidden = false
-    }
-    
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        bannerView.isHidden = true
     }
 }

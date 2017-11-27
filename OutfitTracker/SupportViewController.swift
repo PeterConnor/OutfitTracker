@@ -20,7 +20,6 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID, "d92c2e45d0d54ff363ed9de43b0ab875"]
         bannerView.delegate = self
         bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
         bannerView.rootViewController = self
@@ -79,14 +78,6 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
     func deleteConfirmation(action: UIAlertAction) {
         CoreDataManager.cleanCoreData()
         ImagesModel.shared.imageItems = []
-    }
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        bannerView.isHidden = false
-    }
-    
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        bannerView.isHidden = true
     }
 
 }
