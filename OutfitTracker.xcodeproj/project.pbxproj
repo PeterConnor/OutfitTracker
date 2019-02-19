@@ -19,7 +19,6 @@
 		FA53710E1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA53710C1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld */; };
 		FA5371101EB037F100AF69A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA53710F1EB037F100AF69A4 /* Assets.xcassets */; };
 		FA5371131EB037F100AF69A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5371111EB037F100AF69A4 /* LaunchScreen.storyboard */; };
-		FA6FB95F1F998FC400E35AA9 /* OutfitTrackerAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6FB95E1F998FC400E35AA9 /* OutfitTrackerAppIcon.png */; };
 		FA7D438E1EC009950061EACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438D1EC009950061EACB /* ViewController.swift */; };
 		FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438F1EC009E40061EACB /* ImagesModel.swift */; };
 		FA8312881F12E8130011BE62 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8312871F12E8130011BE62 /* SupportViewController.swift */; };
@@ -52,7 +51,7 @@
 		6426BCBC55242686318664DC /* Pods-OutfitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker.release.xcconfig"; sourceTree = "<group>"; };
 		92985434B7759F894A6CFC26 /* Pods-OutfitTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2FAD741FA1538D00C02CDC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Questions&Notes.swift"; sourceTree = "<group>"; };
 		FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		FA5371021EB037F100AF69A4 /* OutfitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutfitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,13 +62,12 @@
 		FA53710F1EB037F100AF69A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5371121EB037F100AF69A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5371141EB037F100AF69A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA6FB95E1F998FC400E35AA9 /* OutfitTrackerAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OutfitTrackerAppIcon.png; path = ../../../../Downloads/OutfitTrackerAppIcon.png; sourceTree = "<group>"; };
 		FA7D438D1EC009950061EACB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7D438F1EC009E40061EACB /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		FA8312871F12E8130011BE62 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		FA85C8F22A6A97482E918879 /* Pods-OutfitTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
-		FAA4EC811F959E35008E536C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationManager.swift; path = "../../../../Downloads/OutfitTracker-2/OutfitTracker/NotificationManager.swift"; sourceTree = "<group>"; };
-		FAA4EC831F959E3F008E536C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationViewController.swift; path = "../../../../Downloads/OutfitTracker-2/OutfitTracker/NotificationViewController.swift"; sourceTree = "<group>"; };
+		FAA4EC811F959E35008E536C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		FAA4EC831F959E3F008E536C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		FAA4EC851F96D788008E536C /* InstructionsPageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsPageOneViewController.swift; sourceTree = "<group>"; };
 		FAC669411F4FB32700432398 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */,
 				FAA4EC831F959E3F008E536C /* NotificationViewController.swift */,
 				FAA4EC811F959E35008E536C /* NotificationManager.swift */,
-				FA6FB95E1F998FC400E35AA9 /* OutfitTrackerAppIcon.png */,
 				FAA4EC851F96D788008E536C /* InstructionsPageOneViewController.swift */,
 				FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */,
 			);
@@ -194,8 +191,6 @@
 				FA5370FE1EB037F100AF69A4 /* Sources */,
 				FA5370FF1EB037F100AF69A4 /* Frameworks */,
 				FA5371001EB037F100AF69A4 /* Resources */,
-				FAF5656FF5ACD7FF353A163E /* [CP] Embed Pods Frameworks */,
-				D60F37EA2F77F893763DA337 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,8 +209,6 @@
 				FACB07E61F3D354900D14AC4 /* Sources */,
 				FACB07E71F3D354900D14AC4 /* Frameworks */,
 				FACB07E81F3D354900D14AC4 /* Resources */,
-				5558134A5318659ED88E763F /* [CP] Embed Pods Frameworks */,
-				243572F0CD5EE25CED574405 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6FB95F1F998FC400E35AA9 /* OutfitTrackerAppIcon.png in Resources */,
 				FA5371131EB037F100AF69A4 /* LaunchScreen.storyboard in Resources */,
 				FA2FAD7F1FA16E0C00C02CDC /* GoogleService-Info.plist in Resources */,
 				FA5371101EB037F100AF69A4 /* Assets.xcassets in Resources */,
@@ -294,64 +286,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		243572F0CD5EE25CED574405 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5558134A5318659ED88E763F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5832ECE0D74D42E864B322F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OutfitTrackerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D60F37EA2F77F893763DA337 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D6F5C12D4415897043755D9A /* [CP] Check Pods Manifest.lock */ = {
@@ -360,28 +310,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OutfitTracker-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FAF5656FF5ACD7FF353A163E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

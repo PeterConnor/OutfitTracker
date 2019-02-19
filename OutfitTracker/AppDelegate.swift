@@ -15,8 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    static var helloThere = "hi"
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UINavigationBar.appearance().barTintColor = UIColor.black
         UIBarButtonItem.appearance().tintColor = UIColor.white

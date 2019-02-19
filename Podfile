@@ -9,9 +9,9 @@ target 'OutfitTracker' do
 
 	pod 'Google-Mobile-Ads-SDK'
 
-  target 'OutfitTrackerTests' do
-    inherit! :search_paths
-    # Pods for testing
+   target 'OutfitTrackerTests' do
+   inherit! :search_paths
+   #Pods for testing
   end
 
 end
