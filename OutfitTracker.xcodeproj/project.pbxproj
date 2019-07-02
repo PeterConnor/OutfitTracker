@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		445B85AFF70AC6BB65EC27DE /* Pods_OutfitTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076028E5312993E54865B13E /* Pods_OutfitTrackerTests.framework */; };
 		E33858DB8B3298CC2DACB0A4 /* Pods_OutfitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CC5203A932091459D4BADD /* Pods_OutfitTracker.framework */; };
-		FA2FAD751FA1539A00C02CDC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2FAD741FA1538D00C02CDC /* iAd.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		FA2FAD7F1FA16E0C00C02CDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */; };
 		FA3710DD1EB821E20097AA56 /* Questions&Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */; };
 		FA52E1FD1F1146EE00F4B1BA /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */; };
@@ -45,12 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		076028E5312993E54865B13E /* Pods_OutfitTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		169106FAC4E4D63574D8AE78 /* Pods-OutfitTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		49CC5203A932091459D4BADD /* Pods_OutfitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6426BCBC55242686318664DC /* Pods-OutfitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker.release.xcconfig"; sourceTree = "<group>"; };
 		92985434B7759F894A6CFC26 /* Pods-OutfitTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FA2FAD741FA1538D00C02CDC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Questions&Notes.swift"; sourceTree = "<group>"; };
 		FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2FAD751FA1539A00C02CDC /* iAd.framework in Frameworks */,
 				E33858DB8B3298CC2DACB0A4 /* Pods_OutfitTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				445B85AFF70AC6BB65EC27DE /* Pods_OutfitTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,9 +109,7 @@
 		FA2FAD731FA1538D00C02CDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA2FAD741FA1538D00C02CDC /* iAd.framework */,
 				49CC5203A932091459D4BADD /* Pods_OutfitTracker.framework */,
-				076028E5312993E54865B13E /* Pods_OutfitTrackerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,11 +154,11 @@
 				FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */,
 				FA5371141EB037F100AF69A4 /* Info.plist */,
 				FA53710C1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld */,
-				FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */,
 				FAA4EC831F959E3F008E536C /* NotificationViewController.swift */,
 				FAA4EC811F959E35008E536C /* NotificationManager.swift */,
 				FAA4EC851F96D788008E536C /* InstructionsPageOneViewController.swift */,
 				FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */,
+				FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */,
 			);
 			path = OutfitTracker;
 			sourceTree = "<group>";
@@ -499,7 +491,6 @@
 			baseConfigurationReference = 169106FAC4E4D63574D8AE78 /* Pods-OutfitTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = NGAX96LNTZ;
 				INFOPLIST_FILE = OutfitTracker/Info.plist;
@@ -509,7 +500,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -518,7 +509,6 @@
 			baseConfigurationReference = 6426BCBC55242686318664DC /* Pods-OutfitTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = NGAX96LNTZ;
 				INFOPLIST_FILE = OutfitTracker/Info.plist;
@@ -528,7 +518,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
