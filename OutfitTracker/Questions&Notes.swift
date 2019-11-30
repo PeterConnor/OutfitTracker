@@ -19,12 +19,14 @@ Ad Unit ca-app-pub-9017513021309308/6032231248
 Need to test on device
 remove the code that sets these test devices (viewcontroller - request.testDevices) before you release your app
  
-ask why are 5s simulator group rows diff sizes
+why are 5s simulator group rows diff sizes?
 console messages
 warnings
-launchimage
 3x images
- white done button on datepicker
  make universal & aspectfit
- groupList is gray on first entry
+ test on mauras phone, SE, yours, and ipad
+ fix screenshots on app store. better pics & use APP SCREENSHOT BUILDER
+ redo instructions?
+ redo images and get rid of credits
+ before shipping, make sure test ad is removed and banner is live
 */

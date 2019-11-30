@@ -55,27 +55,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
 
     override func viewWillAppear(_ animated: Bool) {
         
-        if photoImage.image == nil {
-            saveButton.isEnabled = false
-            xButton.isHidden = true
-            photoLibraryButton.isHidden = false
-            photoLibraryButtonWithImage.isHidden = false
-            chooseFromGalleryButton.isHidden = false
-            takePhotoButton.isHidden = false
-            takePhotoButtonWithImage.isHidden = false
-            takePhotoTextButton.isHidden = false
-            orLabel.isHidden = false
-        } else {
-            saveButton.isEnabled = true
-            xButton.isHidden = false
-            photoLibraryButton.isHidden = true
-            photoLibraryButtonWithImage.isHidden = true
-            chooseFromGalleryButton.isHidden = true
-            takePhotoButton.isHidden = true
-            takePhotoButtonWithImage.isHidden = true
-            takePhotoTextButton.isHidden = true
-            orLabel.isHidden = true
-        }
+        isThereAPhoto()
+        
         if !(UIImagePickerController.isSourceTypeAvailable(.camera)) {
             takePhotoButton.isEnabled = false
             takePhotoButtonWithImage.isEnabled = false
@@ -187,6 +168,31 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
             }
     }
     
+    func isThereAPhoto() {
+        if photoImage.image == nil {
+            saveButton.isEnabled = false
+            xButton.isHidden = true
+            photoLibraryButton.isHidden = false
+            photoLibraryButtonWithImage.isHidden = false
+            chooseFromGalleryButton.isHidden = false
+            takePhotoButton.isHidden = false
+            takePhotoButtonWithImage.isHidden = false
+            takePhotoTextButton.isHidden = false
+            orLabel.isHidden = false
+        } else {
+            saveButton.isEnabled = true
+            xButton.isHidden = false
+            photoLibraryButton.isHidden = true
+            photoLibraryButtonWithImage.isHidden = true
+            chooseFromGalleryButton.isHidden = true
+            takePhotoButton.isHidden = true
+            takePhotoButtonWithImage.isHidden = true
+            takePhotoTextButton.isHidden = true
+            orLabel.isHidden = true
+            print("picked")
+        }
+    }
+    
     
     @IBAction func choosePhoto(_ sender: UIButton) {
         imagePicker = UIImagePickerController()
@@ -270,6 +276,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage
         photoImage.contentMode = .scaleAspectFill
         photoImage.image = chosenImage
+        isThereAPhoto()
         dismiss(animated: true, completion: nil)
     }
     
@@ -348,6 +355,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         toolbar.sizeToFit()
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        doneButton.tintColor = .black
         toolbar.setItems([doneButton], animated: true)
         
         dateTextField.inputAccessoryView = toolbar

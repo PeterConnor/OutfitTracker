@@ -246,6 +246,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        let cancelButtonAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
+        UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes, for: .normal)
         self.searchBar.showsCancelButton = true
         view.addGestureRecognizer(tap)
     }

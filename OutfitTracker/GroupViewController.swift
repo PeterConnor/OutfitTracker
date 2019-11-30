@@ -69,6 +69,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.textColor = .white
         if groupList.count < 1 {
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             cell.isUserInteractionEnabled = false
@@ -76,10 +77,12 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.textLabel?.textColor = .gray
             cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)
         } else {
+            print(groupList.count)
             cell.isUserInteractionEnabled = true
             cell.textLabel?.text = groupList[indexPath.row]
             cell.textLabel?.textColor = .white
             cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)
+            print("this just ran")
         }
         
         return cell
@@ -119,12 +122,13 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if textField.text != nil && textField.text != "" {
             groupList.append(textField.text!)
             UserDefaults.standard.set(groupList, forKey: "groupList")
-            
             tableView.reloadData()
+            
 
         }
         textField.resignFirstResponder()
         textField.text = nil
+        
         return true
     }
     

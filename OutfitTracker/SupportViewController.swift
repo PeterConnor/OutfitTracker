@@ -35,14 +35,18 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
     
     @IBAction func sendEmail(_ sender: Any) {
         let mailComposeViewController = configureMailController()
+        UINavigationBar.appearance().barTintColor = UIColor.black
+        UIBarButtonItem.appearance().tintColor = UIColor.white
         if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
+
+        self.present(mailComposeViewController, animated: true, completion: nil)
         } else {
             showMailError()
         }
     }
-
     func configureMailController() -> MFMailComposeViewController {
+        UINavigationBar.appearance().barTintColor = UIColor.blue
+        UIBarButtonItem.appearance().tintColor = UIColor.lightGray
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
         
