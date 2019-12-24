@@ -53,12 +53,12 @@ class NotificationManager: NSObject {
         content.body = "Time to enter an outfit!"
         content.userInfo = ["test": "test"]
         
-        guard let filePath = Bundle.main.path(forResource: "OutfitTrackerAppIcon", ofType: "png") else {
+        /* guard let filePath = Bundle.main.path(forResource: "AppIcon20x20@1x", ofType: "png") else {
             print("Image not found")
             return nil
         }
         let attachment = try! UNNotificationAttachment(identifier: "attachment", url: URL.init(fileURLWithPath: filePath), options: nil)
-        content.attachments = [attachment]
+        content.attachments = [attachment] */
         
         let components = Calendar.current.dateComponents([.minute, .hour], from: date)
         var newComponent = DateComponents()

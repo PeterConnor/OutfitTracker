@@ -26,7 +26,9 @@ warnings
  make universal & aspectfit
  test on mauras phone, SE, yours, and ipad
  fix screenshots on app store. better pics & use APP SCREENSHOT BUILDER
- redo instructions?
- redo images and get rid of credits
+ add 3x for all images
  before shipping, make sure test ad is removed and banner is live
+ add in banner -         //bannerView.load(request) in viewcontroller
+ fix git mess
+
 */

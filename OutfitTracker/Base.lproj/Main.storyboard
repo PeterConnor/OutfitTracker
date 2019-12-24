@@ -95,7 +95,7 @@
                                 <rect key="frame" x="20" y="64" width="374" height="602"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-ml-J1U" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="104.33333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="135.66666666666666"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <state key="normal" title="Support">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -116,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyZ-qu-aNK" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="124.33333333333334" width="374" height="104.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="155.66666666666663" width="374" height="135.33333333333337"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <state key="normal" title="Instructions">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -137,7 +137,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFO-Zd-9S0" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="248.66666666666666" width="374" height="104.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="311" width="374" height="135.66666666666663"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <state key="normal" title="Notifications">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,7 +158,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgO-a5-2xR" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="373.33333333333331" width="374" height="104.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="466.66666666666657" width="374" height="135.33333333333331"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                         <state key="normal" title="Delete All">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -176,27 +176,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="deleteAll:" destination="plv-CN-B4Z" eventType="touchUpInside" id="GcK-Ud-4Gf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgw-dL-qtl" customClass="RoundButton" customModule="OutfitTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="497.66666666666657" width="374" height="104.33333333333331"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
-                                        <state key="normal" title="Credits">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="575-bw-a3p" kind="show" id="YfG-E3-cgM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -241,108 +220,108 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kaC-xE-Pev">
-                                <rect key="frame" x="0.0" y="44" width="414" height="412"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="456"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save by Bernar Novalyi from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nx2-yv-AtE">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="27.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30.333333333333332"/>
                                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save by Тимур Минвалеев from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B17-gH-hhq" userLabel="Тимур">
-                                        <rect key="frame" x="0.0" y="27.333333333333329" width="414" height="27.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="30.333333333333336" width="414" height="30.333333333333336"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share by Тимур Минвалеев from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa2-9Z-dUE">
-                                        <rect key="frame" x="0.0" y="55.000000000000007" width="414" height="27.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="60.666666666666664" width="414" height="30.666666666666664"/>
                                         <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit by Gregor Cresnar from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-YM-L2y">
-                                        <rect key="frame" x="0.0" y="82.333333333333329" width="414" height="27.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="91.333333333333329" width="414" height="30.333333333333329"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete by Agni from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCS-xE-XUq">
-                                        <rect key="frame" x="0.0" y="110" width="414" height="27.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="121.66666666666667" width="414" height="30.333333333333329"/>
                                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera by Alfa Design from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bp1-ft-hRC">
-                                        <rect key="frame" x="0.0" y="137.33333333333334" width="414" height="27.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="152" width="414" height="30.333333333333343"/>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo library by icon 54 from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ps-Rz-jri">
-                                        <rect key="frame" x="0.0" y="164.66666666666666" width="414" height="27.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="182.33333333333334" width="414" height="30.333333333333343"/>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-shirt by Royyan Wijaya from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNp-ec-rYL">
-                                        <rect key="frame" x="0.0" y="192.33333333333334" width="414" height="27.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="212.66666666666666" width="414" height="30.666666666666657"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings by i cons from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUd-AT-fMV">
-                                        <rect key="frame" x="0.0" y="219.66666666666669" width="414" height="27.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="243.33333333333334" width="414" height="30.333333333333343"/>
                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Man by Eugen Belyakoff from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1g-A9-ob2">
-                                        <rect key="frame" x="0.0" y="247.33333333333334" width="414" height="27.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="273.66666666666669" width="414" height="30.333333333333314"/>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought Bubble by Hea Poh Lin from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVM-pe-0NZ">
-                                        <rect key="frame" x="0.0" y="274.66666666666669" width="414" height="27.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="304" width="414" height="30.333333333333314"/>
                                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought Bubble by Adrien Coquet from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUf-9h-3w1">
-                                        <rect key="frame" x="0.0" y="302" width="414" height="27.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="334.33333333333331" width="414" height="30.333333333333314"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought Bubble by Benjamin Sommerlad from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOP-hV-BIm">
-                                        <rect key="frame" x="0.0" y="329.66666666666669" width="414" height="27.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="364.66666666666669" width="414" height="30.666666666666686"/>
                                         <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question by Gregor Cresnar from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MG-y1-GP8">
-                                        <rect key="frame" x="0.0" y="357" width="414" height="27.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="395.33333333333331" width="414" height="30.333333333333314"/>
                                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Bulb by Surya from the Noun Project" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YM-EL-Iix">
-                                        <rect key="frame" x="0.0" y="384.66666666666669" width="414" height="27.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="425.66666666666669" width="414" height="30.333333333333314"/>
                                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
@@ -2316,31 +2295,31 @@ for instructions</string>
         </scene>
     </scenes>
     <resources>
-        <image name="CameraImage" width="178.66667175292969" height="137.33332824707031"/>
-        <image name="DeleteImage" width="128.66667175292969" height="165.66667175292969"/>
-        <image name="EditImage" width="130" height="129.66667175292969"/>
-        <image name="Page2" width="250" height="444.66665649414062"/>
+        <image name="CameraImage" width="332" height="237.5"/>
+        <image name="DeleteImage" width="278" height="337"/>
+        <image name="EditImage" width="289.5" height="289.5"/>
+        <image name="Page2" width="375" height="667"/>
         <image name="Page3" width="375" height="667"/>
         <image name="Page4" width="375" height="667"/>
-        <image name="PhotoLibraryImage" width="201.33332824707031" height="183.66667175292969"/>
-        <image name="SaveImage" width="152.33332824707031" height="196.66667175292969"/>
-        <image name="SavePhotoImage" width="160.66667175292969" height="162"/>
-        <image name="SearchExample" width="250" height="444.66665649414062"/>
-        <image name="SettingsImage" width="25" height="25"/>
-        <image name="ShareImage" width="150.66667175292969" height="192.33332824707031"/>
-        <image name="TshirtImage" width="181" height="178"/>
-        <image name="cloud1" width="162.66667175292969" height="194.66667175292969"/>
-        <image name="cloud2" width="210" height="202"/>
-        <image name="cloud3" width="161" height="166"/>
+        <image name="PhotoLibraryImage" width="338.5" height="338.5"/>
+        <image name="SaveImage" width="247.5" height="333.5"/>
+        <image name="SavePhotoImage" width="248" height="248"/>
+        <image name="SearchExample" width="375" height="667"/>
+        <image name="SettingsImage" width="20" height="20"/>
+        <image name="ShareImage" width="247.5" height="333.5"/>
+        <image name="TshirtImage" width="271.5" height="267"/>
+        <image name="cloud1" width="244" height="292"/>
+        <image name="cloud2" width="315" height="303"/>
+        <image name="cloud3" width="241.5" height="249"/>
         <image name="inst1" width="249.33332824707031" height="402"/>
         <image name="inst2" width="248.66667175292969" height="400.66665649414062"/>
         <image name="inst3" width="250" height="444.66665649414062"/>
         <image name="inst4" width="250" height="444.66665649414062"/>
         <image name="inst5" width="249.66667175292969" height="401.66665649414062"/>
         <image name="inst6" width="248.66667175292969" height="402"/>
-        <image name="inst7" width="248.66667175292969" height="402"/>
-        <image name="lightbulb" width="145.66667175292969" height="170.33332824707031"/>
-        <image name="questionman" width="590" height="585"/>
+        <image name="inst7" width="373" height="603"/>
+        <image name="lightbulb" width="400" height="430.5"/>
+        <image name="questionman" width="295" height="292.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Upk-gP-Qc4"/>
