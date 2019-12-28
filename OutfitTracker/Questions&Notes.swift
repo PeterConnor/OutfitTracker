@@ -23,12 +23,9 @@ why are 5s simulator group rows diff sizes?
 console messages
 warnings
 3x images
- make universal & aspectfit
- test on mauras phone, SE, yours, and ipad
- fix screenshots on app store. better pics & use APP SCREENSHOT BUILDER
- add 3x for all images
+ test on mauras phone, SE, yours, and ipad, iphone 11 max, and biggest ipad (make sure functionality and images work)
+ fix screenshots on app store. better pics & use APP SCREENSHOT BUILDER?
  before shipping, make sure test ad is removed and banner is live
  add in banner -         //bannerView.load(request) in viewcontroller
  fix git mess
-
 */
