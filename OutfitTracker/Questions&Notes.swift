@@ -22,7 +22,6 @@ remove the code that sets these test devices (viewcontroller - request.testDevic
 why are 5s simulator group rows diff sizes?
 console messages
 warnings
-3x images
  test on mauras phone, SE, yours, and ipad, iphone 11 max, and biggest ipad (make sure functionality and images work)
  fix screenshots on app store. better pics & use APP SCREENSHOT BUILDER?
  before shipping, make sure test ad is removed and banner is live
