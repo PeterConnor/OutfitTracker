@@ -26,5 +26,4 @@ warnings
  fix screenshots on app store. better pics & use APP SCREENSHOT BUILDER?
  before shipping, make sure test ad is removed and banner is live
  add in banner -         //bannerView.load(request) in viewcontroller
- fix git mess
-*/
+Push to remote. Make sure it actually gets pushed and is from 2019 */
