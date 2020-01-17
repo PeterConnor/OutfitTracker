@@ -23,6 +23,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var groupButton: UIButton!
     @IBOutlet weak var takePhotoButton: UIButton!
+
+    @IBOutlet weak var viewAroundPhotoImage: UIView!
     
     @IBOutlet weak var takePhotoTextButton: UIButton!
     
@@ -96,6 +98,8 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         dateTextField.text = dateFormatter.string(from: date)
         
         if editedItem != nil {
+            photoImage.contentMode = .scaleAspectFit
+            viewAroundPhotoImage.backgroundColor = .clear
             photoImage.image = editedItem?.image
             textField.text = editedItem?.note
             dateTextField.text = editedItem?.date
@@ -172,6 +176,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         if photoImage.image == nil {
             saveButton.isEnabled = false
             xButton.isHidden = true
+            viewAroundPhotoImage.backgroundColor = .lightGray
             photoLibraryButton.isHidden = false
             photoLibraryButtonWithImage.isHidden = false
             chooseFromGalleryButton.isHidden = false
@@ -182,6 +187,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         } else {
             saveButton.isEnabled = true
             xButton.isHidden = false
+            viewAroundPhotoImage.backgroundColor = .clear
             photoLibraryButton.isHidden = true
             photoLibraryButtonWithImage.isHidden = true
             chooseFromGalleryButton.isHidden = true
@@ -274,7 +280,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage
-        photoImage.contentMode = .scaleAspectFill
+        photoImage.contentMode = .scaleAspectFit
         photoImage.image = chosenImage
         isThereAPhoto()
         dismiss(animated: true, completion: nil)
@@ -288,6 +294,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         photoImage.image = nil
         xButton.isHidden = true
         saveButton.isEnabled = false
+        viewAroundPhotoImage.backgroundColor = .lightGray
         photoLibraryButton.isHidden = false
         photoLibraryButtonWithImage.isHidden = false
         takePhotoButton.isHidden = false

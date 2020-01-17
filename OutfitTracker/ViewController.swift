@@ -27,8 +27,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     
     @IBOutlet weak var bannerView: GADBannerView!
-    
-    
+        
     private let reuseIdentifier = "imageCell"
     
     var notes = [String]()
@@ -40,6 +39,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var searches = [String]()
 
     var tap = UITapGestureRecognizer()
+    
+    var horizontalRowNumber: CGFloat {
+        if self.traitCollection.horizontalSizeClass == .compact {
+            return 3.0
+        } else {
+            return 4.0
+        }
+    }
     
     override func viewDidLoad() {
         
@@ -56,9 +63,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let request = GADRequest()
         bannerView.delegate = self
-        bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
-        //bannerView.load(request)
+        bannerView.load(request)
         }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,6 +99,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if segmentedControl.selectedSegmentIndex == 0 {
             cell.customImageView.image = itemList[indexPath.row].image
+            print(cell.customImageView.bounds.size)
+            print(cell.customImageView.image?.size)
+            
             cell.dateLabel.text = itemList[indexPath.row].date
             cell.noteLabel.text = searches[indexPath.row]
             if cell.noteLabel.text == "" {
@@ -169,7 +179,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = imageCollectionView.frame.size.width / 3 - 3
+        let width = imageCollectionView.frame.size.width / horizontalRowNumber - horizontalRowNumber
         let height = imageCollectionView.frame.size.height / 3 - 3
         return CGSize(width: width, height: height)
     }
