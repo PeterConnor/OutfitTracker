@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Outfit Tracker requires access to your Photo Library, so you can select photos of your outfits and use them within the app.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Outfit Tracker requires access to your Photo Library, so you can save photos taken within the app to your device. </string>
+	<key>NSCameraUsageDescription</key>
+	<string>Outfit Tracker requires access to your camera, so you can take photos of your outfits and store them in the app. </string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

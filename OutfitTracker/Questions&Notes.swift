@@ -20,18 +20,14 @@ Test Unit ID: ca-app-pub-3940256099942544/2934735716
 Need to test on device
 remove the code that sets these test devices (viewcontroller - request.testDevices) before you release your app
  
-why are 5s simulator group rows diff sizes?
 console messages
 warnings
 
- Test functionality and images/look on...
- mauras phone
- SE
- yours (7)
- ipad
- iphone 11 max
- biggest ipad
- is something up with loading photopicker the first time?
+ app review sites
+ landing page
+ ask for a review. prompt user.
+ 
+ 
  fix screenshots on app store. better pics & use APP SCREENSHOT BUILDER?
  before shipping, make sure test ad is removed and banner is live (test id is in)
 Push to remote. Make sure it actually gets pushed and is from 2019

@@ -36,9 +36,16 @@ class NotificationViewController: UIViewController {
     }
     
     @IBAction func schedule(_ sender: Any) {
-        let nextDate = NotificationManager.shared.schedule(date: self.datePicker.date, repeats: self.repeatSwitch.isOn)
-        if nextDate != nil {
-            self.remainingTime.text = nextDate!.timeIntervalSinceNow.formattedTime
+        if NotificationManager.shared.isAuthorized == false {
+            let alert = UIAlertController(title: "Notifications", message: "To enable notifications, please go to Settings -> OutfitTracker -> Notifications -> Allow Notifications. Then, restart the app.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let nextDate = NotificationManager.shared.schedule(date: self.datePicker.date, repeats: self.repeatSwitch.isOn)
+            if nextDate != nil {
+                self.remainingTime.text = nextDate!.timeIntervalSinceNow.formattedTime
+            }
         }
     }
     

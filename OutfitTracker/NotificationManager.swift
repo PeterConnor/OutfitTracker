@@ -20,7 +20,7 @@ class NotificationManager: NSObject {
         
     }()
     
-    var isAuthorized = false
+    var isAuthorized: Bool? = nil
     
     func requestAuthorization() {
         let options: UNAuthorizationOptions = [.badge, .alert, .sound]
@@ -33,7 +33,6 @@ class NotificationManager: NSObject {
                 self.isAuthorized = true
                 
             } else {
-                
                 print("Notification Not Authorized")
                 self.isAuthorized = false
                 
@@ -45,6 +44,8 @@ class NotificationManager: NSObject {
     }
     
     func schedule(date: Date, repeats: Bool) -> Date? {
+        
+        requestAuthorization()
         
         cancelAllNotofications()
         

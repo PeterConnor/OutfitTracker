@@ -176,7 +176,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         if photoImage.image == nil {
             saveButton.isEnabled = false
             xButton.isHidden = true
-            viewAroundPhotoImage.backgroundColor = .lightGray
+            viewAroundPhotoImage.backgroundColor = .white
             photoLibraryButton.isHidden = false
             photoLibraryButtonWithImage.isHidden = false
             chooseFromGalleryButton.isHidden = false
@@ -269,11 +269,10 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func displayPicker(type: UIImagePickerControllerSourceType) {
-        self.imagePicker.mediaTypes = [kUTTypeImage as String]
-        self.imagePicker.sourceType = type
-        self.imagePicker.allowsEditing = true
-        
         DispatchQueue.main.async {
+            self.imagePicker.mediaTypes = [kUTTypeImage as String]
+            self.imagePicker.sourceType = type
+            self.imagePicker.allowsEditing = true
             self.present(self.imagePicker, animated: true, completion: nil)
         }
     }
@@ -294,7 +293,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         photoImage.image = nil
         xButton.isHidden = true
         saveButton.isEnabled = false
-        viewAroundPhotoImage.backgroundColor = .lightGray
+        viewAroundPhotoImage.backgroundColor = .white
         photoLibraryButton.isHidden = false
         photoLibraryButtonWithImage.isHidden = false
         takePhotoButton.isHidden = false

@@ -63,7 +63,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let request = GADRequest()
         bannerView.delegate = self
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-9017513021309308/6032231248"
         bannerView.rootViewController = self
         bannerView.load(request)
         }

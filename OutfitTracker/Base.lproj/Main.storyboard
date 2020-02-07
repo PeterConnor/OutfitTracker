@@ -282,10 +282,10 @@ for instructions</string>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z47-ln-Ui1">
-                                                            <rect key="frame" x="10" y="127" width="105" height="58"/>
+                                                            <rect key="frame" x="10" y="129" width="105" height="54"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-vd-30B">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="19.333333333333332"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="18"/>
                                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
@@ -293,7 +293,7 @@ for instructions</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ceb-uJ-siW">
-                                                                    <rect key="frame" x="0.0" y="19.333333333333343" width="105" height="19.333333333333329"/>
+                                                                    <rect key="frame" x="0.0" y="18" width="105" height="18"/>
                                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
@@ -301,7 +301,7 @@ for instructions</string>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3eO-gG-ZCx">
-                                                                    <rect key="frame" x="0.0" y="38.666666666666657" width="105" height="19.333333333333329"/>
+                                                                    <rect key="frame" x="0.0" y="36" width="105" height="18"/>
                                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
@@ -327,14 +327,14 @@ for instructions</string>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="z47-ln-Ui1" secondAttribute="bottom" id="Abg-OV-kxg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="z47-ln-Ui1" secondAttribute="bottom" constant="2" id="Abg-OV-kxg"/>
                                                         <constraint firstAttribute="trailing" secondItem="qTz-iN-c2y" secondAttribute="trailing" constant="5" id="Pl4-WB-une"/>
                                                         <constraint firstItem="qTz-iN-c2y" firstAttribute="leading" secondItem="Ddg-4W-syd" secondAttribute="leading" constant="5" id="R1A-qx-86Y"/>
                                                         <constraint firstItem="z47-ln-Ui1" firstAttribute="leading" secondItem="Ddg-4W-syd" secondAttribute="leading" constant="10" id="p4a-JB-ruO"/>
                                                         <constraint firstItem="qTz-iN-c2y" firstAttribute="height" secondItem="Ddg-4W-syd" secondAttribute="height" multiplier="0.66" id="qYu-bX-pRW"/>
                                                         <constraint firstItem="qTz-iN-c2y" firstAttribute="top" secondItem="Ddg-4W-syd" secondAttribute="top" constant="5" id="tAC-fq-yXK"/>
                                                         <constraint firstAttribute="trailing" secondItem="z47-ln-Ui1" secondAttribute="trailing" constant="10" id="uAq-wd-YBj"/>
-                                                        <constraint firstItem="z47-ln-Ui1" firstAttribute="top" secondItem="qTz-iN-c2y" secondAttribute="bottom" id="yXO-D7-opN"/>
+                                                        <constraint firstItem="z47-ln-Ui1" firstAttribute="top" secondItem="qTz-iN-c2y" secondAttribute="bottom" constant="2" id="yXO-D7-opN"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -621,7 +621,7 @@ for instructions</string>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="bYT-DX-AcS" secondAttribute="trailing" id="0ju-FY-0WX"/>
                                     <constraint firstItem="bYT-DX-AcS" firstAttribute="centerX" secondItem="AsY-nT-jLk" secondAttribute="centerX" id="2YO-1S-f5e"/>
@@ -928,20 +928,31 @@ for instructions</string>
                                     <constraint firstAttribute="height" constant="50" id="Tob-J6-XEx"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uby-LW-uZn">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uby-LW-uZn">
                                 <rect key="frame" x="10" y="54" width="394" height="538"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fm-bZ-XvD">
-                                        <rect key="frame" x="13.666666666666657" y="10" width="366.66666666666674" height="439.33333333333331"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yD-9k-TwM">
+                                        <rect key="frame" x="10" y="10" width="374" height="438"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fm-bZ-XvD">
+                                                <rect key="frame" x="4.3333333333333428" y="0.0" width="365.33333333333326" height="438"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9fm-bZ-XvD" secondAttribute="height" multiplier="187:224" id="Pua-z0-hc9"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="9fm-bZ-XvD" secondAttribute="height" multiplier="187:224" id="Pua-z0-hc9"/>
+                                            <constraint firstItem="9fm-bZ-XvD" firstAttribute="top" secondItem="4yD-9k-TwM" secondAttribute="top" id="CW4-Vd-j59"/>
+                                            <constraint firstItem="9fm-bZ-XvD" firstAttribute="centerX" secondItem="4yD-9k-TwM" secondAttribute="centerX" id="ZXg-YN-Uyq"/>
+                                            <constraint firstAttribute="bottom" secondItem="9fm-bZ-XvD" secondAttribute="bottom" id="rf9-4j-RcH"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5c0-Ld-6EV">
-                                        <rect key="frame" x="167.33333333333334" y="459.33333333333337" width="59.333333333333343" height="68.666666666666629"/>
+                                        <rect key="frame" x="167.33333333333334" y="458" width="59.333333333333343" height="70"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptf-x2-WRA">
-                                                <rect key="frame" x="7.6666666666666572" y="0.0" width="44.333333333333336" height="23"/>
+                                                <rect key="frame" x="7.6666666666666572" y="0.0" width="44.333333333333336" height="23.333333333333332"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
@@ -949,7 +960,7 @@ for instructions</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsR-GR-72x">
-                                                <rect key="frame" x="0.0" y="23" width="59.333333333333336" height="22.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="23.333333333333371" width="59.333333333333336" height="23.333333333333329"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
@@ -957,7 +968,7 @@ for instructions</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-ow-JeU">
-                                                <rect key="frame" x="7.3333333333333144" y="45.666666666666629" width="44.666666666666664" height="23"/>
+                                                <rect key="frame" x="7.3333333333333144" y="46.666666666666629" width="44.666666666666664" height="23.333333333333329"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
@@ -970,10 +981,12 @@ for instructions</string>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="5c0-Ld-6EV" firstAttribute="centerX" secondItem="Uby-LW-uZn" secondAttribute="centerX" id="9u5-9e-QT5"/>
+                                    <constraint firstAttribute="trailing" secondItem="4yD-9k-TwM" secondAttribute="trailing" constant="10" id="Ck0-N3-ZvO"/>
                                     <constraint firstAttribute="bottom" secondItem="5c0-Ld-6EV" secondAttribute="bottom" constant="10" id="DeT-As-Am5"/>
-                                    <constraint firstItem="9fm-bZ-XvD" firstAttribute="height" secondItem="5c0-Ld-6EV" secondAttribute="height" multiplier="6.4" id="Nb4-mx-tEu"/>
-                                    <constraint firstItem="5c0-Ld-6EV" firstAttribute="top" secondItem="9fm-bZ-XvD" secondAttribute="bottom" constant="10" id="ZuT-0Z-mQe"/>
-                                    <constraint firstItem="9fm-bZ-XvD" firstAttribute="top" secondItem="Uby-LW-uZn" secondAttribute="top" constant="10" id="b6N-E2-j3Q"/>
+                                    <constraint firstItem="4yD-9k-TwM" firstAttribute="top" secondItem="Uby-LW-uZn" secondAttribute="top" constant="10" id="FDL-bt-ySu"/>
+                                    <constraint firstItem="4yD-9k-TwM" firstAttribute="leading" secondItem="Uby-LW-uZn" secondAttribute="leading" constant="10" id="ast-OP-Qbp"/>
+                                    <constraint firstItem="5c0-Ld-6EV" firstAttribute="top" secondItem="4yD-9k-TwM" secondAttribute="bottom" constant="10" id="lJY-Zn-P9D"/>
+                                    <constraint firstItem="9fm-bZ-XvD" firstAttribute="height" secondItem="5c0-Ld-6EV" secondAttribute="height" multiplier="6.25714" id="oAU-BK-tzU"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -985,7 +998,6 @@ for instructions</string>
                             <constraint firstAttribute="trailing" secondItem="h8j-qC-xHJ" secondAttribute="trailing" id="NIN-Lf-RvP"/>
                             <constraint firstItem="Uby-LW-uZn" firstAttribute="top" secondItem="y9I-4G-bor" secondAttribute="bottom" constant="10" id="VbD-RP-q8G"/>
                             <constraint firstItem="0uu-FV-LR9" firstAttribute="centerX" secondItem="gxS-4y-crY" secondAttribute="centerX" id="YyK-PS-HA8"/>
-                            <constraint firstItem="9fm-bZ-XvD" firstAttribute="centerX" secondItem="gxS-4y-crY" secondAttribute="centerX" id="lS5-SX-MLe"/>
                             <constraint firstAttribute="trailing" secondItem="Uby-LW-uZn" secondAttribute="trailing" constant="10" id="vZ9-bZ-nM6"/>
                             <constraint firstItem="h8j-qC-xHJ" firstAttribute="leading" secondItem="gxS-4y-crY" secondAttribute="leading" id="vo2-1K-4jD"/>
                             <constraint firstItem="Uby-LW-uZn" firstAttribute="leading" secondItem="gxS-4y-crY" secondAttribute="leading" constant="10" id="xSR-L3-L2s"/>
@@ -1016,6 +1028,7 @@ for instructions</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YSs-zL-Xe9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1183,7 +1196,7 @@ for instructions</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inst1" translatesAutoresizingMaskIntoConstraints="NO" id="Bt5-DL-xky">
-                                <rect key="frame" x="0.0" y="44" width="414.00000000000006" height="692"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
