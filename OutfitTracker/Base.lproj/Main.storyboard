@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wox-GM-HEs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wox-GM-HEs">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1018,7 +1018,7 @@ for instructions</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzc-fH-QcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dhi-XV-tPJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="918.84057971014499" y="167.93478260869566"/>
+            <point key="canvasLocation" x="919" y="185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bii-FZ-hCP">
@@ -1377,6 +1377,9 @@ for instructions</string>
             <point key="canvasLocation" x="353.62318840579712" y="-1382.608695652174"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qOd-al-Jje"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="CameraImage" width="332.33334350585938" height="237.66667175292969"/>
         <image name="DeleteImage" width="278" height="337"/>
@@ -1394,7 +1397,4 @@ for instructions</string>
         <image name="inst6" width="373" height="603"/>
         <image name="inst7" width="373" height="603"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="qOd-al-Jje"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -4,7 +4,7 @@
 //
 //  Created by Pete Connor on 5/1/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-//
+// 
 
 import Foundation
 
@@ -12,7 +12,7 @@ import Foundation
 /* 
 
 ***Notes***
-
+git check
 add banner - https://developers.google.com/admob/ios/banner
 APP ID ca-app-pub-9017513021309308~9223293379
 Ad Unit ca-app-pub-9017513021309308/6032231248
