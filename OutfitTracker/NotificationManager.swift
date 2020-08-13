@@ -62,6 +62,7 @@ class NotificationManager: NSObject {
         content.attachments = [attachment] */
         
         let components = Calendar.current.dateComponents([.minute, .hour], from: date)
+        
         var newComponent = DateComponents()
         newComponent.hour = components.hour
         newComponent.minute = components.minute

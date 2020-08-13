@@ -11,8 +11,8 @@ import Foundation
 
 /* 
 
-**Notes**
- 
+***Notes***
+
 add banner - https://developers.google.com/admob/ios/banner
 APP ID ca-app-pub-9017513021309308~9223293379
 Ad Unit ca-app-pub-9017513021309308/6032231248
