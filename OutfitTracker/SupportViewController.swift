@@ -4,7 +4,6 @@
 //
 //  Created by Pete Connor on 7/9/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import UIKit
 import MessageUI
@@ -16,7 +15,7 @@ class SupportViewController: UIViewController, MFMailComposeViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let request = GADRequest()

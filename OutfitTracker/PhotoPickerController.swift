@@ -4,14 +4,12 @@
 //
 //  Created by Pete Connor on 4/25/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import UIKit
 import AVFoundation
 import Photos
 import MobileCoreServices
 import GoogleMobileAds
-
 
 class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, GroupDelegate, GADBannerViewDelegate {
 
@@ -42,7 +40,6 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     let datePicker = UIDatePicker()
     let magnesium = UIColor(red: CGFloat(199.0/255.0), green: CGFloat(199.0/255.0), blue: CGFloat(205.0/255.0), alpha: CGFloat(0.9))
 
-    
     var note = ""
     var groupGlobal = ""
     var actualDate = Date()
@@ -77,16 +74,14 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         let whiteSaveButton = UIImage(named: "SavePhotoImage")?.withRenderingMode(.alwaysTemplate)
         saveButton.setImage(whiteSaveButton, for: .normal)
         saveButton.tintColor = UIColor.white
         
-        
-        
-        takePhotoButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
-        photoLibraryButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center
+        takePhotoButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
+        photoLibraryButton.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
         
         textField.delegate = self
         
@@ -142,34 +137,32 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         
         if (UIImagePickerController.isSourceTypeAvailable(.photoLibrary)) {
                 
-                let status = PHPhotoLibrary.authorizationStatus()
+            let status = PHPhotoLibrary.authorizationStatus()
+            
+            if (status == .authorized) {
+                self.displayPicker(type: .photoLibrary)
+            }
+            
+            if (status == .restricted) {
                 
-                if (status == .authorized) {
-                    self.displayPicker(type: .photoLibrary)
-                }
+                self.handleRestricted()
+            }
+            
+            if (status == .denied) {
                 
-                if (status == .restricted) {
-                    
-                    self.handleRestricted()
-                }
+                self.handleDenied()
+            }
+            
+            if (status == .notDetermined) {
                 
-                if (status == .denied) {
-                    
-                    self.handleDenied()
-                }
-                
-                if (status == .notDetermined) {
-                    
-                    PHPhotoLibrary.requestAuthorization({ (status) in
-                        if (status == PHAuthorizationStatus.authorized) {
-                            self.displayPicker(type: .photoLibrary)
-                        }
-                    })
-                    
-                }
-                
+                PHPhotoLibrary.requestAuthorization({ (status) in
+                    if (status == PHAuthorizationStatus.authorized) {
+                        self.displayPicker(type: .photoLibrary)
+                    }
+                })
                 
             }
+        }
     }
     
     func isThereAPhoto() {
@@ -199,39 +192,38 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     
-    
     @IBAction func choosePhoto(_ sender: UIButton) {
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
         if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
-                let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
-                
-                if (status == .authorized) {
-                    self.displayPicker(type: .camera)
-                }
-                
-                if (status == .restricted) {
-                
-                    self.handleRestricted()
-                }
-                
-                if (status == .denied) {
-                    
-                    self.handleDenied()
-                }
-                
-                if (status == .notDetermined) {
-                
-                    AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted) in
-                        if (granted) {
-                            self.displayPicker(type: .camera)
-                        }
-                        
-                    })
-                }
-                
+            let status = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
+            
+            if (status == .authorized) {
+                self.displayPicker(type: .camera)
             }
+            
+            if (status == .restricted) {
+            
+                self.handleRestricted()
+            }
+            
+            if (status == .denied) {
+                
+                self.handleDenied()
+            }
+            
+            if (status == .notDetermined) {
+            
+                AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (granted) in
+                    if (granted) {
+                        self.displayPicker(type: .camera)
+                    }
+                    
+                })
+            }
+                
+        }
     }
     
     func handleDenied() {
@@ -240,7 +232,11 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         
         let settingsAction = UIAlertAction(title: "Go To Settings", style: .default) { (action) in
             DispatchQueue.main.async {
-                UIApplication.shared.open(NSURL(string: UIApplicationOpenSettingsURLString)! as URL)
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                }
             }
         }
         
@@ -268,7 +264,7 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
-    func displayPicker(type: UIImagePickerControllerSourceType) {
+    func displayPicker(type: UIImagePickerController.SourceType) {
         DispatchQueue.main.async {
             self.imagePicker.mediaTypes = [kUTTypeImage as String]
             self.imagePicker.sourceType = type
@@ -277,8 +273,11 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        let chosenImage = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)] as! UIImage
         photoImage.contentMode = .scaleAspectFit
         photoImage.image = chosenImage
         isThereAPhoto()
@@ -381,3 +380,17 @@ class PhotoPickerController: UIViewController, UIImagePickerControllerDelegate, 
     }
 }
 
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
+}

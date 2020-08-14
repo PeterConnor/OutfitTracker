@@ -4,7 +4,6 @@
 //
 //  Created by Pete Connor on 5/21/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import Foundation
 import UIKit
@@ -52,7 +51,7 @@ class LargeImageViewController: UIViewController, GADBannerViewDelegate {
     }
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         let whiteDeleteButton = UIImage(named: "DeleteImage")?.withRenderingMode(.alwaysTemplate)
@@ -79,7 +78,7 @@ class LargeImageViewController: UIViewController, GADBannerViewDelegate {
     }
     
     @IBAction func saveToPhone(_ sender: Any) {
-        let imageData = UIImagePNGRepresentation(largePhotoImage.image!)
+        let imageData = largePhotoImage.image!.pngData()
         let compressedImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedImage!, nil, nil, nil)
         

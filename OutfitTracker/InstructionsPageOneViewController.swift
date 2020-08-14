@@ -4,15 +4,13 @@
 //
 //  Created by Pete Connor on 10/17/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import UIKit
 
 class InstructionsPageOneViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +25,6 @@ class InstructionsPageOneViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

@@ -4,7 +4,6 @@
 //
 //  Created by Pete Connor on 10/14/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import UIKit
 
@@ -54,8 +53,6 @@ class NotificationViewController: UIViewController {
         
         NotificationManager.shared.cancelAllNotofications()
     }
-    
-    
 }
 
 extension TimeInterval {

@@ -4,10 +4,8 @@
 //
 //  Created by Pete Connor on 8/9/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import UIKit
-
 
 @IBDesignable
 class RoundButton: UIButton {

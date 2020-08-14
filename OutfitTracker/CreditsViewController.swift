@@ -4,7 +4,6 @@
 //
 //  Created by Pete Connor on 8/24/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import UIKit
 import GoogleMobileAds
@@ -36,7 +35,6 @@ class CreditsViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var lightbulbButton: UIButton!
     
     @IBOutlet weak var bannerView: GADBannerView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

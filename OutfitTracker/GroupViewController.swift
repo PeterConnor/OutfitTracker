@@ -4,7 +4,6 @@
 //
 //  Created by Pete Connor on 7/8/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import UIKit
 import GoogleMobileAds
@@ -19,8 +18,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var bannerView: GADBannerView!
-    
-    
+        
     var groupList = [String]()
     let exampleGroupList = ["E.g. Family", "E.g. Friends", "E.g. Work"]
     var delegate: GroupDelegate? = nil
@@ -28,7 +26,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.tableView.rowHeight = 44.0
         
@@ -71,17 +69,17 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.textColor = .white
         if groupList.count < 1 {
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
             cell.isUserInteractionEnabled = false
             cell.textLabel?.text = exampleGroupList[indexPath.row]
             cell.textLabel?.textColor = .gray
-            cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)
+            cell.textLabel?.font = UIFont(name: "HelveticaNeue-BoldItalic", size: 17.0)
         } else {
             print(groupList.count)
             cell.isUserInteractionEnabled = true
             cell.textLabel?.text = groupList[indexPath.row]
             cell.textLabel?.textColor = .white
-            cell.textLabel?.font = UIFont(name:"HelveticaNeue-BoldItalic", size: 17.0)
+            cell.textLabel?.font = UIFont(name: "HelveticaNeue-BoldItalic", size: 17.0)
             print("this just ran")
         }
         
@@ -98,7 +96,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if groupList.count < 1 {
             return
         } else {
@@ -124,7 +122,6 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
             UserDefaults.standard.set(groupList, forKey: "groupList")
             tableView.reloadData()
             
-
         }
         textField.resignFirstResponder()
         textField.text = nil
@@ -151,5 +148,4 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         textField.text = nil
         textField.resignFirstResponder()
     }
-
 }

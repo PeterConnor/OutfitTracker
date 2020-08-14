@@ -49,9 +49,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
             instantiateViewControllerWithIdentifier("\(color)ViewController")
     }
     
-    
-    
-
     /*
     // MARK: - Navigation
 

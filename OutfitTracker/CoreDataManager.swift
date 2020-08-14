@@ -4,7 +4,7 @@
 //
 //  Created by Pete Connor on 5/18/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
+//
 
 import Foundation
 import UIKit
@@ -27,7 +27,7 @@ class func storeObject(item: ImageItem) {
         managedObject.setValue(item.actualDate, forKey: "actualDate")
         managedObject.setValue(item.note, forKey: "note")
         managedObject.setValue(item.group, forKey: "group")
-        let imageData = UIImageJPEGRepresentation(item.image, 1)
+        let imageData = item.image.jpegData(compressionQuality: 1)
         managedObject.setValue(imageData, forKey: "imageVal")
         
         do {

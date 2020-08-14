@@ -4,7 +4,6 @@
 //
 //  Created by Pete Connor on 5/7/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import Foundation
 import UIKit
@@ -50,7 +49,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         searchBar.delegate = self
@@ -70,8 +69,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+               
         model.imageItems.sort(by: { $0.actualDate > $1.actualDate})
         resetSearches()
         itemList = model.imageItems
@@ -99,8 +97,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if segmentedControl.selectedSegmentIndex == 0 {
             cell.customImageView.image = itemList[indexPath.row].image
-            print(cell.customImageView.bounds.size)
-            print(cell.customImageView.image?.size)
+            //print(cell.customImageView.bounds.size)
+            //print(cell.customImageView.image?.size)
             
             cell.dateLabel.text = itemList[indexPath.row].date
             cell.noteLabel.text = searches[indexPath.row]
@@ -136,9 +134,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell.groupLabel.text = "-"
             }
         }
-        
         return cell
-    
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -250,13 +246,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 }
             }
         }
-
-        
       imageCollectionView.reloadData()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        let cancelButtonAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
+        let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes, for: .normal)
         self.searchBar.showsCancelButton = true
         view.addGestureRecognizer(tap)
@@ -321,4 +315,3 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
 }
-

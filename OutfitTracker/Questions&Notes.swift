@@ -8,11 +8,10 @@
 
 import Foundation
 
-
 /* 
 
 ***Notes***
-git check
+ 
 add banner - https://developers.google.com/admob/ios/banner
 APP ID ca-app-pub-9017513021309308~9223293379
 Ad Unit ca-app-pub-9017513021309308/6032231248
@@ -27,8 +26,4 @@ warnings
  landing page
  ask for a review. prompt user.
  
- 
- fix screenshots on app store. better pics & use APP SCREENSHOT BUILDER?
- before shipping, make sure test ad is removed and banner is live (test id is in)
-Push to remote. Make sure it actually gets pushed and is from 2019
-Push minigames to remote too */
+*/

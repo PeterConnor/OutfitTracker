@@ -4,7 +4,6 @@
 //
 //  Created by Pete Connor on 4/25/17.
 //  Copyright © 2017 c0nman. All rights reserved.
-// 
 
 import UIKit
 import CoreData
@@ -15,15 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UINavigationBar.appearance().barTintColor = UIColor.black
         UIBarButtonItem.appearance().tintColor = UIColor.white
         UIApplication.shared.statusBarStyle = .lightContent
-        UINavigationBar.appearance().titleTextAttributes = [ NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         
         GADMobileAds.configure(withApplicationID: "ca-app-pub-9017513021309308~9223293379")
-
-
+        
         return true
     }
 
@@ -95,6 +93,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
-

@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		E33858DB8B3298CC2DACB0A4 /* Pods_OutfitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CC5203A932091459D4BADD /* Pods_OutfitTracker.framework */; };
 		FA2FAD7F1FA16E0C00C02CDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */; };
-		FA3710DD1EB821E20097AA56 /* Questions&Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */; };
 		FA52E1FD1F1146EE00F4B1BA /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */; };
 		FA5371061EB037F100AF69A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5371051EB037F100AF69A4 /* AppDelegate.swift */; };
 		FA5371081EB037F100AF69A4 /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5371071EB037F100AF69A4 /* PhotoPickerController.swift */; };
 		FA53710B1EB037F100AF69A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5371091EB037F100AF69A4 /* Main.storyboard */; };
-		FA53710E1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA53710C1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld */; };
 		FA5371131EB037F100AF69A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5371111EB037F100AF69A4 /* LaunchScreen.storyboard */; };
 		FA551FE023A6F291008416F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA53710F1EB037F100AF69A4 /* Assets.xcassets */; };
 		FA551FE923A88A9B008416F5 /* AppIcon in Resources */ = {isa = PBXBuildFile; fileRef = FA551FE823A88A9B008416F5 /* AppIcon */; };
+		FA657F0124E63E7000E9BADC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA657F0024E63E7000E9BADC /* CoreDataManager.swift */; };
+		FA79AF2F24E63A220058694E /* Questions&Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79AF2E24E63A220058694E /* Questions&Notes.swift */; };
 		FA7D438E1EC009950061EACB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438D1EC009950061EACB /* ViewController.swift */; };
 		FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D438F1EC009E40061EACB /* ImagesModel.swift */; };
 		FA8312881F12E8130011BE62 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8312871F12E8130011BE62 /* SupportViewController.swift */; };
@@ -28,7 +28,7 @@
 		FACB07E51F3BE52C00D14AC4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */; };
 		FACB07ED1F3D354900D14AC4 /* OutfitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB07EC1F3D354900D14AC4 /* OutfitTrackerTests.swift */; };
 		FAE826801EC12EEA000C4353 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */; };
-		FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */; };
+		FAF02A9D1ECE60D60088CB40 /* OutfitTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF02A9C1ECE60D60088CB40 /* OutfitTracker.xcdatamodeld */; };
 		FAF02ABD1ED224E40088CB40 /* LargeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */; };
 		FAF3BC5B1F8B035000A8ED38 /* FinalInstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,17 +49,18 @@
 		6426BCBC55242686318664DC /* Pods-OutfitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTracker/Pods-OutfitTracker.release.xcconfig"; sourceTree = "<group>"; };
 		92985434B7759F894A6CFC26 /* Pods-OutfitTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OutfitTrackerTests/Pods-OutfitTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Questions&Notes.swift"; sourceTree = "<group>"; };
 		FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		FA5371021EB037F100AF69A4 /* OutfitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutfitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5371051EB037F100AF69A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA5371071EB037F100AF69A4 /* PhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
 		FA53710A1EB037F100AF69A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FA53710D1EB037F100AF69A4 /* OutfitTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OutfitTracker.xcdatamodel; sourceTree = "<group>"; };
 		FA53710F1EB037F100AF69A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5371121EB037F100AF69A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5371141EB037F100AF69A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA551FE823A88A9B008416F5 /* AppIcon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon; sourceTree = "<group>"; };
+		FA657F0024E63E7000E9BADC /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FA79AF2E24E63A220058694E /* Questions&Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questions&Notes.swift"; sourceTree = "<group>"; };
+		FA79AF3124E63ABE0058694E /*  */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; name = ""; sourceTree = "<group>"; };
 		FA7D438D1EC009950061EACB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7D438F1EC009E40061EACB /* ImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		FA8312871F12E8130011BE62 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +74,7 @@
 		FACB07EC1F3D354900D14AC4 /* OutfitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitTrackerTests.swift; sourceTree = "<group>"; };
 		FACB07EE1F3D354900D14AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FAF02A9C1ECE60D60088CB40 /* OutfitTracker.xcdatamodeld */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodeld; path = OutfitTracker.xcdatamodeld; sourceTree = "<group>"; };
 		FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeImageViewController.swift; sourceTree = "<group>"; };
 		FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalInstructionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,29 +140,30 @@
 		FA5371041EB037F100AF69A4 /* OutfitTracker */ = {
 			isa = PBXGroup;
 			children = (
+				FAF02A9C1ECE60D60088CB40 /* OutfitTracker.xcdatamodeld */,
+				FA79AF3024E63ABE0058694E /* OutfitTracker.xcdatamodeld */,
 				FA5371051EB037F100AF69A4 /* AppDelegate.swift */,
-				FAF02A9C1ECE60D60088CB40 /* CoreDataManager.swift */,
-				FA7D438F1EC009E40061EACB /* ImagesModel.swift */,
-				FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */,
+				FA79AF2E24E63A220058694E /* Questions&Notes.swift */,
+				FA5371111EB037F100AF69A4 /* LaunchScreen.storyboard */,
+				FA5371091EB037F100AF69A4 /* Main.storyboard */,
+				FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */,
 				FA7D438D1EC009950061EACB /* ViewController.swift */,
 				FAF02ABC1ED224E40088CB40 /* LargeImageViewController.swift */,
 				FA5371071EB037F100AF69A4 /* PhotoPickerController.swift */,
-				FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */,
 				FA8312871F12E8130011BE62 /* SupportViewController.swift */,
-				FA551FE823A88A9B008416F5 /* AppIcon */,
+				FAE8267F1EC12EEA000C4353 /* CustomCollectionViewCell.swift */,
+				FA52E1FC1F1146EE00F4B1BA /* GroupViewController.swift */,
 				FAC669411F4FB32700432398 /* CreditsViewController.swift */,
-				FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */,
-				FA5371091EB037F100AF69A4 /* Main.storyboard */,
-				FA53710F1EB037F100AF69A4 /* Assets.xcassets */,
-				FA5371111EB037F100AF69A4 /* LaunchScreen.storyboard */,
-				FA2FAD7E1FA16E0C00C02CDC /* GoogleService-Info.plist */,
-				FA5371141EB037F100AF69A4 /* Info.plist */,
-				FA53710C1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld */,
 				FAA4EC831F959E3F008E536C /* NotificationViewController.swift */,
-				FAA4EC811F959E35008E536C /* NotificationManager.swift */,
 				FAA4EC851F96D788008E536C /* InstructionsPageOneViewController.swift */,
 				FAF3BC5A1F8B035000A8ED38 /* FinalInstructionViewController.swift */,
-				FA3710DC1EB821E20097AA56 /* Questions&Notes.swift */,
+				FAA4EC811F959E35008E536C /* NotificationManager.swift */,
+				FA657F0024E63E7000E9BADC /* CoreDataManager.swift */,
+				FA7D438F1EC009E40061EACB /* ImagesModel.swift */,
+				FACB07E41F3BE52C00D14AC4 /* RoundButton.swift */,
+				FA5371141EB037F100AF69A4 /* Info.plist */,
+				FA53710F1EB037F100AF69A4 /* Assets.xcassets */,
+				FA551FE823A88A9B008416F5 /* AppIcon */,
 			);
 			path = OutfitTracker;
 			sourceTree = "<group>";
@@ -228,13 +230,13 @@
 					FA5371011EB037F100AF69A4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = NGAX96LNTZ;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1160;
 						ProvisioningStyle = Automatic;
 					};
 					FACB07E91F3D354900D14AC4 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = E5ZJ3PWQ3A;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1160;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FA5371011EB037F100AF69A4;
 					};
@@ -329,18 +331,18 @@
 				FACB07E51F3BE52C00D14AC4 /* RoundButton.swift in Sources */,
 				FAA4EC841F959E3F008E536C /* NotificationViewController.swift in Sources */,
 				FA7D438E1EC009950061EACB /* ViewController.swift in Sources */,
+				FA657F0124E63E7000E9BADC /* CoreDataManager.swift in Sources */,
 				FAE826801EC12EEA000C4353 /* CustomCollectionViewCell.swift in Sources */,
 				FAA4EC861F96D788008E536C /* InstructionsPageOneViewController.swift in Sources */,
 				FA8312881F12E8130011BE62 /* SupportViewController.swift in Sources */,
 				FA5371081EB037F100AF69A4 /* PhotoPickerController.swift in Sources */,
-				FA3710DD1EB821E20097AA56 /* Questions&Notes.swift in Sources */,
 				FA52E1FD1F1146EE00F4B1BA /* GroupViewController.swift in Sources */,
 				FAF3BC5B1F8B035000A8ED38 /* FinalInstructionViewController.swift in Sources */,
+				FA79AF2F24E63A220058694E /* Questions&Notes.swift in Sources */,
 				FA5371061EB037F100AF69A4 /* AppDelegate.swift in Sources */,
 				FAF02ABD1ED224E40088CB40 /* LargeImageViewController.swift in Sources */,
-				FA53710E1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld in Sources */,
 				FAA4EC821F959E35008E536C /* NotificationManager.swift in Sources */,
-				FAF02A9D1ECE60D60088CB40 /* CoreDataManager.swift in Sources */,
+				FAF02A9D1ECE60D60088CB40 /* OutfitTracker.xcdatamodeld in Sources */,
 				FA7D43901EC009E40061EACB /* ImagesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = c0nman.OutfitTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -531,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = c0nman.OutfitTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -547,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.c0nman.OutfitTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutfitTracker.app/OutfitTracker";
 			};
 			name = Debug;
@@ -563,7 +565,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.c0nman.OutfitTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutfitTracker.app/OutfitTracker";
 			};
 			name = Release;
@@ -601,12 +603,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FA53710C1EB037F100AF69A4 /* OutfitTracker.xcdatamodeld */ = {
+		FA79AF3024E63ABE0058694E /* OutfitTracker.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FA53710D1EB037F100AF69A4 /* OutfitTracker.xcdatamodel */,
+				FA79AF3124E63ABE0058694E /*  */,
 			);
-			currentVersion = FA53710D1EB037F100AF69A4 /* OutfitTracker.xcdatamodel */;
+			currentVersion = FA79AF3124E63ABE0058694E /*  */;
 			path = OutfitTracker.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
